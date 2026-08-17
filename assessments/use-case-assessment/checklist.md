@@ -1,0 +1,75 @@
+---
+schema_version: "1.0"
+artifact_id: ASSESS-USE-001
+title: AI Use-Case Assessment Checklist
+artifact_class: assessment
+artifact_type: checklist
+domains:
+  - use-case-intake
+  - impact-assessment
+  - risk-tiering
+applies_to:
+  - generative-ai
+  - agentic-ai
+  - machine-learning
+industries:
+  - cross-industry
+lifecycle_stages:
+  - intake
+  - design
+status: draft
+version: "0.1.0"
+last_reviewed: 2026-08-17
+source_artifacts:
+  - GenAI Policies - Example.docx
+  - GenAI_Audit_Checklist_v3.xlsx
+---
+
+# AI Use-Case Assessment Checklist
+
+## Purpose and ownership
+
+- [ ] Business problem, intended outcome, and alternatives are documented.
+- [ ] Business and technical owners are named.
+- [ ] Intended users, affected people, and decision recipients are identified.
+- [ ] Success, failure, and stop criteria are measurable.
+- [ ] Intended uses, prohibited uses, and foreseeable misuse are documented.
+
+## Impact and dependency
+
+- [ ] Consequences of inaccurate, harmful, delayed, unavailable, or manipulated output are assessed.
+- [ ] The role of AI in decisions is clear: inform, recommend, rank, decide, or act.
+- [ ] Human review is meaningful, timely, trained, and authorized.
+- [ ] Reversibility, scale, vulnerable populations, and downstream reliance are evaluated.
+- [ ] The [risk tier](../../governance/risk-tiering/ai-risk-tiering-framework.md) and rationale are recorded.
+
+## Data and privacy
+
+- [ ] Data sources, classifications, rights, lineage, regions, and retention are identified.
+- [ ] Sensitive or regulated data use is necessary and approved.
+- [ ] Training, improvement, logging, and provider reuse terms are understood.
+- [ ] Data minimization, deletion, legal hold, and data-subject processes are designed.
+
+## Architecture and security
+
+- [ ] Models, prompts, retrieval, memory, tools, connectors, identities, and providers are mapped.
+- [ ] Trust boundaries and untrusted content paths are threat-modeled.
+- [ ] Least privilege, output validation, action authorization, logging, and secrets controls are defined.
+- [ ] Fallback, containment, rollback, and kill-switch mechanisms are feasible.
+
+## Legal, rights, and conduct
+
+- [ ] Applicable jurisdictions, sector rules, contracts, records duties, and disclosure obligations are identified.
+- [ ] Discrimination, accessibility, intellectual-property, consumer, workforce, and contestability impacts are assessed.
+- [ ] Legal or compliance interpretations are confirmed by accountable specialists.
+
+## Assurance and operation
+
+- [ ] Evaluation methods reflect the actual workflow and plausible failures.
+- [ ] Acceptance thresholds and approval authority are defined before testing.
+- [ ] Monitoring metrics, sampling, incidents, feedback, and change triggers are established.
+- [ ] Vendor assessment and exit plan are complete where applicable.
+
+## Decision
+
+Record approval, conditions, rejected alternatives, unresolved risks, required evidence, owner, expiry/review date, and triggers for reassessment.
