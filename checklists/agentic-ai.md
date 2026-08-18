@@ -19,9 +19,10 @@ lifecycle_stages:
   - deployment
   - operation
 status: draft
-version: "0.1.0"
-last_reviewed: 2026-08-17
+version: "0.2.0"
+last_reviewed: 2026-08-18
 source_artifacts:
+  - Agentic_AI_Auditing_Framework.docx
   - GenAI Testing Procedures v2.docx
   - GenAI Audit Checklist v3.xlsx
 ---
@@ -33,6 +34,7 @@ source_artifacts:
 - [ ] Agent goal, allowed scope, success condition, prohibited actions, and termination condition are explicit.
 - [ ] Every tool/action has an owner, business purpose, and read/write/delete/transact/execute classification.
 - [ ] User authority is propagated and revalidated at action time.
+- [ ] The agent cannot expand its own privileges, change governing policy, approve its own material action, or authorize its own exception.
 
 ## Privilege and action
 
@@ -45,6 +47,8 @@ source_artifacts:
 
 - [ ] Untrusted input paths include retrieval, email, files, web, tool output, MCP metadata, messages, and memory.
 - [ ] Tool/package identity, version, integrity, and provenance are verified.
+- [ ] A2A/MCP clients, servers, extensions, SDK/protocol versions, tool schemas, endpoints, and owners are registered and approved.
+- [ ] Tokens are scope- and audience-bound, validated at each trust boundary, and not passed unchanged to unauthorized downstream services.
 - [ ] Memory writes are classified, logged, bounded, reviewable, and deletable.
 - [ ] Cross-user, cross-session, and cross-agent contamination is tested.
 
@@ -52,6 +56,7 @@ source_artifacts:
 
 - [ ] Loops, retries, duplicates, concurrency, partial failure, and state recovery are controlled.
 - [ ] Delegation limits, provenance, recursion, conflicts, and shared resources are governed.
+- [ ] Child agents have distinct identities, bounded authority, parent/task linkage, termination conditions, and maximum delegation depth.
 - [ ] Completion is verified against system state rather than accepted from self-report alone.
 
 ## Observability and recovery
@@ -59,3 +64,5 @@ source_artifacts:
 - [ ] Planning, tool calls, approvals, state changes, errors, and final outcomes are reconstructable.
 - [ ] Alerts cover unauthorized action, repeated failure, budget breach, anomalous tools, and trace gaps.
 - [ ] Kill switch, credential revocation, containment, rollback/compensation, and checkpoint recovery are tested.
+- [ ] Material runs can be reconstructed from decision and action evidence without relying on hidden chain-of-thought.
+- [ ] Audit evidence is integrity-protected, access-controlled, minimized, exportable, and retained under an approved schedule.

@@ -23,9 +23,10 @@ lifecycle_stages:
   - operation
   - retirement
 status: draft
-version: "0.2.0"
+version: "0.3.0"
 last_reviewed: 2026-08-18
 source_artifacts:
+  - Agentic_AI_Auditing_Framework.docx
   - GenAI Audit Checklist v3.xlsx
   - GenAI Policies - Example.docx
   - GenAI MRM Survey with Heatmap v2.xlsx
@@ -39,6 +40,8 @@ source_artifacts:
 These objectives define the outcomes an AI control environment should achieve. They are not a universal checklist: determine applicability using the system boundary, risk tier, deployment modality, data, and autonomy. For each applicable objective, identify the implementing control, owner, frequency, evidence, and test procedure.
 
 The [AI Data Security & Governance Framework](../data-security-governance/framework.md) provides the implementation model for DATA objectives and related security, quality, provider, and agent controls.
+
+The [Agentic AI Governance and Assurance Profile](../agentic-ai/governance-and-assurance-profile.md) and [A2A, MCP, and Multi-Agent Control Standard](../agentic-ai/a2a-mcp-multi-agent-control-standard.md) provide the system and protocol context for AGT objectives.
 
 Assessment should distinguish:
 
@@ -348,6 +351,22 @@ Assessment should distinguish:
 **Evidence:** agent identities, delegation policy, conflict resolution, resource arbitration, termination rules, interaction traces.
 
 **Assurance procedure:** run conflicting-goal, looping-delegation, duplicate-action, and compromised-agent scenarios.
+
+### AGT-06 — Agent identity, delegation, and protocol trust
+
+**Objective:** Every agent, protocol client/server, and child task has an approved identity and bounded authority; delegated authority, context, and communication cannot be spoofed, replayed, expanded, or passed to an unintended service.
+
+**Evidence:** agent/server/tool register, workload identities, parent/child graph, scopes and audiences, token/exchange configuration, delegation policy, protocol/SDK/schema versions, denied and revoked access logs.
+
+**Assurance procedure:** attempt unknown/revoked identities, wrong-audience tokens, unsafe downstream token passthrough, unapproved servers/tools, spoofed/replayed messages, excessive delegation depth, and child-agent privilege expansion.
+
+### AGT-07 — Action and state integrity
+
+**Objective:** Retries, concurrency, partial failure, cancellation, recovery, and agent self-report cannot create duplicate, conflicting, unreconciled, or falsely completed actions.
+
+**Evidence:** idempotency keys, state machine, transaction boundaries, locks/deduplication, checkpoints, authoritative reconciliation, rollback/compensation results, orphaned-task reports.
+
+**Assurance procedure:** interrupt multi-step workflows, time out after downstream success, replay or duplicate requests, race concurrent actions, cancel long-running work, restore state, and verify authoritative outcomes and compensation.
 
 ## 8. Monitoring, incidents, and change
 

@@ -20,14 +20,17 @@ lifecycle_stages:
   - deployment
   - operation
 status: draft
-version: "0.1.0"
-last_reviewed: 2026-08-17
+version: "0.2.0"
+last_reviewed: 2026-08-18
 source_artifacts:
+  - Agentic_AI_Auditing_Framework.docx
   - GenAI Testing Procedures v2.docx
   - GenAI Audit Checklist v3.xlsx
 ---
 
 # Agentic AI Testing Guide
+
+Use this guide with the [Agentic AI Governance and Assurance Profile](../../governance/agentic-ai/governance-and-assurance-profile.md). Select and document concrete tests through the [Agentic AI Assurance Scenario Library](scenario-library.md).
 
 ## Objective
 
@@ -66,6 +69,12 @@ Test delegation authority, provenance, conflicting goals, recursive delegation, 
 ### Observability and recovery
 
 Verify reconstructable traces, correlation IDs, alerts, budgets, circuit breakers, kill switch, rollback, compensation, and post-incident evidence.
+
+Require externally meaningful decision and action evidence—identity, authorized purpose, configuration, context references, policy decisions, approvals, calls, state changes, and outcomes. Hidden chain-of-thought is neither required nor a substitute for operational evidence.
+
+### Protocol and delegated authority
+
+For A2A, MCP, or other protocol-mediated systems, test component registration, protocol/SDK/schema version, workload identity, scope and audience validation, unsafe token passthrough, untrusted metadata, delegation depth, message spoofing/replay, child-agent authority, cancellation, and inter-agent traceability. Apply the [A2A, MCP, and Multi-Agent Control Standard](../../governance/agentic-ai/a2a-mcp-multi-agent-control-standard.md).
 
 ## Scenario severity
 

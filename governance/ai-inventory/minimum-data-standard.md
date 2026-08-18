@@ -21,9 +21,10 @@ lifecycle_stages:
   - operation
   - retirement
 status: draft
-version: "0.2.0"
+version: "0.3.0"
 last_reviewed: 2026-08-18
 source_artifacts:
+  - Agentic_AI_Auditing_Framework.docx
   - GenAI Policies - Example.docx
   - GenAI Audit Checklist v3.xlsx
   - GenAI MRM Survey with Heatmap v2.xlsx
@@ -114,11 +115,15 @@ An organization may maintain separate linked records for a use case, system, mod
 | Field | Requirement |
 |---|---|
 | Agent/orchestrator | Agent identifier, objective, planner pattern, and parent/child relationship |
-| Tool registry link | Tools available, owner, purpose, scope, environment, and risk |
-| Service identity | Credentials, role, privileges, rotation, and revocation owner |
+| Tool and protocol registry link | Tools, MCP/A2A clients/servers, endpoints, extensions, operations, owner, purpose, scope, environment, and risk |
+| Version and schema baseline | Agent graph, protocol, SDK, server/tool, schema, extension, and deprecation status |
+| Service identity | Credentials, authorization server, role, scopes/audiences, privileges, expiry/rotation, exchange pattern, and revocation owner |
+| Delegated authority | Initiating human/workload, allowed delegation targets, maximum depth/duration, propagated authority, and termination |
 | Action controls | Approval steps, limits, budgets, allowlists, circuit breakers, and rollback |
 | Memory/state | Data stored, provenance, access, retention, correction, deletion, and checkpointing |
-| Multi-agent protocol | Coordination, conflict resolution, resource arbitration, and termination |
+| Multi-agent coordination | Communication partners, context isolation, message integrity, conflict resolution, resource arbitration, and termination |
+| Action/state integrity | Idempotency, deduplication, transaction boundaries, reconciliation, rollback/compensation, and orphan handling |
+| Agent evidence | Correlation model for identity, purpose, versions, context references, approvals, calls, state changes, errors, and outcomes |
 
 ### G. Testing, monitoring, and operations
 

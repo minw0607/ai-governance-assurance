@@ -12,7 +12,7 @@ applies_to:
 industries:
   - cross-industry
 status: draft
-version: "0.3.0"
+version: "0.4.0"
 last_reviewed: 2026-08-18
 ---
 
@@ -30,6 +30,7 @@ The library was curated from locally supplied source documents. The original bin
 | GenAI MRM Survey with Heatmap v2.xlsx | Readiness questions and weighted scoring | Migrated into readiness checklist and scoring guide; SR 11-7 framing updated |
 | SaaS Testing Automation UseCase Design.docx | SaaS automation and test design | Reused for modality and test-design principles; product UI details deferred |
 | Guide Automation Engineer.docx | Product-specific automation execution | Deferred from core library because selectors, interfaces, and authentication flows are implementation-specific and time-sensitive |
+| Agentic_AI_Auditing_Framework.docx | Agentic governance, audit modules, A2A/MCP controls, scenarios, evidence requests, and workpapers | Curated into an agentic governance and assurance profile, protocol control standard, scenario library, audit-readiness checklist, workpaper template, and targeted enhancements to tiering, inventory, controls, assessments, glossary, and catalogs; client/interview details and opaque internal source identifiers remain local |
 
 ## Material updates during migration
 
@@ -48,3 +49,12 @@ The data-security source material had strong control intent, but several example
 - A DPA, no-training clause, and encryption do not alone authorize external AI processing. Purpose, data rights, provider features, retention, human review, subprocessors, location, isolation, incident response, deletion, and exit also require review.
 - Masking, tokenization, pseudonymization, embeddings, and synthetic data were not treated as automatically anonymous or outside privacy/confidentiality obligations.
 - Deletion was expanded from vector removal into source-to-derived lineage, suppression, re-indexing, cache/log/memory/provider handling, backup non-restoration, model-impact assessment, and verification.
+
+## Agentic AI curation corrections
+
+- “Reasoning traceability” was translated into externally meaningful decision-and-action evidence. The library does not require hidden chain-of-thought.
+- “Immutable lineage” was translated into proportionate tamper-evident or access-controlled append-only evidence that remains compatible with minimization, correction, deletion, legal hold, and retention obligations.
+- Mutual authentication and trust scoring were not treated as universal standalone requirements. Strong workload identity, authenticated channels, authorization, provenance, policy enforcement, and replay resistance are required; mutual authentication and trust/risk signals depend on architecture and protocol support.
+- MCP is treated as a versioned protocol surface, not a complete security architecture. The deployed specification, SDK, extensions, authorization model, servers, tools, and schemas must be recorded and governed.
+- SOC and similar assurance reports are supporting third-party evidence, not proof that the deployed agent system's controls operate effectively.
+- Client names, interview context, internal emails/messages, and internal source IDs in the source document were not published in the library.

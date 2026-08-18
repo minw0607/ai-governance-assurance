@@ -23,9 +23,10 @@ lifecycle_stages:
   - validation
   - operation
 status: draft
-version: "0.1.0"
-last_reviewed: 2026-08-17
+version: "0.2.0"
+last_reviewed: 2026-08-18
 source_artifacts:
+  - Agentic_AI_Auditing_Framework.docx
   - GenAI Vendor Assessment Framework.docx
 ---
 
@@ -89,18 +90,22 @@ For each response, record the vendor answer, evidence reference, assessor conclu
 34. How are planning steps, tool calls, intermediate results, memory writes, and outcomes traced?
 35. What controls address loops, duplicate action, state loss, goal hijacking, malicious tool output, and multi-agent conflict?
 36. How can customers immediately suspend an agent, tool, connector, or credential?
+37. Identify supported A2A/MCP or other agent protocols, clients, servers, SDKs, extensions, protocol versions, schemas, and deprecation commitments.
+38. How are workload identity, scopes, token audiences, delegation, downstream token exchange, message integrity, replay resistance, and revocation enforced?
+39. How are child agents identified, authorized, limited in depth/duration/resources, monitored, cancelled, and prevented from inheriting excessive authority?
+40. What customer-visible evidence correlates initiating identity, agent/model/configuration, context references, authorization, approval, tool calls, state changes, errors, and outcomes?
 
 ## 8. Change and lifecycle management
 
-37. What constitutes a material change and what notice is provided?
-38. Provide recent release notes, deprecation notices, rollback examples, and customer-impact assessments.
-39. How are preview features separated from generally available capabilities?
-40. What reassessment and re-testing does the provider perform after changes?
-41. What support periods and migration paths exist for retired models or APIs?
+41. What constitutes a material change and what notice is provided?
+42. Provide recent release notes, deprecation notices, rollback examples, and customer-impact assessments.
+43. How are preview features separated from generally available capabilities?
+44. What reassessment and re-testing does the provider perform after changes?
+45. What support periods and migration paths exist for retired models or APIs?
 
 ## 9. Contract and assurance
 
-42. Do terms provide audit, regulatory cooperation, incident notification, data-use restriction, deletion, subprocessor notice, service level, and termination rights?
-43. Who owns customer prompts, outputs, fine-tuning artifacts, evaluations, and derived configurations?
-44. How does the provider support transparency, recordkeeping, impact assessment, accessibility, and contestability obligations?
-45. Identify all requested controls the provider cannot meet and proposed alternatives.
+46. Do terms provide audit, regulatory cooperation, incident notification, data-use restriction, deletion, subprocessor notice, service level, and termination rights?
+47. Who owns customer prompts, outputs, fine-tuning artifacts, evaluations, and derived configurations?
+48. How does the provider support transparency, recordkeeping, impact assessment, accessibility, and contestability obligations?
+49. Identify all requested controls the provider cannot meet and proposed alternatives.

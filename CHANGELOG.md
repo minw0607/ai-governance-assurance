@@ -6,6 +6,9 @@ All notable library-level changes are recorded here. Individual artifacts retain
 
 ### Added
 
+- Agentic AI Governance and Assurance Profile covering the full agent-system boundary, autonomy, delegated authority, assurance, and evidence.
+- A2A, MCP, and Multi-Agent Control Standard covering identity, authorization, protocol/version governance, context, delegation, action/state integrity, and resilience.
+- Agentic AI scenario library, audit-readiness checklist, and audit workpaper template.
 - Integrated AI Data Security & Governance Framework covering lifecycle, ownership, control domains, evidence, metrics, and assurance.
 - AI data lifecycle and classification-to-use standards.
 - Dedicated RAG, vector, connector, agent-memory, and tool-data security requirements.
@@ -13,6 +16,9 @@ All notable library-level changes are recorded here. Individual artifacts retain
 
 ### Changed
 
+- Added a cross-library technology and capability overlay catalog to make agentic-AI applicability visible without changing the purpose-first taxonomy.
+- Expanded risk tiering, inventory, control objectives, use-case/vendor assessment, testing, glossary, mappings, and provenance for agentic systems.
+- Curated the supplied Agentic AI Auditing Framework while keeping client/interview details and internal source identifiers out of the public library.
 - Added data security and governance to the root taxonomy and governance catalogs.
 - Reconciled the new standards to the supplied policies, audit checklist, MRM survey, vendor framework, and testing procedure.
 - Corrected source examples that presented fixed retention periods, cryptographic settings, or incomplete provider conditions as universal requirements.

@@ -23,9 +23,10 @@ lifecycle_stages:
   - operation
   - retirement
 status: draft
-version: "0.2.0"
-last_reviewed: 2026-08-17
+version: "0.3.0"
+last_reviewed: 2026-08-18
 source_artifacts:
+  - Agentic_AI_Auditing_Framework.docx
   - GenAI Policies - Example.docx
   - GenAI Audit Checklist v3.xlsx
   - GenAI MRM Survey with Heatmap v2.xlsx
@@ -230,6 +231,8 @@ Implementation requirements are in the [RAG, Vector, and Agent Data Security Sta
 ## 11. Agentic-AI control overlay
 
 Agentic systems require governance of delegated authority, not only output quality.
+
+The [Agentic AI Governance and Assurance Profile](agentic-ai/governance-and-assurance-profile.md) defines the complete agent-system control and assurance model. Use the [A2A, MCP, and Multi-Agent Control Standard](agentic-ai/a2a-mcp-multi-agent-control-standard.md) when agents, tool servers, protocol clients, or delegated tasks communicate across a protocol boundary.
 
 ### 11.1 Autonomy classification
 

@@ -13,7 +13,7 @@ applies_to:
 industries:
   - cross-industry
 status: draft
-version: "0.2.0"
+version: "0.3.0"
 last_reviewed: 2026-08-18
 ---
 
@@ -126,6 +126,19 @@ This map records how the supplied source documents were curated into the library
 | Role, dependencies, execution outputs | Testing tools reference and test evidence concepts | Baseline |
 | Browser automation, authentication state, selectors, waiting, screenshots, rate limits | None in core governance library | Deferred; suitable for a separate implementation playbook maintained against a specific product/version |
 | Troubleshooting and file-output conventions | Testing tools reference | Baseline |
+
+## Agentic_AI_Auditing_Framework.docx
+
+| Source section | Curated destinations | Status and decision |
+|---|---|---|
+| Executive premise and model-vs-system audit comparison | [Agentic AI Governance and Assurance Profile](../governance/agentic-ai/governance-and-assurance-profile.md); root overlay catalog | Detailed; the governed and audited object is the full agent system |
+| Use case, objective, risk tiering, architecture, lifecycle, and accountability modules | Agentic profile; [Risk Tiering](../governance/risk-tiering/ai-risk-tiering-framework.md); [Inventory Standard](../governance/ai-inventory/minimum-data-standard.md); use-case assessment | Detailed; integrated with existing lifecycle rather than duplicated as a separate top-level framework |
+| Access, identity, tool authority, data, privacy, retrieval, and memory modules | Agentic profile; [A2A/MCP Standard](../governance/agentic-ai/a2a-mcp-multi-agent-control-standard.md); [Agent Data Security](../governance/data-security-governance/rag-vector-agent-data-security.md); control objectives | Detailed |
+| TEVV, observability, monitoring, resilience, and incident modules | Agentic testing guide; [Scenario Library](../testing/agentic-ai/scenario-library.md); audit-readiness checklist; control objectives | Detailed; hidden chain-of-thought is not required, and evidence capture is minimized |
+| Third-party and platform risk | Vendor questionnaire; third-party policy; agentic profile | Detailed; SOC reports treated as supporting evidence only |
+| A2A, MCP, and multi-agent controls | [A2A/MCP Standard](../governance/agentic-ai/a2a-mcp-multi-agent-control-standard.md); inventory; control objectives; checklist | Detailed; protocol/version, identity, delegation, context, token, schema, state, and evidence requirements added |
+| Audit reporting, findings, evidence request, and reusable scenarios | [Audit Workpaper Template](../templates/agentic-ai-audit-workpaper-template.md); [Audit Readiness Checklist](../checklists/agentic-ai-audit-readiness.md); [Scenario Library](../testing/agentic-ai/scenario-library.md) | Detailed |
+| Client/interview narrative and internal source basis | None in public library | Deferred; remains local because it contains client/project context, internal communications, and opaque source identifiers |
 
 ## Remaining enhancement opportunities
 

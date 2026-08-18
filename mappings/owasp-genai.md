@@ -20,8 +20,8 @@ lifecycle_stages:
   - validation
   - operation
 status: draft
-version: "0.1.0"
-last_reviewed: 2026-08-17
+version: "0.2.0"
+last_reviewed: 2026-08-18
 ---
 
 # OWASP GenAI Security Mapping
@@ -45,7 +45,7 @@ OWASP published the Top 10 for LLM Applications 2026 on August 3, 2026:
 
 ## Agentic systems
 
-When an LLM becomes an actor with tools, memory, delegation, or state-changing capability, pair the LLM list with OWASP's agentic guidance. The [Agentic AI Testing Guide](../testing/agentic-ai/testing-guide.md) emphasizes goal hijacking, tool misuse, privilege abuse, supply chain, code execution, memory/context poisoning, inter-agent communication, cascading failures, human trust exploitation, and rogue agents.
+When an LLM becomes an actor with tools, memory, delegation, or state-changing capability, pair the LLM list with OWASP's agentic guidance. Apply the [Agentic AI Governance and Assurance Profile](../governance/agentic-ai/governance-and-assurance-profile.md), [A2A/MCP Standard](../governance/agentic-ai/a2a-mcp-multi-agent-control-standard.md), [Agentic AI Testing Guide](../testing/agentic-ai/testing-guide.md), and [Scenario Library](../testing/agentic-ai/scenario-library.md) to goal hijacking, tool misuse, privilege abuse, supply chain, code execution, memory/context poisoning, inter-agent communication, cascading failures, human trust exploitation, and rogue agents.
 
 ## Use note
 
@@ -55,3 +55,4 @@ OWASP categories guide threat coverage; they do not replace system-specific thre
 
 - [OWASP Top 10 for LLM Applications 2026](https://genai.owasp.org/resource/owasp-genai-llm-top-10-2026/)
 - [OWASP GenAI Security Project](https://genai.owasp.org/)
+- [OWASP Agentic Security Initiative](https://genai.owasp.org/initiatives/agentic-security-initiative/)

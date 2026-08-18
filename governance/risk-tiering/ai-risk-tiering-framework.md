@@ -19,9 +19,10 @@ lifecycle_stages:
   - design
   - validation
 status: draft
-version: "0.1.0"
-last_reviewed: 2026-08-17
+version: "0.2.0"
+last_reviewed: 2026-08-18
 source_artifacts:
+  - Agentic_AI_Auditing_Framework.docx
   - GenAI Vendor Assessment Framework.docx
   - GenAI Policies - Example.docx
 ---
@@ -68,7 +69,23 @@ Escalate to at least Tier 2 when the system:
 - can invoke tools with write, delete, transaction, identity, or communication privileges; or
 - is difficult to observe, interrupt, or roll back.
 
+Also escalate to at least Tier 2 when an agent uses persistent cross-session memory, can create or delegate to other agents, relies on externally managed MCP/A2A servers or tools, or can continue long-running work without contemporaneous review.
+
 Escalate to Tier 1 when credible failure could create severe or irreversible harm, or when privileged autonomy is combined with untrusted input and sensitive data.
+
+Tier 1 indicators for agentic systems include open-ended or recursive delegation, administrative or security-control authority, autonomous high-value transactions, cross-tenant reach, safety-critical action, inability to reconstruct material actions, or inability to contain and reconcile partially completed work.
+
+## Agentic risk decision factors
+
+For an agentic use case, record separately:
+
+- highest autonomy mode and maximum duration without human intervention;
+- reachable read, write, execute, communicate, transact, delete, identity, and administrative authority;
+- credential and delegated-authority model, including parent/child propagation;
+- tool, MCP/A2A, data, memory, network, destination, tenant, and environment reach;
+- maximum steps, recursion/delegation depth, concurrency, cost, data volume, and transaction value;
+- observability, intervention window, kill scope, rollback/compensation, and authoritative reconciliation; and
+- credible combined failure involving untrusted input, sensitive data, privileged tools, persistent state, and external action.
 
 ## Minimum assurance by tier
 

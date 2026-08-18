@@ -18,9 +18,10 @@ lifecycle_stages:
   - intake
   - design
 status: draft
-version: "0.1.0"
-last_reviewed: 2026-08-17
+version: "0.2.0"
+last_reviewed: 2026-08-18
 source_artifacts:
+  - Agentic_AI_Auditing_Framework.docx
   - GenAI Policies - Example.docx
   - GenAI_Audit_Checklist_v3.xlsx
 ---
@@ -60,6 +61,17 @@ Apply the [AI Data Security & Governance Framework](../../governance/data-securi
 - [ ] Trust boundaries and untrusted content paths are threat-modeled.
 - [ ] Least privilege, output validation, action authorization, logging, and secrets controls are defined.
 - [ ] Fallback, containment, rollback, and kill-switch mechanisms are feasible.
+
+## Agentic AI applicability
+
+Complete this section when the system plans, uses tools, maintains state, delegates, communicates, or changes an external environment.
+
+- [ ] Autonomy level, action authority, maximum duration, success/stop conditions, and prohibited actions are explicit.
+- [ ] Human and workload identities, delegated authority, approval points, segregation of duties, and revocation are designed.
+- [ ] Tool, MCP/A2A, server, schema, extension, agent, and downstream dependencies are inventoried and versioned.
+- [ ] Memory, inter-agent context, action/state integrity, idempotency, reconciliation, and compensation are addressed.
+- [ ] Maximum steps, retries, recursion/delegation depth, concurrency, cost, data volume, transaction value, and destinations are bounded.
+- [ ] Long-horizon, adversarial, multi-agent, partial-failure, containment, recovery, and evidence-reconstruction tests are planned.
 
 ## Legal, rights, and conduct
 
