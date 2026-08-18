@@ -38,6 +38,14 @@ source_artifacts:
 - [ ] Capacity, rate limits, latency, cost budgets, and abuse controls are configured.
 - [ ] Dependency failure and degraded-mode behavior are understood.
 
+## Data security and governance
+
+- [ ] Material data sources and derived assets have current owners, purpose, classification, provenance, rights, quality, regions, and retention records.
+- [ ] Actual connectors, indexes, permissions, service identities, providers, logs, and memory match the approved data/control-flow design.
+- [ ] Provider training/improvement, retention, human review, subprocessor, region, deletion, and exit terms align with configuration and approval.
+- [ ] Permission, isolation, leakage, poisoning, retention, correction/deletion, backup/restore, and recovery tests passed for applicable data paths.
+- [ ] Open data-quality, privacy, security, IP, or rights findings are remediated or explicitly accepted by authorized owners.
+
 ## Human and customer controls
 
 - [ ] Review, approval, correction, appeal, escalation, and disclosure mechanisms work.

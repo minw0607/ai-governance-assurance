@@ -13,8 +13,8 @@ applies_to:
 industries:
   - cross-industry
 status: draft
-version: "0.1.0"
-last_reviewed: 2026-08-17
+version: "0.2.0"
+last_reviewed: 2026-08-18
 ---
 
 # AI Governance Standards and Guidance Landscape
@@ -22,6 +22,9 @@ last_reviewed: 2026-08-17
 | Source | Current reference | Primary use | Status note |
 |---|---|---|---|
 | NIST | AI RMF 1.0; NIST AI 600-1 GenAI Profile | Voluntary risk-management and GenAI profile | AI RMF 1.0 is under revision |
+| NIST | Cybersecurity Framework 2.0 | Enterprise cybersecurity risk governance and outcomes | Voluntary framework; includes the Govern function |
+| NIST | Privacy Framework 1.0 | Privacy risk management across the data lifecycle and processing ecosystem | Voluntary framework; NIST is developing version 1.1 |
+| NIST | SP 800-218A | Secure development practices for generative AI and dual-use foundation models | AI community profile used with SSDF 1.1 |
 | ISO/IEC | 42001:2023 | AI management system requirements | Published international standard |
 | ISO/IEC | 23894:2023 | AI risk-management guidance | Published international standard |
 | ISO/IEC | 42005:2025 | AI system impact assessment | Published international standard |
@@ -30,10 +33,15 @@ last_reviewed: 2026-08-17
 | European Union | Regulation (EU) 2024/1689, as amended by the 2026 AI Omnibus | Role- and risk-based AI obligations | Staged application; high-risk dates extended |
 | OWASP | Top 10 for LLM Applications 2026 and agentic guidance | Application and agentic security | Community security guidance |
 | U.S. OMB | M-25-21 and M-25-22 | Federal agency AI use and acquisition | Replaced earlier federal policy direction in 2025 |
+| EDPB | Opinion 28/2024 on AI models and personal data | Case-specific analysis of anonymity, lawful basis, and unlawfully processed data | EU data-protection authority opinion; not a universal finding for every model |
+| U.S. FTC | Safeguards Rule, 16 CFR Part 314 | Customer-information safeguards for covered financial institutions | Applies to financial institutions within FTC jurisdiction; includes service-provider oversight |
 
 ## Primary links
 
 - [NIST AI RMF](https://www.nist.gov/itl/ai-risk-management-framework)
+- [NIST Cybersecurity Framework 2.0](https://www.nist.gov/publications/nist-cybersecurity-framework-csf-20)
+- [NIST Privacy Framework](https://www.nist.gov/privacy-framework/privacy-framework)
+- [NIST SP 800-218A](https://csrc.nist.gov/pubs/sp/800/218/a/final)
 - [ISO/IEC 42001:2023](https://www.iso.org/standard/42001)
 - [ISO/IEC 23894:2023](https://www.iso.org/standard/77304.html)
 - [ISO/IEC JTC 1/SC 42 catalog](https://www.iso.org/committee/6794475/x/catalogue/)
@@ -42,6 +50,8 @@ last_reviewed: 2026-08-17
 - [European Commission AI Act overview](https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai)
 - [OWASP GenAI Security Project](https://genai.owasp.org/)
 - [OMB memoranda](https://www.whitehouse.gov/omb/information-resources/guidance/memoranda/)
+- [EDPB Opinion 28/2024](https://www.edpb.europa.eu/documents/opinion-of-the-board-art-64/opinion-282024-on-certain-data-protection-aspects-related-to_en)
+- [FTC Safeguards Rule](https://www.ftc.gov/legal-library/browse/rules/safeguards-rule)
 
 ## Maintenance rule
 

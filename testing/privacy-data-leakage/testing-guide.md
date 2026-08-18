@@ -19,13 +19,15 @@ lifecycle_stages:
   - validation
   - operation
 status: draft
-version: "0.1.0"
-last_reviewed: 2026-08-17
+version: "0.2.0"
+last_reviewed: 2026-08-18
 source_artifacts:
   - GenAI Testing Procedures v2.docx
 ---
 
 # Privacy and Data Leakage Testing Guide
+
+Use this guide to test controls designed under the [AI Data Security & Governance Framework](../../governance/data-security-governance/framework.md) and, for retrieval and agentic systems, the [RAG, Vector, and Agent Data Security Standard](../../governance/data-security-governance/rag-vector-agent-data-security.md).
 
 ## Test surfaces
 

@@ -21,8 +21,8 @@ lifecycle_stages:
   - operation
   - retirement
 status: draft
-version: "0.1.0"
-last_reviewed: 2026-08-17
+version: "0.2.0"
+last_reviewed: 2026-08-18
 source_artifacts:
   - GenAI Policies - Example.docx
 ---
@@ -32,6 +32,8 @@ source_artifacts:
 ## Policy objective
 
 Data used by AI systems must be lawful, necessary, appropriately protected, traceable, and governed throughout prompts, retrieval, training, fine-tuning, logging, evaluation, storage, and deletion.
+
+The [AI Data Security & Governance Framework](../data-security-governance/framework.md) and its lifecycle, classification, RAG/vector/agent, and training/evaluation standards define the operating requirements and evidence supporting this policy.
 
 ## Requirements
 

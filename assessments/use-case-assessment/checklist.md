@@ -45,10 +45,14 @@ source_artifacts:
 
 ## Data and privacy
 
+Apply the [AI Data Security & Governance Framework](../../governance/data-security-governance/framework.md) and [classification control matrix](../../governance/data-security-governance/data-classification-control-matrix.md) to the proposed processing pattern.
+
 - [ ] Data sources, classifications, rights, lineage, regions, and retention are identified.
 - [ ] Sensitive or regulated data use is necessary and approved.
 - [ ] Training, improvement, logging, and provider reuse terms are understood.
 - [ ] Data minimization, deletion, legal hold, and data-subject processes are designed.
+- [ ] Data quality, representativeness, integrity, poisoning, and evaluation-contamination risks are assessed.
+- [ ] RAG permissions, vector/index segregation, agent memory, and tool-data boundaries are designed where applicable.
 
 ## Architecture and security
 

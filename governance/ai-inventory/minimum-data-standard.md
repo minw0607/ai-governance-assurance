@@ -21,8 +21,8 @@ lifecycle_stages:
   - operation
   - retirement
 status: draft
-version: "0.1.0"
-last_reviewed: 2026-08-17
+version: "0.2.0"
+last_reviewed: 2026-08-18
 source_artifacts:
   - GenAI Policies - Example.docx
   - GenAI Audit Checklist v3.xlsx
@@ -102,10 +102,12 @@ An organization may maintain separate linked records for a use case, system, mod
 | Prompt assets | System prompts, templates, policy instructions, versions, and repository links |
 | Retrieval architecture | Sources, connectors, embeddings, indexes, rerankers, namespaces, and permission model |
 | Data sources | Source owner, origin, purpose, lineage, quality, and authorization |
+| Data asset records | Linked records for material datasets, corpora, indexes, evaluation sets, persistent memory, and derived artifacts under the [AI data framework](../data-security-governance/framework.md) |
 | Data classification | Public, internal, confidential, restricted, personal, regulated, licensed, or other enterprise classes |
 | Provider data use | Training/reuse, retention, deletion, residency, and cross-border terms |
 | Logs and traces | Prompt/output/tool data captured, minimization, access, and retention |
 | Training/fine-tuning data | Provenance, rights, representativeness, transformations, and version |
+| Rights and disposition | Correction, restriction, withdrawal, deletion, legal hold, backup non-restoration, and verification process |
 
 ### F. Agentic components
 

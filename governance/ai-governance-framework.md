@@ -92,7 +92,7 @@ The governed object is the **AI system and use case**, not only the underlying m
 |---|---|---|
 | Principles and risk appetite | Defines acceptable outcomes and prohibited exposure | This framework; acceptable-use policy; risk-tiering framework |
 | Policies | States mandatory organizational rules | Data handling, model risk, third-party risk, prompt, and change policies |
-| Standards and control objectives | Defines the minimum control condition | [AI control objectives](control-framework/control-objectives.md) |
+| Standards and control objectives | Defines the minimum control condition | [AI control objectives](control-framework/control-objectives.md); [AI Data Security & Governance](data-security-governance/README.md) |
 | Procedures and methods | Explains how assessments, testing, monitoring, and escalation are performed | Assessment and testing libraries; [lifecycle stage gates](lifecycle/stage-gates.md) |
 | Evidence and records | Demonstrates design and operating effectiveness | Checklists, templates, inventories, approvals, logs, test results, and findings |
 
@@ -182,7 +182,7 @@ Field definitions, record ownership, reconciliation checks, and completeness mea
 |---|---|---|
 | Governance and accountability | Establish ownership, decision rights, risk appetite, and oversight | Charters, RACI, committee decisions, training, exceptions |
 | Inventory and use-case management | Maintain complete visibility and approved scope | Inventory, intake record, discovery reconciliation, prohibited-use check |
-| Data, privacy, and intellectual property | Authorize and protect data throughout the system | Data flows, lineage, classification, privacy assessment, deletion tests |
+| Data, privacy, and intellectual property | Authorize and protect data throughout the system | [AI data security and governance](data-security-governance/framework.md), data flows, lineage, classification, privacy assessment, deletion tests |
 | Architecture and secure development | Build a controlled, resilient, and observable system | Threat model, architecture review, secure-development evidence, baseline |
 | Model and system quality | Demonstrate fitness for the intended task and limits | Requirements, benchmarks, datasets, evaluation results, limitations |
 | Safety, fairness, and rights impact | Identify and mitigate harmful or inequitable outcomes | Impact assessment, subgroup and safety tests, review and appeal evidence |
@@ -211,6 +211,8 @@ Detailed objectives, design expectations, operating-effectiveness tests, and evi
 - Track document provenance, ingestion transformations, embedding/index versions, and deletion propagation.
 - Test retrieval precision, recall, ranking, stale content, permission boundaries, and poisoning.
 - Require citations or source traceability when the use case depends on factual grounding.
+
+Implementation requirements are in the [RAG, Vector, and Agent Data Security Standard](data-security-governance/rag-vector-agent-data-security.md).
 
 ### 10.3 Output controls
 

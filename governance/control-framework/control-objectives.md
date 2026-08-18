@@ -23,8 +23,8 @@ lifecycle_stages:
   - operation
   - retirement
 status: draft
-version: "0.1.0"
-last_reviewed: 2026-08-17
+version: "0.2.0"
+last_reviewed: 2026-08-18
 source_artifacts:
   - GenAI Audit Checklist v3.xlsx
   - GenAI Policies - Example.docx
@@ -37,6 +37,8 @@ source_artifacts:
 ## How to use this artifact
 
 These objectives define the outcomes an AI control environment should achieve. They are not a universal checklist: determine applicability using the system boundary, risk tier, deployment modality, data, and autonomy. For each applicable objective, identify the implementing control, owner, frequency, evidence, and test procedure.
+
+The [AI Data Security & Governance Framework](../data-security-governance/framework.md) provides the implementation model for DATA objectives and related security, quality, provider, and agent controls.
 
 Assessment should distinguish:
 
@@ -136,6 +138,22 @@ Assessment should distinguish:
 **Evidence:** data flows, regional configuration, transfer assessment, provider/subprocessor location, network controls.
 
 **Assurance procedure:** inspect actual routing and storage configuration; test geo-restrictions where implemented.
+
+### DATA-06 — Data quality and integrity
+
+**Objective:** Source, training, retrieval, evaluation, monitoring, and derived data remain sufficiently accurate, complete, timely, consistent, representative, and protected from unauthorized or malicious change for the approved purpose.
+
+**Evidence:** quality rules and thresholds, profiles, source/version manifests, reconciliation, anomaly or poisoning monitoring, issue and remediation records.
+
+**Assurance procedure:** recompute selected quality measures; trace threshold breaches to owned action; introduce or simulate stale, corrupted, mislabeled, and malicious content and verify detection and containment.
+
+### DATA-07 — Training and evaluation data governance
+
+**Objective:** Training, fine-tuning, alignment, evaluation, red-team, and monitoring datasets have approved provenance and rights, controlled preparation, suitable representation, protected splits, contamination controls, and reproducible versions.
+
+**Evidence:** dataset register, source approvals and licenses, manifests, transformation and labeling records, split/deduplication analysis, contamination tests, access controls, limitations.
+
+**Assurance procedure:** reproduce a selected dataset or evaluation version; trace sampled records to approved sources; test for train/test overlap, answer leakage, unauthorized data, and unrecorded transformations.
 
 ## 3. Architecture, security, and supply chain
 

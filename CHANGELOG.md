@@ -4,6 +4,19 @@ All notable library-level changes are recorded here. Individual artifacts retain
 
 ## [Unreleased]
 
+### Added
+
+- Integrated AI Data Security & Governance Framework covering lifecycle, ownership, control domains, evidence, metrics, and assurance.
+- AI data lifecycle and classification-to-use standards.
+- Dedicated RAG, vector, connector, agent-memory, and tool-data security requirements.
+- Training and evaluation data governance requirements for provenance, rights, quality, representativeness, contamination, segregation, and reproducibility.
+
+### Changed
+
+- Added data security and governance to the root taxonomy and governance catalogs.
+- Reconciled the new standards to the supplied policies, audit checklist, MRM survey, vendor framework, and testing procedure.
+- Corrected source examples that presented fixed retention periods, cryptographic settings, or incomplete provider conditions as universal requirements.
+
 ## [0.2.0] - 2026-08-17
 
 ### Added

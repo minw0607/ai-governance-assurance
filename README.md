@@ -21,6 +21,7 @@ flowchart TD
 
     GOV --> GF["Framework and operating model"]
     GOV --> POL["Policies and standards"]
+    GOV --> DATA["Data security and governance"]
     GOV --> RISK["Risk tiering and lifecycle controls"]
     ASS --> VA["Vendor, use-case, and readiness"]
     TEST --> TF["Testing framework and methods"]
@@ -59,8 +60,9 @@ Regulatory mappings deliberately sit across the artifact classes. They help iden
 | [AI Governance Framework](governance/ai-governance-framework.md) | Enterprise operating model, lifecycle, accountability, and control principles | 0.2.0 | Draft |
 | [Roles and Decision Rights](governance/operating-model/roles-and-decision-rights.md) | Three-lines accountability, governance forums, RACI, and escalation | 0.1.0 | Draft |
 | [AI Lifecycle Stage Gates](governance/lifecycle/stage-gates.md) | Entry, exit, evidence, and approval criteria from discovery through retirement | 0.1.0 | Draft |
-| [AI Inventory Minimum Data Standard](governance/ai-inventory/minimum-data-standard.md) | Required system/use-case fields, ownership, reconciliation, and quality rules | 0.1.0 | Draft |
-| [Enterprise AI Control Objectives](governance/control-framework/control-objectives.md) | Testable governance, data, security, quality, vendor, agentic, and operations objectives | 0.1.0 | Draft |
+| [AI Inventory Minimum Data Standard](governance/ai-inventory/minimum-data-standard.md) | Required system/use-case fields, ownership, reconciliation, and quality rules | 0.2.0 | Draft |
+| [AI Data Security & Governance](governance/data-security-governance/README.md) | Integrated data lifecycle, classification, RAG/vector/agent security, and training/evaluation data standards | 0.1.0 | Draft |
+| [Enterprise AI Control Objectives](governance/control-framework/control-objectives.md) | Testable governance, data, security, quality, vendor, agentic, and operations objectives | 0.2.0 | Draft |
 | [GenAI Policy Suite](governance/policies/README.md) | Modular acceptable-use, data, model-risk, vendor, prompt, and change policies | 0.1.0 | Draft |
 | [AI Risk Tiering Framework](governance/risk-tiering/ai-risk-tiering-framework.md) | Risk classification and minimum assurance requirements | 0.1.0 | Draft |
 
@@ -103,8 +105,8 @@ Additional methodologies cover functional correctness, hallucination and factual
 | [EU AI Act](mappings/eu-ai-act.md) | Risk-based obligations and current application timeline | 2026-08-17 |
 | [OWASP GenAI](mappings/owasp-genai.md) | OWASP Top 10 for LLM Applications 2026 mapping | 2026-08-17 |
 | [Crosswalk](mappings/crosswalk.md) | Cross-framework control themes | 2026-08-17 |
-| [Standards Landscape](references/standards-landscape.md) | Current standards and guidance register | 2026-08-17 |
-| [Source Coverage Map](references/source-coverage-map.md) | Traceability from supplied source sections to curated library artifacts | 2026-08-17 |
+| [Standards Landscape](references/standards-landscape.md) | Current standards and guidance register | 2026-08-18 |
+| [Source Coverage Map](references/source-coverage-map.md) | Traceability from supplied source sections to curated library artifacts | 2026-08-18 |
 
 ## How to use the library
 

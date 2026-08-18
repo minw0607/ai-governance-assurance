@@ -12,8 +12,8 @@ applies_to:
 industries:
   - cross-industry
 status: draft
-version: "0.2.0"
-last_reviewed: 2026-08-17
+version: "0.3.0"
+last_reviewed: 2026-08-18
 ---
 
 # Source Register and Migration Decisions
@@ -37,3 +37,14 @@ The library was curated from locally supplied source documents. The original bin
 - OWASP's 2026 LLM Top 10 replaced the 2025 list in August 2026.
 - EU AI Act dates were updated for the AI Omnibus that entered into force in July 2026.
 - NIST AI RMF 1.0 is identified as under revision; NIST AI 600-1 remains the GenAI companion profile.
+
+## Data security and governance corrections
+
+The data-security source material had strong control intent, but several examples required qualification before becoming reusable standards:
+
+- Fixed prompt, output, log, training-data, or model-artifact retention periods were not adopted as universal requirements. Retention must follow purpose, applicable law, authoritative records schedules, contracts, investigations, legal holds, and minimization.
+- The source's “25 months for credit denials” attribution to FCRA was corrected. The 25-month application-record requirement is generally in [Regulation B, 12 CFR 1002.12](https://www.consumerfinance.gov/rules-policy/regulations/1002/12/), with scope, business-credit, investigation, and other qualifications.
+- Example algorithms, protocol versions, credential-rotation periods, alert counts, and test sample sizes were treated as tailoring inputs. Current enterprise security standards and risk-based test design control these values.
+- A DPA, no-training clause, and encryption do not alone authorize external AI processing. Purpose, data rights, provider features, retention, human review, subprocessors, location, isolation, incident response, deletion, and exit also require review.
+- Masking, tokenization, pseudonymization, embeddings, and synthetic data were not treated as automatically anonymous or outside privacy/confidentiality obligations.
+- Deletion was expanded from vector removal into source-to-derived lineage, suppression, re-indexing, cache/log/memory/provider handling, backup non-restoration, model-impact assessment, and verification.

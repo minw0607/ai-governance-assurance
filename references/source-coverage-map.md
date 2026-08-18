@@ -13,8 +13,8 @@ applies_to:
 industries:
   - cross-industry
 status: draft
-version: "0.1.0"
-last_reviewed: 2026-08-17
+version: "0.2.0"
+last_reviewed: 2026-08-18
 ---
 
 # Source-to-Library Coverage Map
@@ -36,11 +36,11 @@ This map records how the supplied source documents were curated into the library
 |---|---|---|
 | Executive summary and policy architecture | [AI Governance Framework](../governance/ai-governance-framework.md); policy suite | Detailed; converted from one large policy document into framework, policies, standards, and procedures |
 | Acceptable use, user responsibility, intake, attestations, enforcement, exceptions | [Acceptable Use](../governance/policies/acceptable-use.md); [Stage Gates](../governance/lifecycle/stage-gates.md); [Roles and Decision Rights](../governance/operating-model/roles-and-decision-rights.md) | Detailed; fixed examples and organization-specific forms generalized |
-| Data classification, regulated data, prompt/output handling, retention, cross-border | [Data Handling](../governance/policies/data-handling.md); [Control Objectives](../governance/control-framework/control-objectives.md) | Detailed; legal applicability and exact retention periods left for tailoring |
+| Data classification, regulated data, prompt/output handling, retention, cross-border | [Data Handling](../governance/policies/data-handling.md); [AI Data Security & Governance](../governance/data-security-governance/README.md); [Control Objectives](../governance/control-framework/control-objectives.md) | Detailed; expanded into lifecycle, classification, RAG/vector/agent, and training/evaluation standards; legal applicability and exact retention periods left for tailoring |
 | Model definition, inventory, development, validation, monitoring, change, retirement | [AI Inventory Standard](../governance/ai-inventory/minimum-data-standard.md); [Model Risk Policy](../governance/policies/model-risk-management.md); [Stage Gates](../governance/lifecycle/stage-gates.md) | Detailed; legacy SR 11-7 conclusions superseded by the current SR 26-2 scope note |
 | Third-party assessment, contracts, monitoring | Vendor assessment framework/questionnaire/scoring; [Third-Party Risk Policy](../governance/policies/third-party-risk.md) | Detailed |
 | Prompt security, effectiveness, versioning, grounding | [Prompt Management](../governance/policies/prompt-management.md); security and factuality testing guides | Detailed |
-| Technical security standards | [Control Objectives](../governance/control-framework/control-objectives.md); security, privacy, and agentic testing guides | Detailed; fixed cryptographic versions, rotation periods, and numeric alert examples treated as tailoring inputs rather than universal requirements |
+| Technical security standards | [AI Data Security & Governance](../governance/data-security-governance/README.md); [Control Objectives](../governance/control-framework/control-objectives.md); security, privacy, and agentic testing guides | Detailed; identity, segregation, data paths, provider settings, monitoring, deletion, and assurance integrated; fixed cryptographic versions, rotation periods, and numeric alert examples treated as tailoring inputs rather than universal requirements |
 | Testing and validation standards | Enterprise testing framework and nine testing guides | Detailed; brittle universal pass rates excluded |
 | Monitoring, incident response, continuous improvement | [AI Governance Framework](../governance/ai-governance-framework.md); ongoing monitoring and examination checklists | Detailed; fixed notification timelines not generalized |
 | Prohibited and restricted uses | [Acceptable Use](../governance/policies/acceptable-use.md); [Risk Tiering](../governance/risk-tiering/ai-risk-tiering-framework.md) | Baseline; organizations must map current law and risk appetite |
@@ -54,7 +54,7 @@ This map records how the supplied source documents were curated into the library
 | Workbook area | Curated destinations | Status and decision |
 |---|---|---|
 | Governance and lifecycle controls | [Control Objectives](../governance/control-framework/control-objectives.md); [Stage Gates](../governance/lifecycle/stage-gates.md); examination checklist | Detailed; design and operating-effectiveness distinction retained |
-| Data security and privacy | Data policy, privacy testing, production/examination checklists, control objectives | Detailed |
+| Data security and privacy | Data policy; [AI Data Security & Governance](../governance/data-security-governance/README.md); privacy testing; production/examination checklists; control objectives | Detailed; all nine source controls are represented with design, evidence, operating-effectiveness, and testing expectations |
 | Model risk and quality | Testing framework, factuality/fairness/RAG methods, readiness assessment, control objectives | Detailed |
 | Runtime security and monitoring | Security red teaming, ongoing monitoring, incident and resilience controls | Detailed |
 | Agentic AI governance | Agentic testing, agentic checklist, inventory and control objectives | Detailed |
@@ -67,7 +67,7 @@ This map records how the supplied source documents were curated into the library
 |---|---|---|
 | Inventory and scope | Readiness assessment; AI inventory standard | Detailed |
 | Use and autonomy | Risk tiering; agentic controls; readiness assessment | Detailed |
-| Data, privacy, IP, performance, hallucination, explainability, vendor, accountability | Readiness checklist and control objectives | Detailed |
+| Data, privacy, IP, performance, hallucination, explainability, vendor, accountability | Readiness checklist; [AI Data Security & Governance](../governance/data-security-governance/README.md); control objectives | Detailed; data-type, regulated-data, provider retention, DLP, and internal-training questions are reflected in lifecycle and processing-pattern decisions |
 | Response scoring and category weights | [Readiness Scoring Guide](../assessments/readiness-assessment/scoring-guide.md) | Detailed; presented as a configurable starting point |
 | SR 11-7 / MRM theme labels | [SR 26-2 Mapping](../mappings/sr-26-2.md) | Superseded; no claim that the current guidance directly applies to GenAI or agentic AI |
 
@@ -134,3 +134,11 @@ This map records how the supplied source documents were curated into the library
 - Add machine-readable control-to-framework mappings at the individual control-objective level.
 - Add example completed evidence packages and case studies using synthetic organizations and data.
 - Convert selected checklists and assessment models into reusable spreadsheets while retaining the Markdown source of truth.
+
+## Curation corrections applied to data-security material
+
+- The source's fixed 90-day, one-year, three-year, and seven-year examples are not presented as universal retention rules.
+- “25 months for credit denials” is not presented as a blanket FCRA requirement; Regulation B scope and exceptions must be analyzed.
+- DPA, encryption, and a no-training clause are treated as part of—not a substitute for—provider, privacy, security, and legal review.
+- Masking, tokenization, pseudonymization, embeddings, and synthetic data do not automatically change classification or eliminate privacy obligations.
+- Deletion requirements cover source and derived stores, providers, backups, restoration, and model impact rather than only vector removal.

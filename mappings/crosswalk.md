@@ -19,8 +19,8 @@ lifecycle_stages:
   - validation
   - operation
 status: draft
-version: "0.1.0"
-last_reviewed: 2026-08-17
+version: "0.2.0"
+last_reviewed: 2026-08-18
 ---
 
 # Cross-Framework AI Governance Themes
@@ -33,7 +33,7 @@ This crosswalk identifies common implementation themes; it does not claim requir
 | Context and classification | Map | Roles, prohibited/high-risk/GPAI classification | Purpose, exposure, materiality | Architecture and threat context | [Use-case assessment](../assessments/use-case-assessment/checklist.md) |
 | Inventory and documentation | Govern/Map | Technical documentation and records | Inventory and documentation | Asset/supply-chain awareness | Governance framework and templates |
 | Risk measurement and testing | Measure | Accuracy, robustness, cybersecurity, conformity evidence | Development testing, validation, outcomes analysis | Adversarial testing | [Testing framework](../testing/testing-framework/enterprise-genai-testing.md) |
-| Data governance and privacy | Map/Measure/Manage | Data governance and fundamental rights | Inputs and data limitations | Disclosure, poisoning, vector weaknesses | Data policy and privacy testing |
+| Data governance and privacy | Map/Measure/Manage | Data governance and fundamental rights | Inputs and data limitations | Disclosure, poisoning, vector weaknesses | [AI Data Security & Governance](../governance/data-security-governance/README.md) |
 | Human oversight and action control | Govern/Manage | Human oversight and transparency | Effective challenge and appropriate use | Excessive agency | Agentic guide and checklist |
 | Monitoring and incident response | Manage | Post-market monitoring and incidents | Ongoing monitoring | Detection, response, resource abuse | Monitoring checklist and template |
 | Change and lifecycle | Govern/Manage | Substantial modification and lifecycle duties | Changes, deterioration, redevelopment | Supply-chain and configuration change | Change policy and regression testing |
