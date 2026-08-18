@@ -4,7 +4,51 @@ A practical, versioned collection of frameworks, procedures, checklists, templat
 
 The library is organized by **artifact purpose**, then topic, then document. Regulations and standards are mapped across the library rather than used as the primary folder structure.
 
-> **Release status:** Initial curated draft (`0.1.0`). The material is implementation guidance, not legal advice, and must be tailored to an organization's risks, obligations, and operating environment.
+> **Release status:** Expanded curated draft (`0.2.0`). The material is implementation guidance, not legal advice, and must be tailored to an organization's risks, obligations, and operating environment.
+
+## Repository taxonomy
+
+The primary taxonomy is **artifact purpose → topic → document**. This keeps a policy, assessment, testing method, checklist, and template about the same topic distinct while allowing them to share metadata and regulatory mappings.
+
+```mermaid
+flowchart TD
+    LIB["AI Governance & Assurance Library"]
+    LIB --> GOV["Governance<br/>What rules and accountabilities should exist?"]
+    LIB --> ASS["Assessments<br/>What should be evaluated?"]
+    LIB --> TEST["Testing & Assurance<br/>How should it be tested?"]
+    LIB --> CHECK["Checklists<br/>What must be verified?"]
+    LIB --> TEMP["Templates<br/>How should evidence be recorded?"]
+
+    GOV --> GF["Framework and operating model"]
+    GOV --> POL["Policies and standards"]
+    GOV --> RISK["Risk tiering and lifecycle controls"]
+    ASS --> VA["Vendor, use-case, and readiness"]
+    TEST --> TF["Testing framework and methods"]
+    CHECK --> CG["Release, monitoring, and examination gates"]
+    TEMP --> EV["Risk, test, findings, vendor, and monitoring records"]
+
+    MAP["Mappings<br/>NIST · EU AI Act · OWASP · SR 26-2"]
+    REF["References and schema<br/>Glossary · standards · sources · metadata"]
+    MAP -.-> GOV
+    MAP -.-> ASS
+    MAP -.-> TEST
+    MAP -.-> CHECK
+    REF -.-> LIB
+```
+
+### Classification dimensions
+
+| Dimension | Purpose | Examples |
+|---|---|---|
+| Artifact class | Primary folder and user question | `governance`, `assessment`, `testing`, `checklist`, `template` |
+| Topic/domain | Subject addressed within an artifact class | security, privacy, model risk, agentic AI, third-party risk |
+| Applies to | AI capability in scope | generative AI, LLM, RAG, agentic AI, machine learning |
+| Lifecycle stage | Point at which the artifact is used | intake, design, validation, deployment, operation, retirement |
+| Deployment | Technical delivery pattern | SaaS, API, on-premises, embedded, agentic workflow |
+| Industry | Intended sector context | cross-industry, financial services, public sector |
+| Status and version | Independent artifact lifecycle | draft, active, deprecated; semantic artifact version |
+
+Regulatory mappings deliberately sit across the artifact classes. They help identify coverage and applicability but do not replace legal analysis or reorganize the library around individual regulations.
 
 ## Library
 
@@ -12,7 +56,11 @@ The library is organized by **artifact purpose**, then topic, then document. Reg
 
 | Resource | Description | Version | Status |
 |---|---|---:|---|
-| [AI Governance Framework](governance/ai-governance-framework.md) | Enterprise operating model, lifecycle, accountability, and control principles | 0.1.0 | Draft |
+| [AI Governance Framework](governance/ai-governance-framework.md) | Enterprise operating model, lifecycle, accountability, and control principles | 0.2.0 | Draft |
+| [Roles and Decision Rights](governance/operating-model/roles-and-decision-rights.md) | Three-lines accountability, governance forums, RACI, and escalation | 0.1.0 | Draft |
+| [AI Lifecycle Stage Gates](governance/lifecycle/stage-gates.md) | Entry, exit, evidence, and approval criteria from discovery through retirement | 0.1.0 | Draft |
+| [AI Inventory Minimum Data Standard](governance/ai-inventory/minimum-data-standard.md) | Required system/use-case fields, ownership, reconciliation, and quality rules | 0.1.0 | Draft |
+| [Enterprise AI Control Objectives](governance/control-framework/control-objectives.md) | Testable governance, data, security, quality, vendor, agentic, and operations objectives | 0.1.0 | Draft |
 | [GenAI Policy Suite](governance/policies/README.md) | Modular acceptable-use, data, model-risk, vendor, prompt, and change policies | 0.1.0 | Draft |
 | [AI Risk Tiering Framework](governance/risk-tiering/ai-risk-tiering-framework.md) | Risk classification and minimum assurance requirements | 0.1.0 | Draft |
 
@@ -56,6 +104,7 @@ Additional methodologies cover functional correctness, hallucination and factual
 | [OWASP GenAI](mappings/owasp-genai.md) | OWASP Top 10 for LLM Applications 2026 mapping | 2026-08-17 |
 | [Crosswalk](mappings/crosswalk.md) | Cross-framework control themes | 2026-08-17 |
 | [Standards Landscape](references/standards-landscape.md) | Current standards and guidance register | 2026-08-17 |
+| [Source Coverage Map](references/source-coverage-map.md) | Traceability from supplied source sections to curated library artifacts | 2026-08-17 |
 
 ## How to use the library
 
