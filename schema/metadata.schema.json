@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/minw0607/ai-governance-assurance/schema/metadata.schema.json",
+  "title": "AI Governance & Assurance Library artifact metadata",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "artifact_id",
+    "title",
+    "artifact_class",
+    "artifact_type",
+    "status",
+    "version",
+    "last_reviewed"
+  ],
+  "properties": {
+    "schema_version": { "const": "1.0" },
+    "artifact_id": { "type": "string", "pattern": "^[A-Z]+(?:-[A-Z0-9]+)+$" },
+    "title": { "type": "string", "minLength": 3 },
+    "artifact_class": {
+      "enum": ["governance", "assessment", "testing", "checklist", "template", "mapping", "reference"]
+    },
+    "artifact_type": { "type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$" },
+    "status": { "enum": ["draft", "active", "deprecated", "archived"] },
+    "version": { "type": "string", "pattern": "^\\d+\\.\\d+\\.\\d+$" },
+    "last_reviewed": { "type": "string", "format": "date" },
+    "domains": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+    "applies_to": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+    "industries": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+    "deployment_models": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+    "lifecycle_stages": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+    "source_artifacts": { "type": "array", "items": { "type": "string" }, "uniqueItems": true }
+  },
+  "additionalProperties": true
+}
