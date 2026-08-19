@@ -115,7 +115,8 @@ Additional methodologies cover functional correctness, hallucination and factual
 | [Ongoing Monitoring](checklists/ongoing-monitoring.md) | Recurring quality, security, risk, and vendor checks | 0.1.0 | Draft |
 | [Agentic AI Audit Readiness](checklists/agentic-ai-audit-readiness.md) | Scope, control, evidence, testing, resilience, and reporting readiness | 0.1.0 | Draft |
 | [Agentic AI Audit Workpaper](templates/agentic-ai-audit-workpaper-template.md) | Reusable control-design, testing, evidence, finding, and retest record | 0.1.0 | Draft |
-| [Templates Catalog](templates/README.md) | Risk, testing, findings, vendor, and monitoring templates | 0.1.0 | Draft |
+| [Illustrative Microsoft 365 Copilot Audit Assessment](templates/examples/m365-copilot-audit-assessment-report.md) | Synthetic application of the framework and report templates; not client work or sponsored/endorsed | 0.1.0 | Draft |
+| [Templates Catalog](templates/README.md) | Risk, testing, findings, vendor, monitoring, and illustrative report resources | 0.1.0 | Draft |
 
 ### Mappings & References
 
@@ -127,7 +128,7 @@ Additional methodologies cover functional correctness, hallucination and factual
 | [OWASP GenAI](mappings/owasp-genai.md) | OWASP Top 10 for LLM Applications 2026 mapping | 2026-08-17 |
 | [Crosswalk](mappings/crosswalk.md) | Cross-framework control themes | 2026-08-17 |
 | [Standards Landscape](references/standards-landscape.md) | Current standards and guidance register | 2026-08-18 |
-| [Source Coverage Map](references/source-coverage-map.md) | Traceability from supplied source sections to curated library artifacts | 2026-08-18 |
+| [Source Coverage Map](references/source-coverage-map.md) | Traceability from supplied source sections to curated library artifacts | 2026-08-19 |
 
 ## How to use the library
 

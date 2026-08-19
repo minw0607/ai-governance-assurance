@@ -6,6 +6,7 @@ All notable library-level changes are recorded here. Individual artifacts retain
 
 ### Added
 
+- A GitHub-native, wholly synthetic Microsoft 365 Copilot audit assessment report demonstrating application of the governance framework, data-security standard, agentic profile, control objectives, scenario library, and findings template; no source-document binary is published.
 - Agentic AI Governance and Assurance Profile covering the full agent-system boundary, autonomy, delegated authority, assurance, and evidence.
 - A2A, MCP, and Multi-Agent Control Standard covering identity, authorization, protocol/version governance, context, delegation, action/state integrity, and resilience.
 - Agentic AI scenario library, audit-readiness checklist, and audit workpaper template.
@@ -16,6 +17,7 @@ All notable library-level changes are recorded here. Individual artifacts retain
 
 ### Changed
 
+- Re-authored the Microsoft 365 Copilot sample as a native Markdown report with current product boundaries, capability-based agentic applicability, delegated authority, web and connector paths, audit evidence, public-release suitability, and explicit no-client-work/no-sponsorship disclosures.
 - Added a cross-library technology and capability overlay catalog to make agentic-AI applicability visible without changing the purpose-first taxonomy.
 - Expanded risk tiering, inventory, control objectives, use-case/vendor assessment, testing, glossary, mappings, and provenance for agentic systems.
 - Curated the supplied Agentic AI Auditing Framework while keeping client/interview details and internal source identifiers out of the public library.

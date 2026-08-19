@@ -12,13 +12,13 @@ applies_to:
 industries:
   - cross-industry
 status: draft
-version: "0.4.0"
-last_reviewed: 2026-08-18
+version: "0.5.0"
+last_reviewed: 2026-08-19
 ---
 
 # Source Register and Migration Decisions
 
-The library was curated from locally supplied source documents. The original binaries are intentionally not published in the repository; they remain local inputs for provenance and future review. Detailed section-level traceability is maintained in the [Source-to-Library Coverage Map](source-coverage-map.md).
+The library was curated from locally supplied source documents. Original binaries remain local inputs for provenance and future review and are not published in the repository. Public artifacts are independently curated and reformatted in repository-native Markdown. Detailed section-level traceability is maintained in the [Source-to-Library Coverage Map](source-coverage-map.md).
 
 | Source artifact | Primary use | Migration decision |
 |---|---|---|
@@ -31,6 +31,7 @@ The library was curated from locally supplied source documents. The original bin
 | SaaS Testing Automation UseCase Design.docx | SaaS automation and test design | Reused for modality and test-design principles; product UI details deferred |
 | Guide Automation Engineer.docx | Product-specific automation execution | Deferred from core library because selectors, interfaces, and authentication flows are implementation-specific and time-sensitive |
 | Agentic_AI_Auditing_Framework.docx | Agentic governance, audit modules, A2A/MCP controls, scenarios, evidence requests, and workpapers | Curated into an agentic governance and assurance profile, protocol control standard, scenario library, audit-readiness checklist, workpaper template, and targeted enhancements to tiering, inventory, controls, assessments, glossary, and catalogs; client/interview details and opaque internal source identifiers remain local |
+| Sample_M365_Copilot_Audit_Assessment_Report.docx | Product-oriented sample audit report and framework application | Source remains local and unpublished; concepts were independently reviewed, rewritten, reorganized, and published as a GitHub-native synthetic example aligned to the governance framework, data-security standard, agentic profile, control objectives, scenario library, and findings template; client, employer, interview, communication, personal-metadata, and internal-source references were excluded |
 
 ## Material updates during migration
 
@@ -58,3 +59,12 @@ The data-security source material had strong control intent, but several example
 - MCP is treated as a versioned protocol surface, not a complete security architecture. The deployed specification, SDK, extensions, authorization model, servers, tools, and schemas must be recorded and governed.
 - SOC and similar assurance reports are supporting third-party evidence, not proof that the deployed agent system's controls operate effectively.
 - Client names, interview context, internal emails/messages, and internal source IDs in the source document were not published in the library.
+
+## Microsoft 365 Copilot sample curation corrections
+
+- The report is explicitly identified as synthetic framework illustration, not actual client work, assurance, attestation, certification, legal advice, or evidence about a real organization or tenant.
+- References to clients, employers, interviews, internal communications, personal metadata, and opaque internal source IDs were removed before publication.
+- Core Microsoft 365 Copilot capabilities were distinguished from separately enabled web, external-agent, connector, and Copilot Studio paths; processing, contractual, identity, logging, and control boundaries must be assessed against the deployed configuration.
+- Agentic applicability is capability-based. Additional controls apply when tools, triggers, state, autonomy, delegated authority, workload identities, inter-agent communication, or external actions are present.
+- Product capability and documentation are not treated as evidence that a control is implemented or effective. Licensing, configuration, event coverage, evidence completeness, and operating effectiveness require validation.
+- Product-specific assertions and source references were checked against current official Microsoft documentation as of 2026-08-19 and must be revalidated when the example is tailored.

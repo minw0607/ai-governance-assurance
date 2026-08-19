@@ -11,3 +11,7 @@ Templates answer: **How should the decision, test, or evidence be documented?**
 - [Agentic AI Audit Workpaper](agentic-ai-audit-workpaper-template.md)
 
 Replace bracketed instructions and remove sections that are not applicable with a documented rationale.
+
+## Illustrative examples
+
+- [Microsoft 365 Copilot Audit Assessment Report](examples/m365-copilot-audit-assessment-report.md) — a synthetic example showing how the governance framework, control objectives, testing scenarios, and findings template can be combined in a product-oriented report. It is not client work and is not sponsored, endorsed, or approved by Microsoft or any other organization.

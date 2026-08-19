@@ -13,8 +13,8 @@ applies_to:
 industries:
   - cross-industry
 status: draft
-version: "0.3.0"
-last_reviewed: 2026-08-18
+version: "0.4.0"
+last_reviewed: 2026-08-19
 ---
 
 # Source-to-Library Coverage Map
@@ -139,6 +139,17 @@ This map records how the supplied source documents were curated into the library
 | A2A, MCP, and multi-agent controls | [A2A/MCP Standard](../governance/agentic-ai/a2a-mcp-multi-agent-control-standard.md); inventory; control objectives; checklist | Detailed; protocol/version, identity, delegation, context, token, schema, state, and evidence requirements added |
 | Audit reporting, findings, evidence request, and reusable scenarios | [Audit Workpaper Template](../templates/agentic-ai-audit-workpaper-template.md); [Audit Readiness Checklist](../checklists/agentic-ai-audit-readiness.md); [Scenario Library](../testing/agentic-ai/scenario-library.md) | Detailed |
 | Client/interview narrative and internal source basis | None in public library | Deferred; remains local because it contains client/project context, internal communications, and opaque source identifiers |
+
+## Sample_M365_Copilot_Audit_Assessment_Report.docx
+
+| Source section | Curated destinations | Status and decision |
+|---|---|---|
+| Purpose, scope, architecture, governance, lifecycle, and accountability | [Illustrative report example](../templates/examples/m365-copilot-audit-assessment-report.md); [AI Governance Framework](../governance/ai-governance-framework.md) | Detailed; recast as an explicitly synthetic application of the library rather than evidence about a real organization |
+| Microsoft 365 Copilot data, access, privacy, security, platform, and monitoring coverage | Illustrative report; [AI Data Security & Governance](../governance/data-security-governance/README.md); [Control Objectives](../governance/control-framework/control-objectives.md) | Detailed; product features treated as licensing- and configuration-dependent, with implementation and operating-effectiveness evidence required |
+| Copilot Studio, connectors, tools, identities, triggers, actions, and autonomy | Illustrative report; [Agentic AI Profile](../governance/agentic-ai/governance-and-assurance-profile.md); [Agentic Scenario Library](../testing/agentic-ai/scenario-library.md) | Detailed; agentic applicability made capability-based and extended to delegated authority, workload identity, web/external boundaries, autonomous action, failure, and evidence reconstruction |
+| Testing, findings, remediation, evidence requests, and maturity views | Illustrative report; [Findings Template](../templates/findings-report-template.md); testing and checklist artifacts | Detailed; results and responses are explicitly invented, limitations are stated, and tailoring requirements are included |
+| Client, employer, interview, communication, personal metadata, and internal source references | None in public example | Excluded; the source binary remains local and the public Markdown source basis is limited to library artifacts and current official Microsoft documentation |
+| Sponsorship, endorsement, affiliation, and assurance implications | Illustrative report disclosure and catalog page | Corrected; the example states that it is not client work and was not commissioned, sponsored, endorsed, reviewed, or approved by Microsoft or any other organization |
 
 ## Remaining enhancement opportunities
 
