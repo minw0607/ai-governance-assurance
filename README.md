@@ -6,6 +6,8 @@ The library is organized by **artifact purpose**, then topic, then document. Reg
 
 > **Release status:** Expanded curated draft (`0.2.0`). The material is implementation guidance, not legal advice, and must be tailored to an organization's risks, obligations, and operating environment.
 
+> **Project:** Independent personal research project
+
 ## Repository taxonomy
 
 The primary taxonomy is **artifact purpose → topic → document**. This keeps a policy, assessment, testing method, checklist, and template about the same topic distinct while allowing them to share metadata and regulatory mappings.
@@ -146,6 +148,18 @@ Each substantive artifact carries YAML front matter with a stable identifier, co
 ## Contributing
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for editorial standards, review requirements, and the definition of a material change.
+
+<a id="disclaimer"></a>
+
+## 🧾 Disclaimer
+
+This repository is an independent personal project created outside of my employment using my own time and equipment.
+
+Unless explicitly stated otherwise, the code, notebooks, demonstrations, analyses, and documentation in this repository are developed independently, using only publicly available research papers, technical documentation, regulations, and other public sources. They do not rely on, incorporate, or disclose any confidential, proprietary, non-public, or client information obtained through my employment or professional engagements.
+
+The views, designs, implementations, and conclusions expressed in this repository are solely my own and do not represent the views of any employer, client, or affiliated organization.
+
+This repository is provided for research and educational purposes only.
 
 ## License
 
