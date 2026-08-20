@@ -1,12 +1,24 @@
-# AI Governance & Assurance Library
+<div align="center">
 
-A practical, versioned collection of frameworks, procedures, checklists, templates, and reference material for governing and evaluating generative AI and agentic AI systems.
+# 📚 AI Governance & Assurance Library
 
-The library is organized by **artifact purpose**, then topic, then document. Regulations and standards are mapped across the library rather than used as the primary folder structure.
+**A practical, versioned collection of frameworks, procedures, checklists, templates, and reference material for governing and evaluating generative AI and agentic AI systems.**
+
+[![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](LICENSE)
+[![Release: 0.2.0](https://img.shields.io/badge/Release-0.2.0%20curated%20draft-blue.svg)](CHANGELOG.md)
+[![Artifacts: 53](https://img.shields.io/badge/Artifacts-53%20documents-1baf7a.svg)](#library)
+[![Frameworks](https://img.shields.io/badge/mapped-EU%20AI%20Act%20·%20NIST%20AI%20RMF%20·%20OWASP%20GenAI%20·%20SR%2026--2-378add.svg)](mappings/crosswalk.md)
+[![Project: Independent & Personal](https://img.shields.io/badge/Project-Independent%20%26%20Personal-lightgrey)](#disclaimer)
+
+*Governance · assessments · testing & assurance · checklists · templates — organized by artifact purpose, then topic, then document, with regulations mapped across the library rather than used as the folder structure.*
+
+</div>
+
+> **Status:** Independent personal research project
+
+---
 
 > **Release status:** Expanded curated draft (`0.2.0`). The material is implementation guidance, not legal advice, and must be tailored to an organization's risks, obligations, and operating environment.
-
-> **Project:** Independent personal research project
 
 ## Repository taxonomy
 
