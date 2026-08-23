@@ -16,5 +16,9 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Validate metadata and links
+      - name: Install validation dependencies
+        run: pip install pyyaml jsonschema
+      - name: Check control coverage matrix is current
+        run: python3 scripts/build-coverage-matrix.py --check
+      - name: Validate metadata, links, and catalog consistency
         run: python3 scripts/validate-library.py

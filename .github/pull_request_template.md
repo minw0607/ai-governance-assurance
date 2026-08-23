@@ -15,7 +15,10 @@ Describe the purpose of this change and the affected artifact classes.
 - [ ] Regulatory or standards statements use current primary sources.
 - [ ] Scope, assumptions, and limitations are explicit.
 - [ ] No confidential information or unapproved source material is included.
-- [ ] `python3 scripts/validate-library.py` passes locally.
+- [ ] Control objective identifiers referenced are defined and current.
+- [ ] `python3 scripts/build-coverage-matrix.py` run if control references changed.
+- [ ] No source filename, organization, engagement, or personal reference is included.
+- [ ] `pip install pyyaml jsonschema && python3 scripts/validate-library.py` passes locally.
 
 ## Change classification
 
