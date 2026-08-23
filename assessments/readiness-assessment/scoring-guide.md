@@ -18,7 +18,7 @@ status: draft
 version: "0.1.0"
 last_reviewed: 2026-08-17
 source_artifacts:
-  - GenAI MRM Survey with Heatmap v2.xlsx
+  - SRC-MRM-01
 ---
 
 # AI Governance Readiness Scoring Guide
@@ -59,3 +59,9 @@ Adjust weights before assessment based on organizational context. Calculate cate
 | Below 0.40 | High risk; foundational governance is not ready for material deployment |
 
 Scores do not replace review of critical gaps. A single missing control may be decisive when it relates to prohibited use, sensitive data, consequential action, or legal obligation.
+
+## Related artifacts
+
+- [Readiness Assessment Checklist](checklist.md)
+- [Control Objectives](../../governance/control-framework/control-objectives.md)
+- [Risk Tiering Framework](../../governance/risk-tiering/ai-risk-tiering-framework.md)

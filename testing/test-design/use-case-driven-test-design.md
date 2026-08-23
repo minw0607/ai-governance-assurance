@@ -21,8 +21,8 @@ status: draft
 version: "0.1.0"
 last_reviewed: 2026-08-17
 source_artifacts:
-  - GenAI Testing Comprehensive Guide v2.docx
-  - SaaS Testing Automation UseCase Design.docx
+  - SRC-TEST-02
+  - SRC-SAAS-01
 ---
 
 # Use-Case-Driven AI Test Design
@@ -78,3 +78,10 @@ AI may accelerate case generation, but humans must verify ground truth, severity
 ## Evaluation design
 
 Prefer deterministic checks when possible. Use domain-expert review for consequential judgments. Calibrate rubrics with examples and inter-rater checks. If an LLM assists evaluation, retain its version and prompt, compare against a human-reviewed calibration set, and route ambiguous or severe cases to people.
+
+## Related artifacts
+
+- [Enterprise GenAI Testing Framework](../testing-framework/enterprise-genai-testing.md)
+- [Testing catalog and scenario libraries](../README.md)
+- [Test Plan Template](../../templates/test-plan-template.md)
+- [Test Case Template](../../templates/test-case-template.md)

@@ -21,10 +21,12 @@ status: draft
 version: "0.1.0"
 last_reviewed: 2026-08-17
 source_artifacts:
-  - GenAI Testing Procedures v2.docx
+  - SRC-TEST-01
 ---
 
 # Safety and Policy Alignment Testing Guide
+
+> **Scenarios:** executable cases with acceptance criteria are in the [scenario library](scenario-library.md) (`SAS-01` onward). Control objective identifiers resolve in the [Enterprise AI Control Objectives](../../governance/control-framework/control-objectives.md).
 
 ## Objective
 

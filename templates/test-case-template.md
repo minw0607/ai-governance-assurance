@@ -25,6 +25,8 @@ last_reviewed: 2026-08-17
 
 - Test ID / version:
 - Category / risk:
+- Control objective(s) evidenced: [e.g. `QUAL-03`, `AGT-02` — see [control objectives](../governance/control-framework/control-objectives.md)]
+- Scenario ID (if drawn from a scenario library):
 - Test format: ground-truth / behavioral / comparative / workflow
 - Preconditions and identity:
 - Model/provider and configuration:

@@ -31,7 +31,7 @@ status: draft
 version: "0.1.0"
 last_reviewed: 2026-08-18
 source_artifacts:
-  - Agentic_AI_Auditing_Framework.docx
+  - SRC-AGT-01
 ---
 
 # A2A, MCP, and Multi-Agent Control Standard
@@ -163,3 +163,11 @@ For HTTP authorization, apply the current specification's resource and issuer va
 - [Model Context Protocol 2026-07-28 release](https://blog.modelcontextprotocol.io/posts/2026-07-28/)
 - [Model Context Protocol specification](https://modelcontextprotocol.io/specification/)
 - [OWASP Agentic Security Initiative](https://genai.owasp.org/initiatives/agentic-security-initiative/)
+
+## Related artifacts
+
+- [Agentic AI Governance and Assurance Profile](governance-and-assurance-profile.md)
+- [Control Objectives (AGT series)](../control-framework/control-objectives.md)
+- [Agentic AI Scenario Library](../../testing/agentic-ai/scenario-library.md)
+- [OWASP Agentic Top 10 Mapping](../../mappings/owasp-agentic.md)
+- [Agentic AI Checklist](../../checklists/agentic-ai.md)

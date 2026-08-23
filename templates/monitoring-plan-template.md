@@ -33,8 +33,10 @@ last_reviewed: 2026-08-17
 
 ## Measures and actions
 
-| Risk/control objective | Metric or review | Segment | Source | Cadence | Threshold | Response | Owner |
-|---|---|---|---|---|---|---|---|
+| Risk | Control objective | Metric or review | Segment | Source | Cadence | Threshold | Response | Owner |
+|---|---|---|---|---|---|---|---|---|
+
+Use the identifiers from the [control objectives](../governance/control-framework/control-objectives.md) (for example `OPS-01`, `QUAL-03`, `AGT-03`) so monitoring coverage can be reconciled against the control framework.
 
 Include fitness for purpose, severe errors, factuality, retrieval, safety, fairness, privacy, security, identity, tool actions, reliability, cost, user feedback, provider changes, and documentation completeness as applicable.
 

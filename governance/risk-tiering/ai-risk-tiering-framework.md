@@ -22,9 +22,9 @@ status: draft
 version: "0.2.0"
 last_reviewed: 2026-08-18
 source_artifacts:
-  - Agentic_AI_Auditing_Framework.docx
-  - GenAI Vendor Assessment Framework.docx
-  - GenAI Policies - Example.docx
+  - SRC-AGT-01
+  - SRC-VEND-01
+  - SRC-POL-01
 ---
 
 # AI Risk Tiering Framework
@@ -103,3 +103,10 @@ For an agentic use case, record separately:
 ## Decision record
 
 Record the tier, dimension-level rationale, assumptions, unresolved questions, required controls, approval authority, date, and reassessment triggers. The tier must be reconsidered when use, users, data, autonomy, model/provider, scale, or external obligations change.
+
+## Related artifacts
+
+- [Use-Case Assessment](../../assessments/use-case-assessment/checklist.md)
+- [AI Lifecycle Stage Gates](../lifecycle/stage-gates.md)
+- [Control Coverage Matrix](../control-framework/control-coverage-matrix.md)
+- [Risk Assessment Template](../../templates/risk-assessment-template.md)

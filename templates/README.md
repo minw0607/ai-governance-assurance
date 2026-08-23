@@ -1,3 +1,21 @@
+---
+schema_version: "1.0"
+artifact_id: TMPL-CAT-000
+title: Templates Catalog
+artifact_class: template
+artifact_type: catalog
+domains:
+  - evidence
+  - recordkeeping
+applies_to:
+  - generative-ai
+  - agentic-ai
+industries:
+  - cross-industry
+status: draft
+version: "0.1.0"
+last_reviewed: 2026-08-23
+---
 # Templates
 
 Templates answer: **How should the decision, test, or evidence be documented?**

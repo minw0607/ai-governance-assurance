@@ -21,12 +21,20 @@ status: draft
 version: "0.1.0"
 last_reviewed: 2026-08-18
 source_artifacts:
-  - Agentic_AI_Auditing_Framework.docx
+  - SRC-AGT-01
 ---
 
 # Agentic AI Audit Readiness Checklist
 
+## How to use this checklist
+
+**Lifecycle gate:** G6 (assurance over an operating agentic system) — see [AI Lifecycle Stage Gates](../governance/lifecycle/stage-gates.md).
+
+Each section lists the [control objectives](../governance/control-framework/control-objectives.md) its items are intended to evidence. A checked box is not evidence; record the artifact, owner, date, and result against the named objective using the [test-case](../templates/test-case-template.md) and [findings](../templates/findings-report-template.md) templates.
+
 ## Scope and criteria
+
+**Control objectives:** GOV-01, GOV-02
 
 - [ ] Audit objective, period, population, risk tier, autonomy level, locations, and control criteria are approved.
 - [ ] The unit of analysis is the full agent system, not only the model or vendor service.
@@ -35,12 +43,16 @@ source_artifacts:
 
 ## Architecture and inventory
 
+**Control objectives:** GOV-05, AGT-01, SEC-04
+
 - [ ] Production architecture and data/control-flow diagrams identify models, prompts, orchestration, data, retrieval, memory, tools, agents, protocols, identities, providers, logs, and downstream systems.
 - [ ] Inventory records reconcile to deployed endpoints, service identities, gateways, tool/server catalogs, repositories, and provider accounts.
 - [ ] Versions and baselines cover model, prompt/policy, retrieval, memory, tool/schema, agent graph, MCP/SDK, permissions, and monitoring.
 - [ ] Unsupported, unowned, unknown, duplicate, shadow, or retired components have been resolved.
 
 ## Governance and accountability
+
+**Control objectives:** GOV-03, GOV-04, GOV-06, HUM-03
 
 - [ ] Business, technical, data, security, privacy, vendor, validation, operations, and audit responsibilities are assigned.
 - [ ] Approval authority matches tier and autonomy; developers and agents cannot self-approve reserved matters.
@@ -49,6 +61,8 @@ source_artifacts:
 
 ## Identity, tools, and action authority
 
+**Control objectives:** AGT-01, AGT-02, AGT-06, SEC-02
+
 - [ ] Human and workload identities, delegated authority, scopes, audiences, expiry, rotation, and revocation are documented.
 - [ ] Each tool/server/action has an owner, purpose, version, integrity source, operations, data access, destinations, and risk classification.
 - [ ] High-impact actions use deterministic authorization and exact-action approval where required.
@@ -56,12 +70,16 @@ source_artifacts:
 
 ## Data, retrieval, memory, and privacy
 
+**Control objectives:** DATA-01, DATA-02, DATA-04, AGT-04, QUAL-04
+
 - [ ] Data classification, source authorization, lineage, minimization, residency, retention, deletion, and provider use are documented.
 - [ ] Retrieval, memory, logs, and agent-to-agent context are isolated by the required user, tenant, role, case, environment, and region boundaries.
 - [ ] Memory writes are provenance-aware, reviewable, correctable, expirable, and deletable.
 - [ ] Sensitive content and credentials are excluded or minimized in prompts, context, tool arguments, memory, and traces.
 
 ## Testing and control effectiveness
+
+**Control objectives:** QUAL-02, QUAL-06, SEC-01, AGT-05
 
 - [ ] Requirements and failure modes trace to scenarios, metrics, acceptance criteria, and findings.
 - [ ] Testing covers intended behavior, goal drift, permission boundaries, adversarial context, tool misuse, memory poisoning, delegation, loops, partial failure, and intervention.
@@ -71,12 +89,16 @@ source_artifacts:
 
 ## Observability and evidence
 
+**Control objectives:** AGT-03, SEC-05
+
 - [ ] Correlation links initiating identity, purpose, agent/model/configuration, retrieval/memory, authorization, approval, tool call, state change, and final outcome.
 - [ ] Sampled runs can be reconstructed without relying on hidden chain-of-thought or agent self-report.
 - [ ] Evidence is access-controlled, integrity-protected, retained appropriately, and minimized for privacy/security.
 - [ ] Trace gaps, clock/correlation errors, disabled logging, and evidence export failure have been tested.
 
 ## Monitoring, resilience, and incidents
+
+**Control objectives:** OPS-01, OPS-02, SEC-06, AGT-07
 
 - [ ] Monitoring covers behavior, quality, permissions, tools/servers, data, drift, cost, loops, failures, overrides, and trace completeness.
 - [ ] Thresholds, alerts, owners, response times, escalation, and recurring review are documented and evidenced.
@@ -86,12 +108,16 @@ source_artifacts:
 
 ## Third parties and protocol dependencies
 
+**Control objectives:** TPRM-01, TPRM-02, TPRM-03, AGT-06, SEC-04
+
 - [ ] Provider due diligence and contracts address AI behavior, data use, security, changes, incidents, evidence, deletion, continuity, and exit.
 - [ ] Assurance reports have been assessed for scope, period, exceptions, and complementary customer controls; they are not the sole control conclusion.
 - [ ] MCP/A2A/protocol and SDK versions, enabled extensions, authentication model, deprecations, and migration obligations are current.
 - [ ] External servers, tools, packages, agent cards/catalogs, and schemas are approved, monitored, and removable.
 
 ## Reporting and remediation
+
+**Control objectives:** GOV-06, OPS-03
 
 - [ ] Workpapers identify criteria, procedure, population/sample, evidence, result, limitation, conclusion, reviewer, and date.
 - [ ] Findings distinguish root cause, condition, criteria, effect, risk, affected population, compensating controls, and reproducibility.

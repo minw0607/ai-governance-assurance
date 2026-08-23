@@ -41,8 +41,8 @@ last_reviewed: 2026-08-17
 
 ## Impact analysis
 
-| Dimension | Inherent risk | Key controls | Residual risk | Evidence |
-|---|---|---|---|---|
+| Dimension | Inherent risk | Control objective(s) | Key controls | Residual risk | Evidence |
+|---|---|---|---|---|---|
 | Decision and human impact | | | | |
 | Data and privacy | | | | |
 | Security and abuse | | | | |
@@ -64,3 +64,9 @@ last_reviewed: 2026-08-17
 ## Decision
 
 [Approve, approve with conditions, pilot only, defer, or reject. Record rationale, conditions, expiration, and approval authority.]
+
+## Related artifacts
+
+- [Risk Tiering Framework](../governance/risk-tiering/ai-risk-tiering-framework.md)
+- [Use-Case Assessment](../assessments/use-case-assessment/checklist.md)
+- [Control Coverage Matrix](../governance/control-framework/control-coverage-matrix.md)
