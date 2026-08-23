@@ -36,11 +36,11 @@ status: draft
 version: "0.1.0"
 last_reviewed: 2026-08-18
 source_artifacts:
-  - GenAI Policies - Example.docx
-  - GenAI Audit Checklist v3.xlsx
-  - GenAI MRM Survey with Heatmap v2.xlsx
-  - GenAI Vendor Assessment Framework.docx
-  - GenAI Testing Procedures v2.docx
+  - SRC-POL-01
+  - SRC-AUD-01
+  - SRC-MRM-01
+  - SRC-VEND-01
+  - SRC-TEST-01
 ---
 
 # AI Data Security & Governance Framework

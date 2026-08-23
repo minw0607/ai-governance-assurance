@@ -27,9 +27,9 @@ status: draft
 version: "0.1.0"
 last_reviewed: 2026-08-18
 source_artifacts:
-  - Agentic_AI_Auditing_Framework.docx
-  - GenAI Audit Checklist v3.xlsx
-  - GenAI Testing Procedures v2.docx
+  - SRC-AGT-01
+  - SRC-AUD-01
+  - SRC-TEST-01
 ---
 
 # Agentic AI Governance and Assurance Profile

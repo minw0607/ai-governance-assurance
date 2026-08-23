@@ -21,7 +21,7 @@ last_reviewed: 2026-08-19
 
 ## Purpose
 
-This map records how the supplied source documents were curated into the library. “Migrated” means the underlying concept is represented, not that the source text was copied verbatim. Stale legal conclusions, fixed numerical thresholds, product UI instructions, and unsupported claims are not carried forward without review.
+This map records how each unpublished source draft (referenced by opaque label; see the [Source Register](source-register.md)) was curated into the library. “Migrated” means the underlying concept is represented, not that source text was copied verbatim. Stale legal conclusions, fixed numerical thresholds, product UI instructions, and unsupported claims are not carried forward without review. Organization-specific, engagement-specific, and personally identifying content is excluded rather than generalized.
 
 ## Coverage status
 
@@ -30,7 +30,7 @@ This map records how the supplied source documents were curated into the library
 - **Deferred:** intentionally excluded from the core library because the material is implementation-specific, volatile, duplicative, or needs separate review.
 - **Superseded:** replaced by current authoritative information or corrected scope.
 
-## GenAI Policies - Example.docx
+## SRC-POL-01 — GenAI policy suite
 
 | Source section | Curated destinations | Status and decision |
 |---|---|---|
@@ -49,7 +49,7 @@ This map records how the supplied source documents were curated into the library
 | AI inventory and agentic-AI appendix | [AI Inventory Standard](../governance/ai-inventory/minimum-data-standard.md); [Agentic AI Testing](../testing/agentic-ai/testing-guide.md); control objectives | Detailed |
 | Credit-underwriting case study | Risk tiering, human oversight, fairness, evidence, and lifecycle controls | Baseline; source assertions tied to superseded guidance were not retained as current requirements |
 
-## GenAI Audit Checklist v3.xlsx
+## SRC-AUD-01 — GenAI audit checklist
 
 | Workbook area | Curated destinations | Status and decision |
 |---|---|---|
@@ -61,7 +61,7 @@ This map records how the supplied source documents were curated into the library
 | Walkthrough prompts | Examination readiness and control-objective assurance procedures | Detailed; walkthrough topics generalized into reusable procedures |
 | Low/medium/high issue interpretation | Readiness and vendor scoring guides; findings template | Baseline; ratings remain indicative rather than universal |
 
-## GenAI MRM Survey with Heatmap v2.xlsx
+## SRC-MRM-01 — Model-risk readiness survey
 
 | Workbook area | Curated destinations | Status and decision |
 |---|---|---|
@@ -71,7 +71,7 @@ This map records how the supplied source documents were curated into the library
 | Response scoring and category weights | [Readiness Scoring Guide](../assessments/readiness-assessment/scoring-guide.md) | Detailed; presented as a configurable starting point |
 | SR 11-7 / MRM theme labels | [SR 26-2 Mapping](../mappings/sr-26-2.md) | Superseded; no claim that the current guidance directly applies to GenAI or agentic AI |
 
-## GenAI Vendor Assessment Framework.docx
+## SRC-VEND-01 — Vendor assessment framework
 
 | Source section | Curated destinations | Status and decision |
 |---|---|---|
@@ -83,7 +83,7 @@ This map records how the supplied source documents were curated into the library
 | SaaS versus API considerations | Vendor framework and testing modality guidance | Baseline |
 | SR 11-7 appendix | SR 26-2 mapping | Superseded |
 
-## GenAI Testing Procedures v2.docx
+## SRC-TEST-01 — GenAI testing procedures
 
 | Source section | Curated destinations | Status and decision |
 |---|---|---|
@@ -99,7 +99,7 @@ This map records how the supplied source documents were curated into the library
 | Regression and change detection | Regression testing guide | Detailed |
 | Product-specific quick references | Testing tools reference | Deferred where product configuration or UI is volatile |
 
-## GenAI Testing Comprehensive Guide v2.docx
+## SRC-TEST-02 — GenAI testing comprehensive guide
 
 | Source section | Curated destinations | Status and decision |
 |---|---|---|
@@ -109,7 +109,7 @@ This map records how the supplied source documents were curated into the library
 | Six-step methodology and prioritization | Use-case-driven test design; test plan template | Detailed |
 | Product-specific automation | Testing tools reference | Deferred where login, selectors, rate limits, or interface behavior is volatile |
 
-## SaaS Testing Automation UseCase Design.docx
+## SRC-SAAS-01 — SaaS testing automation use-case design
 
 | Source section | Curated destinations | Status and decision |
 |---|---|---|
@@ -119,7 +119,7 @@ This map records how the supplied source documents were curated into the library
 | End-to-end workflow | Test plan and test case templates | Detailed |
 | Specific product automation code | Testing tools reference | Deferred from core methods |
 
-## Guide Automation Engineer.docx
+## SRC-AUTO-01 — Automation engineering guide
 
 | Source section | Curated destinations | Status and decision |
 |---|---|---|
@@ -127,7 +127,7 @@ This map records how the supplied source documents were curated into the library
 | Browser automation, authentication state, selectors, waiting, screenshots, rate limits | None in core governance library | Deferred; suitable for a separate implementation playbook maintained against a specific product/version |
 | Troubleshooting and file-output conventions | Testing tools reference | Baseline |
 
-## Agentic_AI_Auditing_Framework.docx
+## SRC-AGT-01 — Agentic AI auditing framework
 
 | Source section | Curated destinations | Status and decision |
 |---|---|---|
@@ -138,9 +138,9 @@ This map records how the supplied source documents were curated into the library
 | Third-party and platform risk | Vendor questionnaire; third-party policy; agentic profile | Detailed; SOC reports treated as supporting evidence only |
 | A2A, MCP, and multi-agent controls | [A2A/MCP Standard](../governance/agentic-ai/a2a-mcp-multi-agent-control-standard.md); inventory; control objectives; checklist | Detailed; protocol/version, identity, delegation, context, token, schema, state, and evidence requirements added |
 | Audit reporting, findings, evidence request, and reusable scenarios | [Audit Workpaper Template](../templates/agentic-ai-audit-workpaper-template.md); [Audit Readiness Checklist](../checklists/agentic-ai-audit-readiness.md); [Scenario Library](../testing/agentic-ai/scenario-library.md) | Detailed |
-| Client/interview narrative and internal source basis | None in public library | Deferred; remains local because it contains client/project context, internal communications, and opaque source identifiers |
+| Organization-specific narrative and source identifiers | None in public library | Excluded; organization-specific context and source identifiers are not published in any form |
 
-## Sample_M365_Copilot_Audit_Assessment_Report.docx
+## SRC-M365-01 — Microsoft 365 Copilot sample assessment
 
 | Source section | Curated destinations | Status and decision |
 |---|---|---|
@@ -148,7 +148,7 @@ This map records how the supplied source documents were curated into the library
 | Microsoft 365 Copilot data, access, privacy, security, platform, and monitoring coverage | Illustrative report; [AI Data Security & Governance](../governance/data-security-governance/README.md); [Control Objectives](../governance/control-framework/control-objectives.md) | Detailed; product features treated as licensing- and configuration-dependent, with implementation and operating-effectiveness evidence required |
 | Copilot Studio, connectors, tools, identities, triggers, actions, and autonomy | Illustrative report; [Agentic AI Profile](../governance/agentic-ai/governance-and-assurance-profile.md); [Agentic Scenario Library](../testing/agentic-ai/scenario-library.md) | Detailed; agentic applicability made capability-based and extended to delegated authority, workload identity, web/external boundaries, autonomous action, failure, and evidence reconstruction |
 | Testing, findings, remediation, evidence requests, and maturity views | Illustrative report; [Findings Template](../templates/findings-report-template.md); testing and checklist artifacts | Detailed; results and responses are explicitly invented, limitations are stated, and tailoring requirements are included |
-| Client, employer, interview, communication, personal metadata, and internal source references | None in public example | Excluded; the source binary remains local and the public Markdown source basis is limited to library artifacts and current official Microsoft documentation |
+| Organization-specific context and personal metadata | None in public example | Excluded; the published example is built solely from library artifacts and current official Microsoft documentation |
 | Sponsorship, endorsement, affiliation, and assurance implications | Illustrative report disclosure and catalog page | Corrected; the example states that it is not client work and was not commissioned, sponsored, endorsed, reviewed, or approved by Microsoft or any other organization |
 
 ## Remaining enhancement opportunities

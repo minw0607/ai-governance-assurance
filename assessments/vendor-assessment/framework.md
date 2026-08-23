@@ -29,7 +29,7 @@ status: draft
 version: "0.1.0"
 last_reviewed: 2026-08-17
 source_artifacts:
-  - GenAI Vendor Assessment Framework.docx
+  - SRC-VEND-01
 ---
 
 # GenAI and Agentic AI Vendor Assessment Framework

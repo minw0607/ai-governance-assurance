@@ -26,9 +26,9 @@ status: draft
 version: "0.1.0"
 last_reviewed: 2026-08-17
 source_artifacts:
-  - GenAI Policies - Example.docx
-  - GenAI Audit Checklist v3.xlsx
-  - GenAI Vendor Assessment Framework.docx
+  - SRC-POL-01
+  - SRC-AUD-01
+  - SRC-VEND-01
 ---
 
 # AI Lifecycle Stage Gates

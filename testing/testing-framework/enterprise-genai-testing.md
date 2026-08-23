@@ -27,8 +27,8 @@ status: draft
 version: "0.1.0"
 last_reviewed: 2026-08-17
 source_artifacts:
-  - GenAI Testing Procedures v2.docx
-  - GenAI Testing Comprehensive Guide v2.docx
+  - SRC-TEST-01
+  - SRC-TEST-02
 ---
 
 # Enterprise GenAI Testing Framework

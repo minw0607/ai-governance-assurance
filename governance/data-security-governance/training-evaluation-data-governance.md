@@ -29,10 +29,10 @@ status: draft
 version: "0.1.0"
 last_reviewed: 2026-08-18
 source_artifacts:
-  - GenAI Policies - Example.docx
-  - GenAI MRM Survey with Heatmap v2.xlsx
-  - GenAI Testing Procedures v2.docx
-  - GenAI Vendor Assessment Framework.docx
+  - SRC-POL-01
+  - SRC-MRM-01
+  - SRC-TEST-01
+  - SRC-VEND-01
 ---
 
 # Training and Evaluation Data Governance Standard

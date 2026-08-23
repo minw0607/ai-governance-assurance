@@ -21,9 +21,9 @@ status: draft
 version: "0.2.0"
 last_reviewed: 2026-08-18
 source_artifacts:
-  - Agentic_AI_Auditing_Framework.docx
-  - GenAI Policies - Example.docx
-  - GenAI_Audit_Checklist_v3.xlsx
+  - SRC-AGT-01
+  - SRC-POL-01
+  - SRC-AUD-01
 ---
 
 # AI Use-Case Assessment Checklist

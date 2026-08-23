@@ -23,8 +23,8 @@ status: draft
 version: "0.1.0"
 last_reviewed: 2026-08-17
 source_artifacts:
-  - GenAI Policies - Example.docx
-  - GenAI Vendor Assessment Framework.docx
+  - SRC-POL-01
+  - SRC-VEND-01
 ---
 
 # Third-Party AI Risk Management Policy
