@@ -62,3 +62,13 @@ last_reviewed: 2026-08-18
 ## Maintenance rule
 
 Review this register at least quarterly and after major legal, standards, or supervisory announcements. Record effective dates and distinguish proposals, guidance, voluntary standards, and binding obligations.
+
+## Related artifacts
+
+- [Crosswalk](../mappings/crosswalk.md)
+- [NIST AI RMF Mapping](../mappings/nist-ai-rmf.md)
+- [ISO/IEC 42001 Mapping](../mappings/iso-iec-42001.md)
+- [EU AI Act Mapping](../mappings/eu-ai-act.md)
+- [SR 26-2 Mapping](../mappings/sr-26-2.md)
+- [OWASP LLM Mapping](../mappings/owasp-genai.md)
+- [OWASP Agentic Mapping](../mappings/owasp-agentic.md)
