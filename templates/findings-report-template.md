@@ -33,14 +33,17 @@ last_reviewed: 2026-08-17
 
 ## Results summary
 
-| Dimension | Coverage | Result | Material observations |
-|---|---:|---|---|
+| Dimension | Control objective(s) | Coverage | Result | Material observations |
+|---|---|---:|---|---|
+
+Name the [control objectives](../governance/control-framework/control-objectives.md) each dimension was tested against so the reader can trace scope to the control framework.
 
 ## Findings
 
 ### [Finding ID and title]
 
 - Severity:
+- Control objective(s) not achieved:
 - Affected component/use case:
 - Condition and demonstrated impact:
 - Expected control or criterion:

@@ -1,3 +1,22 @@
+---
+schema_version: "1.0"
+artifact_id: GOV-POL-000
+title: GenAI Policy Suite Catalog
+artifact_class: governance
+artifact_type: catalog
+domains:
+  - policy
+  - ai-governance
+applies_to:
+  - generative-ai
+  - llm
+  - agentic-ai
+industries:
+  - cross-industry
+status: draft
+version: "0.1.0"
+last_reviewed: 2026-08-23
+---
 # Policy Suite
 
 These modular examples are designed to be adopted into an organization's policy hierarchy rather than issued unchanged.

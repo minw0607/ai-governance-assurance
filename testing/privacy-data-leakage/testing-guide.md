@@ -22,10 +22,12 @@ status: draft
 version: "0.2.0"
 last_reviewed: 2026-08-18
 source_artifacts:
-  - GenAI Testing Procedures v2.docx
+  - SRC-TEST-01
 ---
 
 # Privacy and Data Leakage Testing Guide
+
+> **Scenarios:** executable cases with acceptance criteria are in the [scenario library](scenario-library.md) (`PRS-01` onward). Control objective identifiers resolve in the [Enterprise AI Control Objectives](../../governance/control-framework/control-objectives.md).
 
 Use this guide to test controls designed under the [AI Data Security & Governance Framework](../../governance/data-security-governance/framework.md) and, for retrieval and agentic systems, the [RAG, Vector, and Agent Data Security Standard](../../governance/data-security-governance/rag-vector-agent-data-security.md).
 

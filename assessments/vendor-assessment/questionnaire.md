@@ -26,8 +26,8 @@ status: draft
 version: "0.2.0"
 last_reviewed: 2026-08-18
 source_artifacts:
-  - Agentic_AI_Auditing_Framework.docx
-  - GenAI Vendor Assessment Framework.docx
+  - SRC-AGT-01
+  - SRC-VEND-01
 ---
 
 # AI Vendor Assessment Questionnaire
@@ -109,3 +109,10 @@ For each response, record the vendor answer, evidence reference, assessor conclu
 47. Who owns customer prompts, outputs, fine-tuning artifacts, evaluations, and derived configurations?
 48. How does the provider support transparency, recordkeeping, impact assessment, accessibility, and contestability obligations?
 49. Identify all requested controls the provider cannot meet and proposed alternatives.
+
+## Related artifacts
+
+- [Vendor Assessment Framework](framework.md)
+- [Scoring Guide](scoring-guide.md)
+- [Third-Party Risk Policy](../../governance/policies/third-party-risk.md)
+- [Vendor Response Template](../../templates/vendor-questionnaire-template.md)

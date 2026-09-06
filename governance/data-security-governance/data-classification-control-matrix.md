@@ -26,9 +26,9 @@ status: draft
 version: "0.1.0"
 last_reviewed: 2026-08-18
 source_artifacts:
-  - GenAI Policies - Example.docx
-  - GenAI Audit Checklist v3.xlsx
-  - GenAI MRM Survey with Heatmap v2.xlsx
+  - SRC-POL-01
+  - SRC-AUD-01
+  - SRC-MRM-01
 ---
 
 # Data Classification and AI Use Control Matrix
@@ -168,3 +168,11 @@ Each conditional decision should record:
 - “No training” must cover the relevant data categories and service features and be supported by both terms and configuration.
 - Pseudonymization, masking, tokenization, and embeddings do not automatically remove privacy, confidentiality, or rights obligations.
 - Data-subject deletion is conditional on applicable law and exceptions; the technical workflow should nevertheless support correction, suppression, deletion, and evidence across derived stores.
+
+## Related artifacts
+
+- [Data Security & Governance Framework](framework.md)
+- [Data Lifecycle Standard](data-lifecycle-standard.md)
+- [RAG, Vector, and Agent Data Security](rag-vector-agent-data-security.md)
+- [Data Handling Policy](../policies/data-handling.md)
+- [Privacy and Data Leakage Scenarios](../../testing/privacy-data-leakage/scenario-library.md)

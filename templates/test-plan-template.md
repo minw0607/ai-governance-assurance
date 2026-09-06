@@ -40,8 +40,8 @@ last_reviewed: 2026-08-17
 
 ## Risks and coverage
 
-| Risk/failure mode | Test dimension | Case groups | Severity | Acceptance criterion |
-|---|---|---|---|---|
+| Risk/failure mode | Control objective(s) | Test dimension | Case groups | Severity | Acceptance criterion |
+|---|---|---|---|---|---|
 
 ## Test data and ground truth
 
@@ -58,3 +58,10 @@ last_reviewed: 2026-08-17
 ## Deliverables
 
 [List raw logs, results, findings, dashboard, approval, and regression cases.]
+
+## Related artifacts
+
+- [Enterprise GenAI Testing Framework](../testing/testing-framework/enterprise-genai-testing.md)
+- [Use-Case-Driven Test Design](../testing/test-design/use-case-driven-test-design.md)
+- [Testing catalog and scenario libraries](../testing/README.md)
+- [Test Case Template](test-case-template.md)

@@ -22,7 +22,7 @@ Substantive Markdown artifacts begin with YAML front matter. The metadata suppor
 - `industries`: sector-specific applicability; use `cross-industry` when general.
 - `deployment_models`: `api`, `managed-api`, `saas`, `on-premises`, or `hybrid`.
 - `lifecycle_stages`: `intake`, `design`, `development`, `validation`, `deployment`, `operation`, or `retirement`.
-- `source_artifacts`: provenance labels for migrated internal source material.
+- `source_artifacts`: opaque provenance labels (`SRC-*`) for unpublished source drafts. Never record a filename, path, organization, or engagement here; the label-to-file mapping stays local. See the [source register](../references/source-register.md).
 
 ## Controlled artifact classes
 

@@ -5,9 +5,9 @@
 **A practical, versioned collection of frameworks, procedures, checklists, templates, and reference material for governing and evaluating generative AI and agentic AI systems.**
 
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](LICENSE)
-[![Release: 0.2.0](https://img.shields.io/badge/Release-0.2.0%20curated%20draft-blue.svg)](CHANGELOG.md)
-[![Artifacts: 53](https://img.shields.io/badge/Artifacts-53%20documents-1baf7a.svg)](#library)
-[![Frameworks](https://img.shields.io/badge/mapped-EU%20AI%20Act%20·%20NIST%20AI%20RMF%20·%20OWASP%20GenAI%20·%20SR%2026--2-378add.svg)](mappings/crosswalk.md)
+[![Release: 0.3.0](https://img.shields.io/badge/Release-0.3.0%20curated%20draft-blue.svg)](CHANGELOG.md)
+[![Artifacts: 77](https://img.shields.io/badge/Artifacts-77%20documents-1baf7a.svg)](#library)
+[![Frameworks](https://img.shields.io/badge/mapped-EU%20AI%20Act%20·%20NIST%20AI%20RMF%20·%20ISO%2042001%20·%20OWASP%20LLM%20%2B%20Agentic%20·%20SR%2026--2-378add.svg)](mappings/crosswalk.md)
 [![Project: Independent & Personal](https://img.shields.io/badge/Project-Independent%20%26%20Personal-lightgrey)](#disclaimer)
 
 *Governance · assessments · testing & assurance · checklists · templates — organized by artifact purpose, then topic, then document, with regulations mapped across the library rather than used as the folder structure.*
@@ -18,7 +18,26 @@
 
 ---
 
-> **Release status:** Expanded curated draft (`0.2.0`). The material is implementation guidance, not legal advice, and must be tailored to an organization's risks, obligations, and operating environment.
+> **Release status:** Expanded curated draft (`0.3.0`). The material is implementation guidance, not legal advice, and must be tailored to an organization's risks, obligations, and operating environment.
+
+## Start here
+
+Route by the question you actually have. The taxonomy below explains how the library is organized; this table is for finding the artifact.
+
+| Your question | Go to |
+|---|---|
+| **Are we ready for AI?** — what people usually mean by *AI readiness* | [Readiness model](assessments/README.md): the three senses of the term and the two levels at which it is assessed |
+| Is our organization ready to **govern** AI? | [Governance Readiness Assessment](assessments/readiness-assessment/checklist.md) + [scoring guide](assessments/readiness-assessment/scoring-guide.md) |
+| Is **this specific use case** permitted, and at what depth of review? | [Use-Case Assessment](assessments/use-case-assessment/checklist.md) — the intake instrument for [gate G1](governance/lifecycle/stage-gates.md) |
+| Can we **prove** our controls operated, to an examiner or customer? | [Examination Readiness](checklists/examination-readiness.md) |
+| What controls should exist at all? | [Control Objectives](governance/control-framework/control-objectives.md) and the [coverage matrix](governance/control-framework/control-coverage-matrix.md) |
+| How do we test it? | [Testing catalog](testing/README.md) — method guide plus scenario library per dimension |
+| Which regulations and standards apply? | [Crosswalk](mappings/crosswalk.md) |
+| Is this vendor acceptable? | [Vendor Assessment Framework](assessments/vendor-assessment/framework.md) |
+| Can we ship it? | [Production Readiness](checklists/production-readiness.md) |
+| It is an **agent** — what changes? | [Agentic AI Governance and Assurance](governance/agentic-ai/README.md) |
+
+> **A note on the word "readiness."** It appears in this library with three distinct meanings, and they are not interchangeable. **Governance readiness** is scored organizational maturity ([assessment](assessments/readiness-assessment/checklist.md)). **Assurance readiness** is whether control operation can be evidenced to a third party ([examination](checklists/examination-readiness.md), [agentic audit](checklists/agentic-ai-audit-readiness.md)). **Release readiness** is a binary ship/no-ship gate for one system ([pre-deployment](checklists/pre-deployment.md), [production](checklists/production-readiness.md)). **Adoption readiness** — data platform, talent, commercial case — is deliberately [out of scope](assessments/README.md). See the [readiness model](assessments/README.md) for how the first three relate.
 
 ## Repository taxonomy
 
@@ -95,6 +114,7 @@ Overlays identify additional requirements that span artifact classes. They do no
 | [AI Data Security & Governance](governance/data-security-governance/README.md) | Integrated data lifecycle, classification, RAG/vector/agent security, and training/evaluation data standards | 0.1.0 | Draft |
 | [Agentic AI Governance and Assurance](governance/agentic-ai/README.md) | Agentic system governance, autonomy, delegated authority, A2A/MCP, and auditability | 0.1.0 | Draft |
 | [Enterprise AI Control Objectives](governance/control-framework/control-objectives.md) | Testable governance, data, security, quality, vendor, agentic, and operations objectives | 0.3.0 | Draft |
+| [Control Coverage Matrix](governance/control-framework/control-coverage-matrix.md) | Reverse index: every control objective to the checklists, scenarios, templates, and mappings that evidence it | 0.1.0 | Draft |
 | [GenAI Policy Suite](governance/policies/README.md) | Modular acceptable-use, data, model-risk, vendor, prompt, and change policies | 0.1.0 | Draft |
 | [AI Risk Tiering Framework](governance/risk-tiering/ai-risk-tiering-framework.md) | Risk classification and minimum assurance requirements | 0.2.0 | Draft |
 
@@ -103,9 +123,10 @@ Overlays identify additional requirements that span artifact classes. They do no
 | Resource | Description | Version | Status |
 |---|---|---:|---|
 | [Vendor Assessment Framework](assessments/vendor-assessment/framework.md) | Risk-based assessment for AI and foundation-model vendors | 0.1.0 | Draft |
-| [Vendor Questionnaire](assessments/vendor-assessment/questionnaire.md) | Evidence-oriented due-diligence questions | 0.1.0 | Draft |
-| [Use-Case Assessment](assessments/use-case-assessment/checklist.md) | Intake and inherent-risk assessment | 0.2.0 | Draft |
-| [Governance Readiness Assessment](assessments/readiness-assessment/checklist.md) | Governance, model-risk, privacy, and agentic-AI readiness | 0.1.0 | Draft |
+| [Vendor Questionnaire](assessments/vendor-assessment/questionnaire.md) | Evidence-oriented due-diligence questions | 0.2.0 | Draft |
+| [Use-Case Assessment](assessments/use-case-assessment/checklist.md) | Use-case-level intake and inherent-risk assessment; the instrument for stage gate G1 | 0.2.0 | Draft |
+| [Assessments Catalog and Readiness Model](assessments/README.md) | The three senses of "AI readiness", the two levels at which it is assessed, and which artifact serves each | 0.1.0 | Draft |
+| [Governance Readiness Assessment](assessments/readiness-assessment/checklist.md) | Enterprise-level scored governance, model-risk, privacy, and agentic-AI maturity | 0.1.0 | Draft |
 
 ### Testing & Assurance
 
@@ -118,7 +139,7 @@ Overlays identify additional requirements that span artifact classes. They do no
 | [Agentic AI Scenario Library](testing/agentic-ai/scenario-library.md) | Reusable intended, adversarial, failure, recovery, and audit-evidence scenarios | 0.1.0 | Draft |
 | [Regression Testing](testing/regression-testing/testing-guide.md) | Change detection for provider and application updates | 0.1.0 | Draft |
 
-Additional methodologies cover functional correctness, hallucination and factuality, safety, bias and fairness, privacy, and workflow integration in the [testing catalog](testing/README.md).
+Every test dimension pairs a **method guide** with a **scenario library** carrying stable scenario IDs, acceptance criteria, and control-objective references. Functional correctness, hallucination and factuality, safety, bias and fairness, privacy, and workflow integration are catalogued in the [testing catalog](testing/README.md).
 
 ### Checklists & Templates
 
@@ -129,7 +150,7 @@ Additional methodologies cover functional correctness, hallucination and factual
 | [Ongoing Monitoring](checklists/ongoing-monitoring.md) | Recurring quality, security, risk, and vendor checks | 0.1.0 | Draft |
 | [Agentic AI Audit Readiness](checklists/agentic-ai-audit-readiness.md) | Scope, control, evidence, testing, resilience, and reporting readiness | 0.1.0 | Draft |
 | [Agentic AI Audit Workpaper](templates/agentic-ai-audit-workpaper-template.md) | Reusable control-design, testing, evidence, finding, and retest record | 0.1.0 | Draft |
-| [Illustrative Microsoft 365 Copilot Audit Assessment](templates/examples/m365-copilot-audit-assessment-report.md) | Synthetic application of the framework and report templates; not client work or sponsored/endorsed | 0.1.0 | Draft |
+| [Illustrative Microsoft 365 Copilot Audit Assessment](templates/examples/m365-copilot-audit-assessment-report.md) | Synthetic application of the framework and report templates; not client work or sponsored/endorsed | 0.2.0 | Draft |
 | [Templates Catalog](templates/README.md) | Risk, testing, findings, vendor, monitoring, and illustrative report resources | 0.1.0 | Draft |
 
 ### Mappings & References
@@ -139,19 +160,34 @@ Additional methodologies cover functional correctness, hallucination and factual
 | [NIST AI RMF](mappings/nist-ai-rmf.md) | AI RMF 1.0 and Generative AI Profile mapping | 2026-08-17 |
 | [SR 26-2](mappings/sr-26-2.md) | Current U.S. interagency model-risk guidance and GenAI scope note | 2026-08-17 |
 | [EU AI Act](mappings/eu-ai-act.md) | Risk-based obligations and current application timeline | 2026-08-17 |
-| [OWASP GenAI](mappings/owasp-genai.md) | OWASP Top 10 for LLM Applications 2026 mapping | 2026-08-17 |
-| [Crosswalk](mappings/crosswalk.md) | Cross-framework control themes | 2026-08-17 |
+| [OWASP GenAI](mappings/owasp-genai.md) | OWASP Top 10 for LLM Applications 2026 mapping | 2026-08-18 |
+| [OWASP Agentic](mappings/owasp-agentic.md) | OWASP Top 10 for Agentic Applications (`ASI01`–`ASI10`) mapping | 2026-08-23 |
+| [ISO/IEC 42001](mappings/iso-iec-42001.md) | AI management system clauses and Annex A control groups | 2026-08-23 |
+| [Crosswalk](mappings/crosswalk.md) | Cross-framework control themes, keyed to library control objectives | 2026-08-23 |
 | [Standards Landscape](references/standards-landscape.md) | Current standards and guidance register | 2026-08-18 |
-| [Source Coverage Map](references/source-coverage-map.md) | Traceability from supplied source sections to curated library artifacts | 2026-08-19 |
+| [Source Coverage Map](references/source-coverage-map.md) | Traceability from source drafts to curated library artifacts | 2026-08-23 |
 
 ## How to use the library
 
+0. Establish **enterprise readiness** with the [governance readiness assessment](assessments/readiness-assessment/checklist.md). The resulting band sets a ceiling on the risk tier the organization can responsibly approve, so it belongs before the first use case, not after. See [what "AI readiness" means here](assessments/README.md) for the three senses of the term and the two levels at which it is assessed.
 1. Classify the proposed AI use case using the [risk-tiering framework](governance/risk-tiering/ai-risk-tiering-framework.md).
-2. Complete the [use-case](assessments/use-case-assessment/checklist.md) and, when applicable, [vendor assessment](assessments/vendor-assessment/framework.md).
+2. Complete the [use-case assessment](assessments/use-case-assessment/checklist.md) — the intake instrument for stage gate G1 — and, when applicable, the [vendor assessment](assessments/vendor-assessment/framework.md).
 3. Select testing methods based on risks, deployment modality, and lifecycle stage.
 4. Use the checklists as release and monitoring gates.
 5. Record decisions and evidence using the templates.
 6. Use mappings to identify relevant obligations; confirm legal applicability independently.
+
+## Traceability
+
+The [control objectives](governance/control-framework/control-objectives.md) are the spine of the library. Every objective carries a stable identifier (`GOV-01`, `DATA-04`, `AGT-06`, …), and the rest of the library references those identifiers rather than restating the control:
+
+- **Checklists** name the objectives each section is intended to evidence, and the lifecycle gate they belong to.
+- **Scenario libraries** name the objective each scenario tests.
+- **Templates** carry a control-objective field so a result, finding, or monitoring measure is recorded against the objective it speaks to.
+- **Mappings** carry a control-objective column, so an external requirement resolves to testable internal content.
+- The [control coverage matrix](governance/control-framework/control-coverage-matrix.md) is the generated reverse index and lists any objective with no coverage.
+
+`scripts/validate-library.py` fails the build if an artifact references a control identifier that is not defined, or if the coverage matrix is out of date.
 
 ## Versioning and metadata
 
@@ -167,7 +203,9 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for editorial standards, review requireme
 
 This repository is an independent personal project created outside of my employment using my own time and equipment.
 
-Unless explicitly stated otherwise, the code, notebooks, demonstrations, analyses, and documentation in this repository are developed independently, using only publicly available research papers, technical documentation, regulations, and other public sources. They do not rely on, incorporate, or disclose any confidential, proprietary, non-public, or client information obtained through my employment or professional engagements.
+Unless explicitly stated otherwise, the code, notebooks, demonstrations, analyses, and documentation in this repository are written independently, on my own time and equipment. All published content is independently authored; regulatory, standards, and product statements are verified against the publicly available primary sources cited in each artifact.
+
+This repository does not reproduce or disclose any confidential, proprietary, non-public, client, or employer information. Where an unpublished working draft informed the structure of an artifact, it is referenced only by opaque label in the [source register](references/source-register.md), and organization-specific, engagement-specific, and personally identifying content is excluded rather than generalized.
 
 The views, designs, implementations, and conclusions expressed in this repository are solely my own and do not represent the views of any employer, client, or affiliated organization.
 

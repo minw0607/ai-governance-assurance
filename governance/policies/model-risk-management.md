@@ -24,8 +24,8 @@ status: draft
 version: "0.1.0"
 last_reviewed: 2026-08-17
 source_artifacts:
-  - GenAI Policies - Example.docx
-  - GenAI_MRM_Survey_with_Heatmap_v2.xlsx
+  - SRC-POL-01
+  - SRC-MRM-01
 ---
 
 # AI Model and System Risk Management Policy

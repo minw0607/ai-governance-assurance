@@ -22,9 +22,9 @@ status: draft
 version: "0.2.0"
 last_reviewed: 2026-08-18
 source_artifacts:
-  - Agentic_AI_Auditing_Framework.docx
-  - GenAI Vendor Assessment Framework.docx
-  - GenAI Policies - Example.docx
+  - SRC-AGT-01
+  - SRC-VEND-01
+  - SRC-POL-01
 ---
 
 # AI Risk Tiering Framework
@@ -100,6 +100,17 @@ For an agentic use case, record separately:
 | Change-triggered reassessment | Required | Required | Material changes | Scope changes |
 | Approval authority | Executive/risk committee | Senior accountable owner plus risk | Business and technical owners | Designated owner |
 
+## Enterprise readiness ceiling
+
+The tier an organization *assigns* is a property of the use case. The tier it may *approve* is additionally bounded by its own governance maturity: see [readiness and approval authority](../../assessments/readiness-assessment/scoring-guide.md#readiness-and-approval-authority). Where the two conflict, the assigned tier stands and the approval is escalated, scope-reduced, or deferred — never re-tiered downward to fit the available authority (`GOV-02`, `GOV-06`).
+
 ## Decision record
 
 Record the tier, dimension-level rationale, assumptions, unresolved questions, required controls, approval authority, date, and reassessment triggers. The tier must be reconsidered when use, users, data, autonomy, model/provider, scale, or external obligations change.
+
+## Related artifacts
+
+- [Use-Case Assessment](../../assessments/use-case-assessment/checklist.md)
+- [AI Lifecycle Stage Gates](../lifecycle/stage-gates.md)
+- [Control Coverage Matrix](../control-framework/control-coverage-matrix.md)
+- [Risk Assessment Template](../../templates/risk-assessment-template.md)

@@ -21,7 +21,7 @@ status: draft
 version: "0.1.0"
 last_reviewed: 2026-08-17
 source_artifacts:
-  - GenAI MRM Survey with Heatmap v2.xlsx
+  - SRC-MRM-01
 ---
 
 # AI Governance Readiness Assessment
@@ -44,7 +44,7 @@ Rate each scored item using the [scoring guide](scoring-guide.md) and retain evi
 ## C. Risk classification
 
 - [ ] A common risk taxonomy and tiering method includes data, impact, autonomy, exposure, reversibility, and external obligations.
-- [ ] Tier decisions are linked to minimum approval, testing, and monitoring requirements.
+- [ ] Tier decisions are linked to minimum approval, testing, and monitoring requirements — see [minimum assurance by tier](../../governance/risk-tiering/ai-risk-tiering-framework.md#minimum-assurance-by-tier) and the [readiness ceiling](scoring-guide.md#readiness-and-approval-authority) that band applies to them.
 
 ## D. Data, privacy, and intellectual property
 

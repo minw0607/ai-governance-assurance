@@ -80,3 +80,9 @@ last_reviewed: 2026-08-18
 **TEVV:** Test, evaluation, verification, and validation activities used to assess system requirements, performance, and risk.
 
 **Tool:** An external capability an AI system can invoke, such as search, code execution, database access, messaging, file operations, or transactions.
+
+## Related artifacts
+
+- [Standards Landscape](standards-landscape.md)
+- [Control Objectives](../governance/control-framework/control-objectives.md)
+- [Agentic AI Governance and Assurance Profile](../governance/agentic-ai/governance-and-assurance-profile.md)

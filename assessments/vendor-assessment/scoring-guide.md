@@ -20,7 +20,7 @@ status: draft
 version: "0.1.0"
 last_reviewed: 2026-08-17
 source_artifacts:
-  - GenAI Vendor Assessment Framework.docx
+  - SRC-VEND-01
 ---
 
 # AI Vendor Assessment Scoring Guide
@@ -63,3 +63,9 @@ Calculate the weighted average only after blockers and evidence confidence are r
 | Below 2.00 | Unacceptable absent fundamental remediation |
 
 The decision owner may be more conservative based on tier, blockers, low evidence confidence, or concentration risk.
+
+## Related artifacts
+
+- [Vendor Assessment Framework](framework.md)
+- [Vendor Questionnaire](questionnaire.md)
+- [Risk Tiering Framework](../../governance/risk-tiering/ai-risk-tiering-framework.md)

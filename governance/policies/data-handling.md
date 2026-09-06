@@ -24,7 +24,7 @@ status: draft
 version: "0.2.0"
 last_reviewed: 2026-08-18
 source_artifacts:
-  - GenAI Policies - Example.docx
+  - SRC-POL-01
 ---
 
 # AI Data Handling and Privacy Policy

@@ -1,3 +1,22 @@
+---
+schema_version: "1.0"
+artifact_id: GOV-DATA-000
+title: AI Data Security & Governance Catalog
+artifact_class: governance
+artifact_type: catalog
+domains:
+  - data-security
+  - data-governance
+applies_to:
+  - generative-ai
+  - rag
+  - agentic-ai
+industries:
+  - cross-industry
+status: draft
+version: "0.1.0"
+last_reviewed: 2026-08-23
+---
 # AI Data Security & Governance
 
 This collection translates the [AI Data Handling and Privacy Policy](../policies/data-handling.md) into an operating framework and implementation standards. It covers data used or created during acquisition, prompting, retrieval, training, evaluation, logging, monitoring, and retirement.

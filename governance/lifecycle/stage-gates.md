@@ -26,9 +26,9 @@ status: draft
 version: "0.1.0"
 last_reviewed: 2026-08-17
 source_artifacts:
-  - GenAI Policies - Example.docx
-  - GenAI Audit Checklist v3.xlsx
-  - GenAI Vendor Assessment Framework.docx
+  - SRC-POL-01
+  - SRC-AUD-01
+  - SRC-VEND-01
 ---
 
 # AI Lifecycle Stage Gates
@@ -73,6 +73,8 @@ This procedure defines the decisions and evidence required to move an AI system 
 ## G1 — Intake and classify
 
 **Decision:** Is the use permitted, and what risk tier and review path apply?
+
+**Instrument:** [Use-Case Assessment Checklist](../../assessments/use-case-assessment/checklist.md). **Tier definitions:** [AI Risk Tiering Framework](../risk-tiering/ai-risk-tiering-framework.md). **Approval ceiling:** the tier approvable here is bounded by the current [enterprise readiness band](../../assessments/readiness-assessment/scoring-guide.md#readiness-and-approval-authority).
 
 ### Required activities
 

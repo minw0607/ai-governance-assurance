@@ -22,7 +22,7 @@ status: draft
 version: "0.1.0"
 last_reviewed: 2026-08-17
 source_artifacts:
-  - GenAI Testing Procedures v2.docx
+  - SRC-TEST-01
 ---
 
 # AI Testing Tools Reference
@@ -52,3 +52,9 @@ Tools accelerate execution and evidence collection; they do not establish fitnes
 - whether automation is permitted by the provider and organizational policy.
 
 Record tool and plugin versions with test evidence. Revalidate tool-generated metrics after material upgrades.
+
+## Related artifacts
+
+- [Enterprise GenAI Testing Framework](../testing/testing-framework/enterprise-genai-testing.md)
+- [Use-Case-Driven Test Design](../testing/test-design/use-case-driven-test-design.md)
+- [Testing catalog and scenario libraries](../testing/README.md)

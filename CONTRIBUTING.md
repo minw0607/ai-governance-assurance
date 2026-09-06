@@ -18,6 +18,25 @@ Every substantive artifact must use the fields defined in [schema/metadata.md](s
 
 Allowed status values are `draft`, `active`, `deprecated`, and `archived`.
 
+## Control traceability
+
+Artifacts reference the [control objectives](governance/control-framework/control-objectives.md) by identifier rather than restating them:
+
+- checklist sections name the objectives their items evidence, and the lifecycle gate they serve;
+- scenario entries name the objective they test;
+- templates carry a control-objective field; and
+- mappings carry a control-objective column.
+
+A referenced identifier that is not defined fails validation. After changing control references, regenerate the coverage matrix:
+
+```
+python3 scripts/build-coverage-matrix.py
+```
+
+## Source provenance
+
+Never record a source filename, path, organization, engagement, or person in the repository. Unpublished source material is referenced only by opaque `SRC-*` label in `source_artifacts`, and the label-to-file mapping stays local. Organization-specific, engagement-specific, and personally identifying content is excluded rather than generalized.
+
 ## Versioning
 
 Use semantic versions for artifacts:

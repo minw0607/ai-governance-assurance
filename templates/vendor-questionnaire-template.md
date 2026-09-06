@@ -47,3 +47,10 @@ last_reviewed: 2026-08-17
 ## Decision
 
 [Approve, conditional, pilot only, defer, or reject; document rationale and reassessment triggers.]
+
+## Related artifacts
+
+- [Vendor Assessment Framework](../assessments/vendor-assessment/framework.md)
+- [Vendor Questionnaire](../assessments/vendor-assessment/questionnaire.md)
+- [Vendor Scoring Guide](../assessments/vendor-assessment/scoring-guide.md)
+- [Third-Party Risk Policy](../governance/policies/third-party-risk.md)

@@ -24,9 +24,9 @@ status: draft
 version: "0.1.0"
 last_reviewed: 2026-08-17
 source_artifacts:
-  - GenAI Policies - Example.docx
-  - GenAI Audit Checklist v3.xlsx
-  - GenAI MRM Survey with Heatmap v2.xlsx
+  - SRC-POL-01
+  - SRC-AUD-01
+  - SRC-MRM-01
 ---
 
 # AI Governance Roles and Decision Rights
@@ -201,3 +201,10 @@ Escalate outside normal cadence when:
 - Exceptions nearing expiry or renewed more than once.
 - Meeting cadence, quorum, and decision-condition closure.
 - Systems suspended or restricted because approval conditions failed.
+
+## Related artifacts
+
+- [AI Governance Framework](../ai-governance-framework.md)
+- [AI Lifecycle Stage Gates](../lifecycle/stage-gates.md)
+- [Control Objectives (GOV series)](../control-framework/control-objectives.md)
+- [GenAI Policy Suite](../policies/README.md)

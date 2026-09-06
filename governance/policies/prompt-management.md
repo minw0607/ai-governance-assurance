@@ -23,7 +23,7 @@ status: draft
 version: "0.1.0"
 last_reviewed: 2026-08-17
 source_artifacts:
-  - GenAI Policies - Example.docx
+  - SRC-POL-01
 ---
 
 # Prompt and Instruction Management Policy
@@ -45,3 +45,10 @@ System prompts, templates, tool descriptions, memory instructions, retrieval ins
 - Monitor for prompt leakage, injection, anomalous overrides, and unexpected output drift.
 
 Prompt controls reduce risk but are not a substitute for least privilege, deterministic authorization, output validation, transaction controls, or human approval.
+
+## Related artifacts
+
+- [Change Management Policy](change-management.md)
+- [Control Objectives](../control-framework/control-objectives.md)
+- [Regression Testing Scenarios](../../testing/regression-testing/scenario-library.md)
+- [Security Red Teaming Scenarios](../../testing/security-red-teaming/scenario-library.md)

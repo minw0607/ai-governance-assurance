@@ -1,3 +1,21 @@
+---
+schema_version: "1.0"
+artifact_id: GOV-AGT-000
+title: Agentic AI Governance and Assurance Catalog
+artifact_class: governance
+artifact_type: catalog
+domains:
+  - agentic-ai
+  - ai-governance
+applies_to:
+  - agentic-ai
+  - generative-ai
+industries:
+  - cross-industry
+status: draft
+version: "0.1.0"
+last_reviewed: 2026-08-23
+---
 # Agentic AI Governance
 
 Agentic AI is a capability overlay across the library, not a separate artifact class. These governance artifacts define the additional requirements that apply when an AI-enabled system can plan, use tools, maintain state, delegate work, communicate, or change an external environment.

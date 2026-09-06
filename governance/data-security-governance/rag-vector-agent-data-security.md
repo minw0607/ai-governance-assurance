@@ -27,10 +27,10 @@ status: draft
 version: "0.1.0"
 last_reviewed: 2026-08-18
 source_artifacts:
-  - GenAI Policies - Example.docx
-  - GenAI Audit Checklist v3.xlsx
-  - GenAI Testing Procedures v2.docx
-  - GenAI Vendor Assessment Framework.docx
+  - SRC-POL-01
+  - SRC-AUD-01
+  - SRC-TEST-01
+  - SRC-VEND-01
 ---
 
 # RAG, Vector, and Agent Data Security Standard
@@ -232,3 +232,11 @@ Use synthetic canaries and multiple test identities. The source procedure's samp
 - logging schema, monitoring thresholds, alerts, and incident playbook;
 - provider terms/configuration and subprocessor evidence; and
 - open findings, exceptions, owners, dates, and residual-risk approval.
+
+## Related artifacts
+
+- [Data Security & Governance Framework](framework.md)
+- [Data Classification Control Matrix](data-classification-control-matrix.md)
+- [Control Objectives (DATA and QUAL series)](../control-framework/control-objectives.md)
+- [Privacy and Data Leakage Scenarios](../../testing/privacy-data-leakage/scenario-library.md)
+- [Agentic AI Scenario Library](../../testing/agentic-ai/scenario-library.md)

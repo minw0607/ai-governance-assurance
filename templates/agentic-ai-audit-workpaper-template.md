@@ -20,7 +20,7 @@ status: draft
 version: "0.1.0"
 last_reviewed: 2026-08-18
 source_artifacts:
-  - Agentic_AI_Auditing_Framework.docx
+  - SRC-AGT-01
 ---
 
 # Agentic AI Audit Workpaper Template
@@ -46,7 +46,9 @@ Remove bracketed instructions before finalization. Link evidence rather than emb
 
 **Risk addressed:** [Describe credible harm, affected parties, maximum reachable impact, detectability, reversibility, and exposure.]
 
-**Criteria:** [Policy, standard, control objective, approval condition, contract, architecture requirement, or authoritative external requirement.]
+**Library control objective(s):** [Name the identifiers from the [control objectives](../governance/control-framework/control-objectives.md) this procedure tests, e.g. `AGT-02`, `AGT-06`, `SEC-02`.]
+
+**Other criteria:** [Policy, standard, approval condition, contract, architecture requirement, or authoritative external requirement.]
 
 **Expected control outcome:** [State the observable prevention, detection, containment, correction, or governance outcome.]
 
@@ -103,7 +105,8 @@ For each step, identify who performed it, when, against which configuration, and
 
 | Field | Entry |
 |---|---|
-| Scenario ID / failure mode | [Use the scenario library or local ID] |
+| Scenario ID / failure mode | [Use the [scenario library](../testing/agentic-ai/scenario-library.md) or local ID] |
+| Control objective(s) exercised | [e.g. `AGT-02`, `AGT-03`] |
 | Preconditions and baseline | [Identity, versions, data, tools, state] |
 | Input or injected event | [Reference; minimize sensitive content] |
 | Expected agent behavior | [Plan/stop/escalate/abstain] |
