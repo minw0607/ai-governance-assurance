@@ -20,6 +20,25 @@
 
 > **Release status:** Expanded curated draft (`0.3.0`). The material is implementation guidance, not legal advice, and must be tailored to an organization's risks, obligations, and operating environment.
 
+## Start here
+
+Route by the question you actually have. The taxonomy below explains how the library is organized; this table is for finding the artifact.
+
+| Your question | Go to |
+|---|---|
+| **Are we ready for AI?** — what people usually mean by *AI readiness* | [Readiness model](assessments/README.md): the three senses of the term and the two levels at which it is assessed |
+| Is our organization ready to **govern** AI? | [Governance Readiness Assessment](assessments/readiness-assessment/checklist.md) + [scoring guide](assessments/readiness-assessment/scoring-guide.md) |
+| Is **this specific use case** permitted, and at what depth of review? | [Use-Case Assessment](assessments/use-case-assessment/checklist.md) — the intake instrument for [gate G1](governance/lifecycle/stage-gates.md) |
+| Can we **prove** our controls operated, to an examiner or customer? | [Examination Readiness](checklists/examination-readiness.md) |
+| What controls should exist at all? | [Control Objectives](governance/control-framework/control-objectives.md) and the [coverage matrix](governance/control-framework/control-coverage-matrix.md) |
+| How do we test it? | [Testing catalog](testing/README.md) — method guide plus scenario library per dimension |
+| Which regulations and standards apply? | [Crosswalk](mappings/crosswalk.md) |
+| Is this vendor acceptable? | [Vendor Assessment Framework](assessments/vendor-assessment/framework.md) |
+| Can we ship it? | [Production Readiness](checklists/production-readiness.md) |
+| It is an **agent** — what changes? | [Agentic AI Governance and Assurance](governance/agentic-ai/README.md) |
+
+> **A note on the word "readiness."** It appears in this library with three distinct meanings, and they are not interchangeable. **Governance readiness** is scored organizational maturity ([assessment](assessments/readiness-assessment/checklist.md)). **Assurance readiness** is whether control operation can be evidenced to a third party ([examination](checklists/examination-readiness.md), [agentic audit](checklists/agentic-ai-audit-readiness.md)). **Release readiness** is a binary ship/no-ship gate for one system ([pre-deployment](checklists/pre-deployment.md), [production](checklists/production-readiness.md)). **Adoption readiness** — data platform, talent, commercial case — is deliberately [out of scope](assessments/README.md). See the [readiness model](assessments/README.md) for how the first three relate.
+
 ## Repository taxonomy
 
 The primary taxonomy is **artifact purpose → topic → document**. This keeps a policy, assessment, testing method, checklist, and template about the same topic distinct while allowing them to share metadata and regulatory mappings.
