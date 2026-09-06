@@ -4,21 +4,13 @@ All notable library-level changes are recorded here. Individual artifacts retain
 
 ## [Unreleased]
 
+## [0.3.0] - 2026-08-23
+
 ### Added
 
 - Root README "Start here" section routing by question rather than by folder, with an explicit note disambiguating the four meanings the word "readiness" carries in and around this library (governance, assurance, release, adoption).
 - Readiness model in the assessments catalog: the three senses of "AI readiness" (adoption, governance, assurance), which artifact serves each, and adoption readiness declared explicitly out of scope.
 - Readiness-to-approval coupling in the readiness scoring guide: enterprise readiness band sets a ceiling on the risk tier approvable at gate G1, with category scores governing over the weighted total, and the mapping labelled a configurable starting point rather than a standard.
-
-### Changed
-
-- The use-case assessment is now identified as the intake instrument for stage gate G1, with reciprocal links from G1, the acceptable-use policy, and the risk-tiering framework, so intake is specified once rather than described in four places.
-- Root README "how to use the library" now starts at enterprise readiness rather than assuming it.
-
-## [0.3.0] - 2026-08-23
-
-### Added
-
 - Control coverage matrix: a generated reverse index from every control objective to the checklists, scenarios, templates, and mappings that evidence it, with an explicit coverage-gap list.
 - Scenario libraries for functional correctness, factuality, security red teaming, safety and alignment, bias and fairness, privacy and data leakage, integration and workflow, and regression testing — each with stable scenario identifiers, acceptance criteria, and control-objective references.
 - OWASP Top 10 for Agentic Applications (`ASI01`–`ASI10`) mapping, paired with the existing LLM Top 10 mapping as the actor layer to its model layer.
@@ -29,6 +21,8 @@ All notable library-level changes are recorded here. Individual artifacts retain
 
 ### Changed
 
+- The use-case assessment is now identified as the intake instrument for stage gate G1, with reciprocal links from G1, the acceptable-use policy, and the risk-tiering framework, so intake is specified once rather than described in four places.
+- Root README "how to use the library" now starts at enterprise readiness rather than assuming it.
 - Control objective identifiers are now referenced throughout the library: checklist sections, scenario entries, template fields, and every framework mapping. Checklists also name the lifecycle stage gate they serve.
 - Crosswalk rebuilt around library control objectives and extended with an ISO/IEC 42001 column.
 - NIST AI RMF mapping extended from four functions to category level.

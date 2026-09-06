@@ -74,7 +74,7 @@ The third row is the most common surprise. Governance readiness measures whether
 
 ### Example 2 — the ceiling, and why the category score governs
 
-An organization assesses at **0.62 overall** — band `0.60–0.79`, so Tier 2 is approvable under normal authority. Category scores are uneven:
+An organization assesses at **0.62 overall**. Per the [interpretation and approval authority table](readiness-assessment/scoring-guide.md#readiness-and-approval-authority), that band makes Tier 2 approvable under normal authority. Category scores are uneven:
 
 | Category | Score |
 |---|---:|
@@ -86,7 +86,7 @@ An organization assesses at **0.62 overall** — band `0.60–0.79`, so Tier 2 i
 
 A proposed customer-facing assistant answers questions over regulated customer records. It classifies as **Tier 2**.
 
-Reading the overall score alone, this is approvable. But the category that dominates this use case is data and privacy at `0.48` — band `0.40–0.59`, which supports **Tier 3**. The use case is therefore *not* approvable under normal authority, despite a comfortable overall score. The `0.62` was carried by categories that have little to do with the risk this system actually presents.
+Reading the overall score alone, this is approvable. But the category that dominates this use case is data and privacy at `0.48`, a band that supports only **Tier 3**. The use case is therefore *not* approvable under normal authority, despite a comfortable overall score. The `0.62` was carried by categories that have little to do with the risk this system actually presents.
 
 Three legitimate paths from here, none of which is re-tiering the use case downward:
 
