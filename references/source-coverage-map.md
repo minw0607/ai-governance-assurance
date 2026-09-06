@@ -21,7 +21,7 @@ last_reviewed: 2026-08-19
 
 ## Purpose
 
-This map records how each unpublished source draft (referenced by opaque label; see the [Source Register](source-register.md)) was curated into the library. “Migrated” means the underlying concept is represented, not that source text was copied verbatim. Stale legal conclusions, fixed numerical thresholds, product UI instructions, and unsupported claims are not carried forward without review. Organization-specific, engagement-specific, and personally identifying content is excluded rather than generalized.
+This map records how the topics in each of the author's earlier working drafts (referenced by `SRC-*` label; see the [Register](source-register.md)) are represented in the library, and at what depth. “Migrated” means the underlying concept is covered, not that draft text was carried over verbatim. Stale legal conclusions, fixed numerical thresholds, product UI instructions, and unsupported claims were not carried forward without review.
 
 ## Coverage status
 

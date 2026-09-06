@@ -20,7 +20,7 @@
 
 > **Release status:** Expanded curated draft (`0.3.0`). The material is implementation guidance, not legal advice, and must be tailored to an organization's risks, obligations, and operating environment.
 
-## Start here
+## 🧭 Start here
 
 Route by the question you actually have. The taxonomy below explains how the library is organized; this table is for finding the artifact.
 
@@ -39,7 +39,7 @@ Route by the question you actually have. The taxonomy below explains how the lib
 
 > **A note on the word "readiness."** It appears in this library with three distinct meanings, and they are not interchangeable. **Governance readiness** is scored organizational maturity ([assessment](assessments/readiness-assessment/checklist.md)). **Assurance readiness** is whether control operation can be evidenced to a third party ([examination](checklists/examination-readiness.md), [agentic audit](checklists/agentic-ai-audit-readiness.md)). **Release readiness** is a binary ship/no-ship gate for one system ([pre-deployment](checklists/pre-deployment.md), [production](checklists/production-readiness.md)). **Adoption readiness** — data platform, talent, commercial case — is deliberately [out of scope](assessments/README.md). See the [readiness model](assessments/README.md) for how the first three relate.
 
-## Repository taxonomy
+## 🗂️ Repository taxonomy
 
 The primary taxonomy is **artifact purpose → topic → document**. This keeps a policy, assessment, testing method, checklist, and template about the same topic distinct while allowing them to share metadata and regulatory mappings.
 
@@ -77,7 +77,7 @@ flowchart TD
     REF -.-> LIB
 ```
 
-### Classification dimensions
+### 🏷️ Classification dimensions
 
 | Dimension | Purpose | Examples |
 |---|---|---|
@@ -91,7 +91,7 @@ flowchart TD
 
 Regulatory mappings deliberately sit across the artifact classes. They help identify coverage and applicability but do not replace legal analysis or reorganize the library around individual regulations.
 
-### Technology and capability overlays
+### 🧩 Technology and capability overlays
 
 Overlays identify additional requirements that span artifact classes. They do not create a competing top-level folder structure.
 
@@ -101,9 +101,11 @@ Overlays identify additional requirements that span artifact classes. They do no
 | **RAG and enterprise knowledge** | Generation depends on retrieved enterprise, licensed, personal, or regulated information | [RAG, Vector, and Agent Data Security](governance/data-security-governance/rag-vector-agent-data-security.md) | Use-case and vendor assessments | Privacy, security, factuality, and regression testing | Production, monitoring, and examination checklists |
 | **Third-party foundation models and platforms** | A provider controls material models, hosting, updates, guardrails, evidence, or subprocessors | Third-party policy and control objectives | Vendor framework, questionnaire, and scoring | Provider-change regression and customer-control testing | Vendor response, findings, and monitoring templates |
 
-## Library
+<a id="library"></a>
 
-### Governance
+## 🗃️ Library
+
+### 🏛️ Governance
 
 | Resource | Description | Version | Status |
 |---|---|---:|---|
@@ -118,7 +120,7 @@ Overlays identify additional requirements that span artifact classes. They do no
 | [GenAI Policy Suite](governance/policies/README.md) | Modular acceptable-use, data, model-risk, vendor, prompt, and change policies | 0.1.0 | Draft |
 | [AI Risk Tiering Framework](governance/risk-tiering/ai-risk-tiering-framework.md) | Risk classification and minimum assurance requirements | 0.2.0 | Draft |
 
-### Assessments
+### 🔍 Assessments
 
 | Resource | Description | Version | Status |
 |---|---|---:|---|
@@ -128,7 +130,7 @@ Overlays identify additional requirements that span artifact classes. They do no
 | [Assessments Catalog and Readiness Model](assessments/README.md) | The three senses of "AI readiness", the two levels at which it is assessed, and which artifact serves each | 0.1.0 | Draft |
 | [Governance Readiness Assessment](assessments/readiness-assessment/checklist.md) | Enterprise-level scored governance, model-risk, privacy, and agentic-AI maturity | 0.1.0 | Draft |
 
-### Testing & Assurance
+### 🧪 Testing & Assurance
 
 | Resource | Description | Version | Status |
 |---|---|---:|---|
@@ -141,7 +143,7 @@ Overlays identify additional requirements that span artifact classes. They do no
 
 Every test dimension pairs a **method guide** with a **scenario library** carrying stable scenario IDs, acceptance criteria, and control-objective references. Functional correctness, hallucination and factuality, safety, bias and fairness, privacy, and workflow integration are catalogued in the [testing catalog](testing/README.md).
 
-### Checklists & Templates
+### ✅ Checklists & Templates
 
 | Resource | Description | Version | Status |
 |---|---|---:|---|
@@ -153,7 +155,7 @@ Every test dimension pairs a **method guide** with a **scenario library** carryi
 | [Illustrative Microsoft 365 Copilot Audit Assessment](templates/examples/m365-copilot-audit-assessment-report.md) | Synthetic application of the framework and report templates; not client work or sponsored/endorsed | 0.2.0 | Draft |
 | [Templates Catalog](templates/README.md) | Risk, testing, findings, vendor, monitoring, and illustrative report resources | 0.1.0 | Draft |
 
-### Mappings & References
+### 🗺️ Mappings & References
 
 | Resource | Description | Reviewed |
 |---|---|---:|
@@ -167,7 +169,7 @@ Every test dimension pairs a **method guide** with a **scenario library** carryi
 | [Standards Landscape](references/standards-landscape.md) | Current standards and guidance register | 2026-08-18 |
 | [Source Coverage Map](references/source-coverage-map.md) | Traceability from source drafts to curated library artifacts | 2026-08-23 |
 
-## How to use the library
+## 📖 How to use the library
 
 0. Establish **enterprise readiness** with the [governance readiness assessment](assessments/readiness-assessment/checklist.md). The resulting band sets a ceiling on the risk tier the organization can responsibly approve, so it belongs before the first use case, not after. See [what "AI readiness" means here](assessments/README.md) for the three senses of the term and the two levels at which it is assessed.
 1. Classify the proposed AI use case using the [risk-tiering framework](governance/risk-tiering/ai-risk-tiering-framework.md).
@@ -177,7 +179,7 @@ Every test dimension pairs a **method guide** with a **scenario library** carryi
 5. Record decisions and evidence using the templates.
 6. Use mappings to identify relevant obligations; confirm legal applicability independently.
 
-## Traceability
+## 🔗 Traceability
 
 The [control objectives](governance/control-framework/control-objectives.md) are the spine of the library. Every objective carries a stable identifier (`GOV-01`, `DATA-04`, `AGT-06`, …), and the rest of the library references those identifiers rather than restating the control:
 
@@ -189,11 +191,11 @@ The [control objectives](governance/control-framework/control-objectives.md) are
 
 `scripts/validate-library.py` fails the build if an artifact references a control identifier that is not defined, or if the coverage matrix is out of date.
 
-## Versioning and metadata
+## 🔢 Versioning and metadata
 
 Each substantive artifact carries YAML front matter with a stable identifier, controlled taxonomy, status, version, and review date. See the [metadata standard](schema/metadata.md). Artifact versions evolve independently; repository releases represent curated library snapshots.
 
-## Contributing
+## 🤝 Contributing
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for editorial standards, review requirements, and the definition of a material change.
 
@@ -209,6 +211,6 @@ The views, designs, implementations, and conclusions expressed in this repositor
 
 This repository is provided for research and educational purposes only.
 
-## License
+## ⚖️ License
 
 Except where a file states otherwise, this library is licensed under [Creative Commons Attribution 4.0 International](LICENSE).

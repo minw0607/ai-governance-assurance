@@ -33,9 +33,11 @@ A referenced identifier that is not defined fails validation. After changing con
 python3 scripts/build-coverage-matrix.py
 ```
 
-## Source provenance
+## Draft traceability
 
-Never record a source filename, path, organization, engagement, or person in the repository. Unpublished source material is referenced only by opaque `SRC-*` label in `source_artifacts`, and the label-to-file mapping stays local. Organization-specific, engagement-specific, and personally identifying content is excluded rather than generalized.
+`source_artifacts` records which earlier working draft an artifact was consolidated from, using the `SRC-*` labels defined in the [register](references/source-register.md). It is an editorial trace, not a citation: authority for any regulatory, standards, or product statement is the primary source cited in the artifact itself.
+
+Do not record filenames, paths, or personal references in metadata.
 
 ## Versioning
 

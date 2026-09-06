@@ -18,11 +18,11 @@ last_reviewed: 2026-08-19
 
 # Source Register and Migration Decisions
 
-The library was curated from a set of unpublished working drafts held locally. Those drafts are referenced only by opaque source label; no source file, filename, or binary is published in this repository, and the label-to-file mapping is maintained locally.
+Everything in this repository is the author's own original work. This library was consolidated from the author's earlier working drafts, which the `SRC-*` labels below identify so that editorial decisions stay traceable as artifacts evolve independently.
 
-Every public artifact in this library is independently rewritten in repository-native Markdown. Source material was used to identify topics, control themes, and structure. Published wording, control objectives, evidence expectations, and regulatory statements were re-derived and re-verified against the primary sources cited in each artifact. Section-level traceability is maintained in the [Source-to-Library Coverage Map](source-coverage-map.md).
+Every artifact is written in repository-native Markdown. Regulatory, standards, and product statements were re-derived and re-verified against the primary sources cited in each artifact rather than carried forward from an earlier draft. Section-level traceability is maintained in the [Coverage Map](source-coverage-map.md).
 
-Nothing in this library reproduces confidential, proprietary, client, or employer information. Where source material contained organization-specific, engagement-specific, or personally identifying context, that content was excluded rather than generalized.
+The corrections recorded below are the substantive part of this register. They document where an earlier draft's framing was outdated, over-general, or unsupported, and what replaced it — so that a superseded position is not reintroduced later.
 
 | Source label | Material type | Primary use | Migration decision |
 |---|---|---|---|
