@@ -6,6 +6,8 @@ All notable library-level changes are recorded here. Individual artifacts retain
 
 ### Changed
 
+- Restored the standard project disclaimer used across the author's other repositories, replacing the variant introduced in 0.3.0.
+
 - The pre-deployment and production-readiness checklists share five control topics. The distinction between them — validated design versus production-configuration evidence — was real but undocumented, so the two read as duplicative. Each now states the relationship explicitly, and the one genuinely identical item pair (recovery and kill-switch testing) is differentiated by the evidence each gate demands.
 
 ## [0.3.0] - 2026-08-23

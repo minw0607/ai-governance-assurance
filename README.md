@@ -203,9 +203,7 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for editorial standards, review requireme
 
 This repository is an independent personal project created outside of my employment using my own time and equipment.
 
-Unless explicitly stated otherwise, the code, notebooks, demonstrations, analyses, and documentation in this repository are written independently, on my own time and equipment. All published content is independently authored; regulatory, standards, and product statements are verified against the publicly available primary sources cited in each artifact.
-
-This repository does not reproduce or disclose any confidential, proprietary, non-public, client, or employer information. Where an unpublished working draft informed the structure of an artifact, it is referenced only by opaque label in the [source register](references/source-register.md), and organization-specific, engagement-specific, and personally identifying content is excluded rather than generalized.
+Unless explicitly stated otherwise, the code, notebooks, demonstrations, analyses, and documentation in this repository are developed independently, using only publicly available research papers, technical documentation, regulations, and other public sources. They do not rely on, incorporate, or disclose any confidential, proprietary, non-public, or client information obtained through my employment or professional engagements.
 
 The views, designs, implementations, and conclusions expressed in this repository are solely my own and do not represent the views of any employer, client, or affiliated organization.
 
