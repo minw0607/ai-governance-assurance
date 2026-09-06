@@ -28,6 +28,14 @@ source_artifacts:
 
 # AI Use-Case Assessment Checklist
 
+## How to use this assessment
+
+This is the **intake instrument** for [stage gate G1 — Intake and classify](../../governance/lifecycle/stage-gates.md). Completing it produces the G1 exit evidence: the intake record, prohibited-use determination, system-boundary description, and risk-tier rationale. The intake obligation itself is set by the [acceptable-use policy](../../governance/policies/acceptable-use.md); G1 defines when it happens; this checklist is what gets filled in.
+
+Assess **use-case-level readiness** — whether this specific use is permitted and at what depth of review. Enterprise-level readiness is assessed separately in the [governance readiness assessment](../readiness-assessment/checklist.md), and it constrains the tier that may be approved here; see [readiness and approval authority](../readiness-assessment/scoring-guide.md#readiness-and-approval-authority).
+
+Control objectives: `GOV-01` (approved use-case intake) and `GOV-02` (risk classification). Record the result using the [risk assessment template](../../templates/risk-assessment-template.md).
+
 ## Purpose and ownership
 
 - [ ] Business problem, intended outcome, and alternatives are documented.
@@ -89,3 +97,5 @@ Complete this section when the system plans, uses tools, maintains state, delega
 ## Decision
 
 Record approval, conditions, rejected alternatives, unresolved risks, required evidence, owner, expiry/review date, and triggers for reassessment.
+
+Confirm before approving that the assigned tier is within the band the current [enterprise readiness score](../readiness-assessment/scoring-guide.md#readiness-and-approval-authority) supports. Where it is not, either escalate to the authority that band requires, narrow the scope until the use case falls to a supportable tier, or defer.

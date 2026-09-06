@@ -60,7 +60,7 @@ Unless expressly authorized by applicable law and an approved governance process
 
 ## Intake and approval
 
-New uses must document the business purpose, users, affected parties, data, providers, architecture, external obligations, human oversight, failure consequences, and success measures. Approval depth follows the [risk tier](../risk-tiering/ai-risk-tiering-framework.md).
+New uses must document the business purpose, users, affected parties, data, providers, architecture, external obligations, human oversight, failure consequences, and success measures. Record this using the [use-case assessment checklist](../../assessments/use-case-assessment/checklist.md) at [stage gate G1](../lifecycle/stage-gates.md); do not maintain a separate intake form. Approval depth follows the [risk tier](../risk-tiering/ai-risk-tiering-framework.md), subject to the ceiling set by the current [enterprise readiness band](../../assessments/readiness-assessment/scoring-guide.md#readiness-and-approval-authority).
 
 ## Violations and exceptions
 

@@ -60,6 +60,26 @@ Adjust weights before assessment based on organizational context. Calculate cate
 
 Scores do not replace review of critical gaps. A single missing control may be decisive when it relates to prohibited use, sensitive data, consequential action, or legal obligation.
 
+<a id="readiness-and-approval-authority"></a>
+
+## Readiness and approval authority
+
+An enterprise readiness score that does not change what the organization is allowed to do is a report, not a control. This table couples the readiness band to the maximum [risk tier](../../governance/risk-tiering/ai-risk-tiering-framework.md) that may be approved at [stage gate G1](../../governance/lifecycle/stage-gates.md) without escalation.
+
+| Readiness band | Maximum tier approvable under normal authority | Conditions above that tier |
+|---|---|---|
+| 0.80–1.00 | Tier 1 | Normal gate requirements apply |
+| 0.60–0.79 | Tier 2 | Tier 1 requires executive risk-committee approval, named compensating controls, and a shortened reassessment interval |
+| 0.40–0.59 | Tier 3 | Tier 1 and Tier 2 require a dated remediation plan for the deficient categories, or approval as a time-boxed pilot with a restricted population and restricted data |
+| Below 0.40 | Tier 4 | Material deployment deferred; permit only isolated experimentation on synthetic or public data until foundational gaps are closed |
+
+**Category scores govern, not just the overall score.** Use the category most relevant to the proposed use case. A customer-facing assistant over regulated records is constrained by the data and privacy category, whatever the weighted total says; an agent with write access is constrained by autonomy and human oversight. A strong overall score built on weak performance in the category that matters for this use case does not support approval (`GOV-02`, `GOV-06`).
+
+**Restriction is not the only response.** A low band can also be met by narrowing scope — smaller population, non-regulated data, advisory-only output, shorter approval expiry — so that the use case moves to a tier the organization is ready to govern.
+
+**This mapping is a configurable starting point, not a standard.** No regulation or framework prescribes a readiness-to-tier relationship. Set the bands, tiers, and escalation authority to the organization's risk appetite before the first assessment, approve them through the governance forum (`GOV-04`), and record the agreed mapping with the assessment so results cannot be reinterpreted after the fact.
+
+
 ## Related artifacts
 
 - [Readiness Assessment Checklist](checklist.md)

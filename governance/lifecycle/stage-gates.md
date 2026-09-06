@@ -74,6 +74,8 @@ This procedure defines the decisions and evidence required to move an AI system 
 
 **Decision:** Is the use permitted, and what risk tier and review path apply?
 
+**Instrument:** [Use-Case Assessment Checklist](../../assessments/use-case-assessment/checklist.md). **Tier definitions:** [AI Risk Tiering Framework](../risk-tiering/ai-risk-tiering-framework.md). **Approval ceiling:** the tier approvable here is bounded by the current [enterprise readiness band](../../assessments/readiness-assessment/scoring-guide.md#readiness-and-approval-authority).
+
 ### Required activities
 
 - Define intended purpose, users, affected parties, decisions, benefits, alternatives, and foreseeable misuse.

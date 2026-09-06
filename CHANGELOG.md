@@ -4,6 +4,16 @@ All notable library-level changes are recorded here. Individual artifacts retain
 
 ## [Unreleased]
 
+### Added
+
+- Readiness model in the assessments catalog: the three senses of "AI readiness" (adoption, governance, assurance), which artifact serves each, and adoption readiness declared explicitly out of scope.
+- Readiness-to-approval coupling in the readiness scoring guide: enterprise readiness band sets a ceiling on the risk tier approvable at gate G1, with category scores governing over the weighted total, and the mapping labelled a configurable starting point rather than a standard.
+
+### Changed
+
+- The use-case assessment is now identified as the intake instrument for stage gate G1, with reciprocal links from G1, the acceptable-use policy, and the risk-tiering framework, so intake is specified once rather than described in four places.
+- Root README "how to use the library" now starts at enterprise readiness rather than assuming it.
+
 ## [0.3.0] - 2026-08-23
 
 ### Added

@@ -6,7 +6,7 @@
 
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](LICENSE)
 [![Release: 0.3.0](https://img.shields.io/badge/Release-0.3.0%20curated%20draft-blue.svg)](CHANGELOG.md)
-[![Artifacts: 76](https://img.shields.io/badge/Artifacts-76%20documents-1baf7a.svg)](#library)
+[![Artifacts: 77](https://img.shields.io/badge/Artifacts-77%20documents-1baf7a.svg)](#library)
 [![Frameworks](https://img.shields.io/badge/mapped-EU%20AI%20Act%20·%20NIST%20AI%20RMF%20·%20ISO%2042001%20·%20OWASP%20LLM%20%2B%20Agentic%20·%20SR%2026--2-378add.svg)](mappings/crosswalk.md)
 [![Project: Independent & Personal](https://img.shields.io/badge/Project-Independent%20%26%20Personal-lightgrey)](#disclaimer)
 
@@ -105,8 +105,9 @@ Overlays identify additional requirements that span artifact classes. They do no
 |---|---|---:|---|
 | [Vendor Assessment Framework](assessments/vendor-assessment/framework.md) | Risk-based assessment for AI and foundation-model vendors | 0.1.0 | Draft |
 | [Vendor Questionnaire](assessments/vendor-assessment/questionnaire.md) | Evidence-oriented due-diligence questions | 0.2.0 | Draft |
-| [Use-Case Assessment](assessments/use-case-assessment/checklist.md) | Intake and inherent-risk assessment | 0.2.0 | Draft |
-| [Governance Readiness Assessment](assessments/readiness-assessment/checklist.md) | Governance, model-risk, privacy, and agentic-AI readiness | 0.1.0 | Draft |
+| [Use-Case Assessment](assessments/use-case-assessment/checklist.md) | Use-case-level intake and inherent-risk assessment; the instrument for stage gate G1 | 0.2.0 | Draft |
+| [Assessments Catalog and Readiness Model](assessments/README.md) | The three senses of "AI readiness", the two levels at which it is assessed, and which artifact serves each | 0.1.0 | Draft |
+| [Governance Readiness Assessment](assessments/readiness-assessment/checklist.md) | Enterprise-level scored governance, model-risk, privacy, and agentic-AI maturity | 0.1.0 | Draft |
 
 ### Testing & Assurance
 
@@ -149,8 +150,9 @@ Every test dimension pairs a **method guide** with a **scenario library** carryi
 
 ## How to use the library
 
+0. Establish **enterprise readiness** with the [governance readiness assessment](assessments/readiness-assessment/checklist.md). The resulting band sets a ceiling on the risk tier the organization can responsibly approve, so it belongs before the first use case, not after. See [what "AI readiness" means here](assessments/README.md) for the three senses of the term and the two levels at which it is assessed.
 1. Classify the proposed AI use case using the [risk-tiering framework](governance/risk-tiering/ai-risk-tiering-framework.md).
-2. Complete the [use-case](assessments/use-case-assessment/checklist.md) and, when applicable, [vendor assessment](assessments/vendor-assessment/framework.md).
+2. Complete the [use-case assessment](assessments/use-case-assessment/checklist.md) — the intake instrument for stage gate G1 — and, when applicable, the [vendor assessment](assessments/vendor-assessment/framework.md).
 3. Select testing methods based on risks, deployment modality, and lifecycle stage.
 4. Use the checklists as release and monitoring gates.
 5. Record decisions and evidence using the templates.
