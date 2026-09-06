@@ -32,6 +32,9 @@ source_artifacts:
 
 Each section lists the [control objectives](../governance/control-framework/control-objectives.md) its items are intended to evidence. A checked box is not evidence; record the artifact, owner, date, and result against the named objective using the [test-case](../templates/test-case-template.md) and [findings](../templates/findings-report-template.md) templates.
 
+**Relationship to production readiness.** This gate establishes that the design and behavior have been **validated** — evidence comes from the validation environment, including failure paths that cannot safely be exercised in production. The same control topics reappear in the [production readiness checklist](production-readiness.md) at G5, where they demand a different thing: evidence from the **production configuration**. The repetition is deliberate; completing one does not satisfy the other.
+
+
 ## Governance
 
 **Control objectives:** GOV-01, GOV-02, GOV-04, GOV-05, TPRM-01, TPRM-02
@@ -56,7 +59,7 @@ Each section lists the [control objectives](../governance/control-framework/cont
 
 - [ ] Threat model includes prompt injection, poisoning, output handling, supply chain, identity, and abuse.
 - [ ] Least privilege, secrets, tool authorization, output validation, rate limits, and logging are implemented.
-- [ ] Failure, timeout, dependency, fallback, rollback, and kill-switch behavior is tested.
+- [ ] Failure, timeout, dependency, fallback, rollback, and kill-switch behavior is tested in the validation environment, including failure paths that cannot safely be induced in production.
 - [ ] Incident playbooks and escalation contacts are ready.
 
 ## Performance and impact

@@ -30,6 +30,9 @@ source_artifacts:
 
 Each section lists the [control objectives](../governance/control-framework/control-objectives.md) its items are intended to evidence. A checked box is not evidence; record the artifact, owner, date, and result against the named objective using the [test-case](../templates/test-case-template.md) and [findings](../templates/findings-report-template.md) templates.
 
+**Relationship to pre-deployment.** The [pre-deployment checklist](pre-deployment.md) established that the design was validated. This gate establishes that the **deployed production configuration** matches what was validated and that the controls operate there, with evidence retained. Where a topic appears in both, this gate asks for production evidence, not a restatement of the validation result.
+
+
 ## Release package
 
 **Control objectives:** GOV-05, OPS-03, QUAL-06, GOV-06
@@ -70,7 +73,7 @@ Each section lists the [control objectives](../governance/control-framework/cont
 
 **Control objectives:** OPS-02, AGT-03, AGT-04, AGT-07
 
-- [ ] Rollback, fallback, disablement, credential revocation, and kill switch are tested.
+- [ ] Rollback, fallback, disablement, credential revocation, and kill switch are re-tested against the production configuration, with operator, timing, and result retained as evidence.
 - [ ] On-call ownership and severity classification include AI-specific failures.
 - [ ] Recovery preserves evidence and prevents duplicate or incomplete agent actions.
 
