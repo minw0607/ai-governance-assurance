@@ -14,7 +14,7 @@ industries:
   - cross-industry
 status: draft
 version: "0.1.0"
-last_reviewed: 2026-08-23
+last_reviewed: 2026-09-05
 ---
 # Agentic AI Governance
 

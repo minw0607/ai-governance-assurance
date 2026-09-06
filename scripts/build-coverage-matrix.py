@@ -109,7 +109,7 @@ def render(titles: dict[str, str], references: dict[str, set[str]]) -> str:
         "  - operation",
         "status: draft",
         'version: "0.1.0"',
-        "last_reviewed: 2026-08-23",
+        "last_reviewed: 2026-09-05",
         "---",
         "",
         "# Control Coverage Matrix",

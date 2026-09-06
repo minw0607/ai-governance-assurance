@@ -4,16 +4,7 @@ All notable library-level changes are recorded here. Individual artifacts retain
 
 ## [Unreleased]
 
-### Changed
-
-- Provenance framing corrected throughout: the library is the author's own original work, and `SRC-*` labels are an editorial trace to earlier working drafts rather than a record of external sources. Removed the statement that the library was curated from unpublished drafts held locally, along with the related language in the coverage map, contributing guide, and metadata standard.
-- Emoji added to root README section headings, with explicit HTML anchors for the two badge targets so heading links do not depend on emoji slug behaviour.
-
-- Restored the standard project disclaimer used across the author's other repositories, replacing the variant introduced in 0.3.0.
-
-- The pre-deployment and production-readiness checklists share five control topics. The distinction between them — validated design versus production-configuration evidence — was real but undocumented, so the two read as duplicative. Each now states the relationship explicitly, and the one genuinely identical item pair (recovery and kill-switch testing) is differentiated by the evidence each gate demands.
-
-## [0.3.0] - 2026-08-23
+## [0.3.0] - 2026-09-05
 
 ### Added
 
