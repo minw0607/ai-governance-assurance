@@ -21,8 +21,8 @@ lifecycle_stages:
   - operation
   - retirement
 status: draft
-version: "0.3.0"
-last_reviewed: 2026-08-18
+version: "0.4.0"
+last_reviewed: 2026-09-18
 source_artifacts:
   - SRC-AGT-01
   - SRC-POL-01
@@ -131,7 +131,9 @@ An organization may maintain separate linked records for a use case, system, mod
 |---|---|
 | Requirements and acceptance | Outcome criteria, failure taxonomy, and release thresholds |
 | Test evidence | Current plan/results, dataset version, findings, and approval |
-| Production baseline | Model, prompt, retrieval, tools, configuration, and release identifier |
+| Production baseline | Model, prompt, retrieval, tools, platform/runtime, configuration, and release identifier |
+| Consuming use cases (shared services) | For each consuming team: business owner, purpose, risk tier, data classes, acceptance-criteria owner, change-notification contact, and whether the consumer can be held on the prior version independently |
+| Inherited tier (shared services) | Highest registered consumer tier, the consumer it derives from, and the date it was last recomputed |
 | Monitoring | Metrics, thresholds, frequency, owner, alerts, and review cadence |
 | Incident routing | Runbook, on-call owner, containment authority, and evidence location |
 | Resilience | Dependencies, degraded mode, RTO/RPO where applicable, rollback, and recovery |
@@ -178,6 +180,7 @@ Discrepancies must be assigned, risk assessed, and resolved. Material unapproved
 - Dates and versions must be machine-readable.
 - Links must resolve to current evidence or explicitly archived records.
 - A system may not be marked approved if approval is expired, conditions are unmet, or the production baseline is unknown.
+- A shared service may not be marked approved if its consumer register is incomplete or its inherited tier exceeds the tier at which it was assured.
 - A retired system may not retain active identities, schedules, endpoints, or tool permissions without documented need.
 
 ## Inventory metrics

@@ -21,8 +21,8 @@ lifecycle_stages:
   - deployment
   - operation
 status: draft
-version: "0.1.0"
-last_reviewed: 2026-08-17
+version: "0.2.0"
+last_reviewed: 2026-09-18
 source_artifacts:
   - SRC-POL-01
   - SRC-AUD-01
@@ -163,6 +163,8 @@ Every material forum decision should capture:
 | Accept validation findings | A by tier | A/R | R | C | C | R | I |
 | Accept residual risk | A by tier | R | C | C | C | I | I |
 | Approve material change | A by tier | R | R | C | C | C | I |
+| Approve change to a shared AI service | A by inherited tier | C | R | C | C | C | I |
+| Accept a shared-service change for one consuming use case | I | A | C | C | C | I | I |
 | Operate and monitor | I | A | R | C | C | I | I |
 | Declare and contain incident | I or A if material | A | R | C | R/C | I | I |
 | Approve exception | A by originating authority | R | R | C | C | I | I |
@@ -176,6 +178,7 @@ Every material forum decision should capture:
 - Independent reviewers must disclose prior design or implementation involvement.
 - Privileged tool access, production deployment, and approval should not rest with one individual for higher-risk systems.
 - The person granting an exception should have authority at least equal to the original requirement owner.
+- The owner of a shared AI service must not accept a change on behalf of a consuming business owner, and must not classify a change below the tier of its highest registered consumer.
 - Internal audit must not own the inventory, tiering, validation, monitoring, or exception process it later audits.
 
 ## Escalation triggers

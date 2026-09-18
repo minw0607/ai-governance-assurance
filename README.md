@@ -35,6 +35,7 @@ Route by the question you actually have. The taxonomy below explains how the lib
 | Which regulations and standards apply? | [Crosswalk](mappings/crosswalk.md) |
 | Is this vendor acceptable? | [Vendor Assessment Framework](assessments/vendor-assessment/framework.md) |
 | Can we ship it? | [Production Readiness](checklists/production-readiness.md) |
+| We are **upgrading** a live AI service — new LLM version, provider, or the platform under it — and several teams depend on it | [Pre-upgrade sequence](governance/policies/change-management.md#pre-upgrade-sequence-for-a-shared-service) in the change policy, verified with the [shared-service section](checklists/pre-deployment.md#upgrading-a-shared-service) of the pre-deployment checklist |
 | It is an **agent** — what changes? | [Agentic AI Governance and Assurance](governance/agentic-ai/README.md) |
 
 > **A note on the word "readiness."** It appears in this library with three distinct meanings, and they are not interchangeable. **Governance readiness** is scored organizational maturity ([assessment](assessments/readiness-assessment/checklist.md)). **Assurance readiness** is whether control operation can be evidenced to a third party ([examination](checklists/examination-readiness.md), [agentic audit](checklists/agentic-ai-audit-readiness.md)). **Release readiness** is a binary ship/no-ship gate for one system ([pre-deployment](checklists/pre-deployment.md), [production](checklists/production-readiness.md)). **Adoption readiness** — data platform, talent, commercial case — is deliberately [out of scope](assessments/README.md). See the [readiness model](assessments/README.md) for how the first three relate.
@@ -109,23 +110,23 @@ Overlays identify additional requirements that span artifact classes. They do no
 
 | Resource | Description | Version | Status |
 |---|---|---:|---|
-| [AI Governance Framework](governance/ai-governance-framework.md) | Enterprise operating model, lifecycle, accountability, and control principles | 0.3.0 | Draft |
-| [Roles and Decision Rights](governance/operating-model/roles-and-decision-rights.md) | Three-lines accountability, governance forums, RACI, and escalation | 0.1.0 | Draft |
-| [AI Lifecycle Stage Gates](governance/lifecycle/stage-gates.md) | Entry, exit, evidence, and approval criteria from discovery through retirement | 0.1.0 | Draft |
-| [AI Inventory Minimum Data Standard](governance/ai-inventory/minimum-data-standard.md) | Required system/use-case fields, ownership, reconciliation, and quality rules | 0.3.0 | Draft |
+| [AI Governance Framework](governance/ai-governance-framework.md) | Enterprise operating model, lifecycle, accountability, and control principles | 0.4.0 | Draft |
+| [Roles and Decision Rights](governance/operating-model/roles-and-decision-rights.md) | Three-lines accountability, governance forums, RACI, and escalation | 0.2.0 | Draft |
+| [AI Lifecycle Stage Gates](governance/lifecycle/stage-gates.md) | Entry, exit, evidence, and approval criteria from discovery through retirement | 0.2.0 | Draft |
+| [AI Inventory Minimum Data Standard](governance/ai-inventory/minimum-data-standard.md) | Required system/use-case fields, ownership, reconciliation, and quality rules | 0.4.0 | Draft |
 | [AI Data Security & Governance](governance/data-security-governance/README.md) | Integrated data lifecycle, classification, RAG/vector/agent security, and training/evaluation data standards | 0.1.0 | Draft |
 | [Agentic AI Governance and Assurance](governance/agentic-ai/README.md) | Agentic system governance, autonomy, delegated authority, A2A/MCP, and auditability | 0.1.0 | Draft |
-| [Enterprise AI Control Objectives](governance/control-framework/control-objectives.md) | Testable governance, data, security, quality, vendor, agentic, and operations objectives | 0.3.0 | Draft |
+| [Enterprise AI Control Objectives](governance/control-framework/control-objectives.md) | Testable governance, data, security, quality, vendor, agentic, and operations objectives | 0.4.0 | Draft |
 | [Control Coverage Matrix](governance/control-framework/control-coverage-matrix.md) | Reverse index: every control objective to the checklists, scenarios, templates, and mappings that evidence it | 0.1.0 | Draft |
 | [GenAI Policy Suite](governance/policies/README.md) | Modular acceptable-use, data, model-risk, vendor, prompt, and change policies | 0.1.0 | Draft |
-| [AI Risk Tiering Framework](governance/risk-tiering/ai-risk-tiering-framework.md) | Risk classification and minimum assurance requirements | 0.2.0 | Draft |
+| [AI Risk Tiering Framework](governance/risk-tiering/ai-risk-tiering-framework.md) | Risk classification and minimum assurance requirements | 0.3.0 | Draft |
 
 ### 🔍 Assessments
 
 | Resource | Description | Version | Status |
 |---|---|---:|---|
 | [Vendor Assessment Framework](assessments/vendor-assessment/framework.md) | Risk-based assessment for AI and foundation-model vendors | 0.1.0 | Draft |
-| [Vendor Questionnaire](assessments/vendor-assessment/questionnaire.md) | Evidence-oriented due-diligence questions | 0.2.0 | Draft |
+| [Vendor Questionnaire](assessments/vendor-assessment/questionnaire.md) | Evidence-oriented due-diligence questions | 0.3.0 | Draft |
 | [Use-Case Assessment](assessments/use-case-assessment/checklist.md) | Use-case-level intake and inherent-risk assessment; the instrument for stage gate G1 | 0.2.0 | Draft |
 | [Assessments Catalog and Readiness Model](assessments/README.md) | The three senses of "AI readiness", the two levels at which it is assessed, and which artifact serves each | 0.1.0 | Draft |
 | [Governance Readiness Assessment](assessments/readiness-assessment/checklist.md) | Enterprise-level scored governance, model-risk, privacy, and agentic-AI maturity | 0.1.0 | Draft |
@@ -139,7 +140,7 @@ Overlays identify additional requirements that span artifact classes. They do no
 | [Security Red Teaming](testing/security-red-teaming/testing-guide.md) | Adversarial testing for LLM and RAG applications | 0.1.0 | Draft |
 | [Agentic AI Testing](testing/agentic-ai/testing-guide.md) | Tool-use, autonomy, memory, and multi-agent assurance | 0.2.0 | Draft |
 | [Agentic AI Scenario Library](testing/agentic-ai/scenario-library.md) | Reusable intended, adversarial, failure, recovery, and audit-evidence scenarios | 0.1.0 | Draft |
-| [Regression Testing](testing/regression-testing/testing-guide.md) | Change detection for provider and application updates | 0.1.0 | Draft |
+| [Regression Testing](testing/regression-testing/testing-guide.md) | Change detection for provider, platform, and application updates | 0.2.0 | Draft |
 
 Every test dimension pairs a **method guide** with a **scenario library** carrying stable scenario IDs, acceptance criteria, and control-objective references. Functional correctness, hallucination and factuality, safety, bias and fairness, privacy, and workflow integration are catalogued in the [testing catalog](testing/README.md).
 
@@ -149,7 +150,7 @@ Every test dimension pairs a **method guide** with a **scenario library** carryi
 |---|---|---:|---|
 | [Examination Readiness](checklists/examination-readiness.md) | Control and evidence readiness for audit or examination | 0.1.0 | Draft |
 | [Production Readiness](checklists/production-readiness.md) | Release gate for production AI systems | 0.1.0 | Draft |
-| [Ongoing Monitoring](checklists/ongoing-monitoring.md) | Recurring quality, security, risk, and vendor checks | 0.1.0 | Draft |
+| [Ongoing Monitoring](checklists/ongoing-monitoring.md) | Recurring quality, security, risk, and vendor checks | 0.2.0 | Draft |
 | [Agentic AI Audit Readiness](checklists/agentic-ai-audit-readiness.md) | Scope, control, evidence, testing, resilience, and reporting readiness | 0.1.0 | Draft |
 | [Agentic AI Audit Workpaper](templates/agentic-ai-audit-workpaper-template.md) | Reusable control-design, testing, evidence, finding, and retest record | 0.1.0 | Draft |
 | [Illustrative Microsoft 365 Copilot Audit Assessment](templates/examples/m365-copilot-audit-assessment-report.md) | Synthetic application of the framework and report templates; not client work or sponsored/endorsed | 0.2.0 | Draft |
@@ -165,7 +166,7 @@ Every test dimension pairs a **method guide** with a **scenario library** carryi
 | [OWASP GenAI](mappings/owasp-genai.md) | OWASP Top 10 for LLM Applications 2026 mapping | 2026-08-18 |
 | [OWASP Agentic](mappings/owasp-agentic.md) | OWASP Top 10 for Agentic Applications (`ASI01`–`ASI10`) mapping | 2026-08-23 |
 | [ISO/IEC 42001](mappings/iso-iec-42001.md) | AI management system clauses and Annex A control groups | 2026-08-23 |
-| [Crosswalk](mappings/crosswalk.md) | Cross-framework control themes, keyed to library control objectives | 2026-08-23 |
+| [Crosswalk](mappings/crosswalk.md) | Cross-framework control themes, keyed to library control objectives | 2026-09-18 |
 | [Standards Landscape](references/standards-landscape.md) | Current standards and guidance register | 2026-08-18 |
 | [Source Coverage Map](references/source-coverage-map.md) | Traceability from source drafts to curated library artifacts | 2026-08-23 |
 

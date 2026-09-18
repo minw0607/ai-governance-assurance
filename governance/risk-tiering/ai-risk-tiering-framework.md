@@ -19,8 +19,8 @@ lifecycle_stages:
   - design
   - validation
 status: draft
-version: "0.2.0"
-last_reviewed: 2026-08-18
+version: "0.3.0"
+last_reviewed: 2026-09-18
 source_artifacts:
   - SRC-AGT-01
   - SRC-VEND-01
@@ -99,6 +99,26 @@ For an agentic use case, record separately:
 | Production monitoring | Continuous or near-real-time for critical controls | Defined metrics and alerts | Periodic sampling | Basic incident monitoring |
 | Change-triggered reassessment | Required | Required | Material changes | Scope changes |
 | Approval authority | Executive/risk committee | Senior accountable owner plus risk | Business and technical owners | Designated owner |
+
+## Shared-service tier inheritance
+
+Tiering is a property of a **use case**. A shared AI service — one deployed system used by several teams or business units for different purposes — has no use case of its own; it has a portfolio of them.
+
+For decisions that act on the service as a whole — change classification, testing depth, monitoring, and approval authority — the service **inherits the highest tier among its registered consuming use cases**. The inheriting tier is recomputed whenever a consumer is onboarded, retired, or re-tiered.
+
+| Question | Tier that governs |
+|---|---|
+| How is this consumer's own use approved, controlled, and reviewed? | That consumer's assigned tier |
+| How is a change to the shared service classified, tested, and approved? | The highest registered consumer tier |
+| What assurance must the shared service itself carry? | The highest registered consumer tier |
+| May a new consumer be onboarded at a tier above the service's current assurance? | Not until the service is assured at that tier |
+
+Two consequences follow:
+
+- A platform team cannot hold a lower tier than the business it serves. Onboarding a Tier 1 consumer raises the service to Tier 1 for change and assurance purposes, with the [minimum assurance](#minimum-assurance-by-tier) and approval authority that implies.
+- Where the inherited tier is unaffordable, the remedy is to separate the consumer onto its own instance, configuration, or service — not to re-tier the consumer downward to fit the shared platform (`GOV-02`, `GOV-06`).
+
+Record the inherited tier, the consumer it derives from, and the date on the service's inventory record. See the [AI Change Management Policy](../policies/change-management.md#shared-ai-services) for the resulting change requirements (`OPS-05`).
 
 ## Enterprise readiness ceiling
 

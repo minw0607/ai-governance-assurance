@@ -19,8 +19,8 @@ lifecycle_stages:
   - validation
   - operation
 status: draft
-version: "0.2.0"
-last_reviewed: 2026-08-18
+version: "0.3.0"
+last_reviewed: 2026-09-18
 ---
 
 # Cross-Framework AI Governance Themes
@@ -38,7 +38,7 @@ This crosswalk identifies common implementation themes; it does not claim requir
 | Human oversight and action control | `HUM-01`–`HUM-03`, `AGT-02` | Govern/Manage | A.8, A.9 | Human oversight and transparency | Effective challenge and appropriate use | `LLM03` (Excessive Agency); `ASI01`, `ASI09` |
 | Agentic identity and coordination | `AGT-01`, `AGT-03`–`AGT-07` | Govern/Measure/Manage | A.6, A.9 | Substantial modification and oversight duties | Out of scope; internal governance choice | `ASI02`–`ASI08`, `ASI10` |
 | Monitoring and incident response | `OPS-01`, `OPS-02` | Manage | Cl. 9; A.6 | Post-market monitoring and incidents | Ongoing monitoring | Detection, response, resource abuse |
-| Change and lifecycle | `OPS-03`, `OPS-04` | Govern/Manage | Cl. 10; A.6 | Substantial modification and lifecycle duties | Changes, deterioration, redevelopment | `LLM04` supply-chain and configuration change |
+| Change and lifecycle | `OPS-03`, `OPS-04`, `OPS-05` | Govern/Manage | Cl. 10; A.6 | Substantial modification and lifecycle duties | Changes, deterioration, redevelopment | `LLM04` supply-chain and configuration change |
 | Third-party risk | `TPRM-01`–`TPRM-03` | Govern/Map/Manage | A.10 | Value-chain roles and cooperation | Vendor products | `LLM04`, `ASI04` |
 
 Control objective identifiers resolve in the [Enterprise AI Control Objectives](../governance/control-framework/control-objectives.md). Full per-framework detail is in the [NIST](nist-ai-rmf.md), [ISO/IEC 42001](iso-iec-42001.md), [EU AI Act](eu-ai-act.md), [SR 26-2](sr-26-2.md), [OWASP LLM](owasp-genai.md), and [OWASP Agentic](owasp-agentic.md) mappings.

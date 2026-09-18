@@ -18,8 +18,8 @@ lifecycle_stages:
   - validation
   - deployment
 status: draft
-version: "0.1.0"
-last_reviewed: 2026-08-17
+version: "0.2.0"
+last_reviewed: 2026-09-18
 source_artifacts:
   - SRC-AUD-01
 ---
@@ -76,6 +76,26 @@ Each section lists the [control objectives](../governance/control-framework/cont
 **Control objectives:** OPS-01, OPS-03, HUM-02, HUM-03, SEC-05
 
 - [ ] Monitoring metrics, thresholds, sampling, alerts, owners, and response actions are approved.
-- [ ] Change and regression process covers provider-controlled updates.
+- [ ] Change and regression process covers provider-controlled updates and platform/infrastructure changes made below the application layer.
 - [ ] Users are trained on limitations, verification, prohibited use, and incident reporting.
 - [ ] Records are reproducible and retained according to policy.
+
+## Upgrading a shared service
+
+**Control objectives:** OPS-05, OPS-03, QUAL-06, GOV-02, TPRM-03
+
+Use this section when the system already runs and the change — model version, provider, prompt, retrieval, tooling, or platform and infrastructure — will reach more than one consuming team. It is the G4 revalidation for an upgrade, not a second release gate; see the [AI Change Management Policy](../governance/policies/change-management.md#pre-upgrade-sequence-for-a-shared-service).
+
+- [ ] The consumer register is current and reconciled against actual usage; consumers found outside it are recorded and registered.
+- [ ] The inherited tier is recomputed from the highest registered consumer and governs classification, testing depth, and approval authority.
+- [ ] Each consumer's obligations, data classes, oversight design, and downstream processes were assessed — not the service in the abstract.
+- [ ] Every registered consumer received notice of the change, the date, what may move, the test window, and the objection route.
+- [ ] The shared core suite ran against the production-intended configuration, and each consumer ran its own acceptance set in the same window.
+- [ ] Results are reported per consuming use case against pre-agreed criteria; no release decision rests on an averaged score across consumers.
+- [ ] The partial-failure rule was applied and the decision recorded, including any consumer deliberately restricted, suspended, or held on the prior version.
+- [ ] Each consuming business owner accepted for their own use case, or the consumer is explicitly held; silence was not treated as acceptance.
+- [ ] Release is approved at the inherited tier's authority.
+- [ ] Rollout is sequenced lowest consumer tier first, with defined soak periods and hold points.
+- [ ] Rollback to the prior validated baseline was verified before the first stage — or, where the prior state will be withdrawn, a rehearsed migration plan, a named fallback, and a dated disposition for every consumer exist instead.
+- [ ] Post-change monitoring is defined **per consumer**, with named owners and thresholds, for a defined period.
+- [ ] Any resulting version divergence between consumers is recorded in the inventory as separate configurations to monitor and test.

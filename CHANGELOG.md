@@ -4,6 +4,27 @@ All notable library-level changes are recorded here. Individual artifacts retain
 
 ## [Unreleased]
 
+### Added
+
+- Shared-service change management throughout the governance chain: a service used by more than one team or business unit now has an explicit consumer register, an inherited risk tier, a split of responsibility between platform owner and consuming business owner, and a named pre-upgrade sequence — enumerate, classify, assess, notify, test, aggregate, approve, sequence, recover, monitor.
+- Control objective `OPS-05` — Shared-service change and consumer impact, with evidence and assurance procedure, wired through the stage gates, risk-tiering framework, change policy, both change checklists, and the regression scenario library.
+- Shared-service tier inheritance in the risk-tiering framework: for change classification, testing depth, and approval authority, a shared service inherits the highest tier among its registered consuming use cases, and an unaffordable inherited tier is resolved by separating the consumer rather than re-tiering it downward.
+- Partial-failure decision rule for shared-service upgrades: a failure against any consumer's pre-agreed criteria blocks the upgrade for that consumer, a higher-tier failure is never offset by lower-tier passes, and version divergence between consumers is recorded as separate configurations to monitor and test.
+- Requirements for changes that cannot be rolled back — provider deprecation and end-of-life — covering when the change record opens, how the internal cutover date is derived from the provider deadline, the fallback that replaces rollback, and the dated disposition of consumers that cannot pass in time.
+- "Upgrading a shared service" section in the pre-deployment checklist, as the G4 revalidation for an upgrade rather than a second release gate, plus a root README routing row for it.
+- Regression scenarios `RGS-09`–`RGS-12`: shared-service upgrade across consuming teams, partial failure and version divergence, platform and infrastructure change, and forced deprecation with migration rehearsal.
+- Shared-services and non-reversible-change sections in the regression testing guide, including how to split a golden suite between a platform-owned core and consumer-owned acceptance sets.
+- Inventory fields for consuming use cases and inherited tier, with a rule that a shared service may not be marked approved on an incomplete consumer register.
+- RACI rows for approving a shared-service change and accepting one for a single consuming use case, and a segregation rule barring a platform owner from accepting a change on a consuming business owner's behalf.
+- Vendor questionnaire coverage of committed advance-notice periods, prior-version availability during a test window, customer ability to defer or stage a change, infrastructure changes made without a version change, and post-migration rollback support.
+
+### Changed
+
+- Change scope now covers the platform and infrastructure the system runs on — runtime, SDK and API version, compute, region, images, orchestration, gateway timeout and truncation behavior, quota, identity integration, and the observability pipeline — treated as material whenever it can alter output, availability, permission resolution, or trace completeness. Previously the scope stopped at application code, leaving the substrate outside the AI change process.
+- `OPS-03` extended to name platform and infrastructure changes, with an assurance procedure that reaches below the application layer.
+- Stage-gate change-to-gate routing gained rows for onboarding a consumer to a shared service, platform and infrastructure change, and provider deprecation notices — the last opening at the notice rather than the deadline. G6 activities and the periodic review record now cover consumer notification, inherited tier, and version divergence.
+- Ongoing monitoring now trends quality and error measures per consuming use case rather than only in aggregate, and tracks deprecation dates with internal cutover dates set back from each deadline.
+
 ## [0.3.0] - 2026-09-05
 
 ### Added

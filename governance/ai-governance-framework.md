@@ -23,8 +23,8 @@ lifecycle_stages:
   - operation
   - retirement
 status: draft
-version: "0.3.0"
-last_reviewed: 2026-08-18
+version: "0.4.0"
+last_reviewed: 2026-09-18
 source_artifacts:
   - SRC-AGT-01
   - SRC-POL-01
@@ -344,12 +344,18 @@ Examples include:
 - changes to prompts, policies, guardrails, or orchestration that affect behavior;
 - new tools, write privileges, autonomy, memory, external communications, or transaction authority;
 - expanded users, geography, scale, purpose, or affected population;
+- platform and infrastructure changes — runtime, SDK or API version, compute, region, container or OS image, orchestration, gateway, timeout, quota, identity integration, or observability pipeline — capable of altering behavior, availability, permission resolution, or trace completeness;
+- a new consuming team onboarded to a shared service, or a change in a consumer's tier;
 - new obligations, incidents, or evidence that invalidates prior assumptions; and
 - performance, fairness, safety, or security degradation beyond approved limits.
 
 Material changes require targeted or full reassessment, regression testing, updated documentation, and approval at the authority level appropriate to the resulting risk.
 
-### 16.2 Non-material and emergency changes
+### 16.2 Shared services used by multiple teams
+
+Where one AI service serves several teams or business units, a single change reaches consumers who did not request it and may not be able to absorb it. Such a service inherits the highest tier among its registered consuming use cases for change classification, testing depth, and approval authority; consumers must be enumerated, notified, and given a test window before release; acceptance is given per use case by each consuming business owner; and rollout is sequenced in ascending order of consumer risk. An aggregate result that masks a failure in one consumer is not a basis for release (`OPS-05`). See the [AI Change Management Policy](policies/change-management.md#shared-ai-services).
+
+### 16.3 Non-material and emergency changes
 
 Infrastructure patches, cosmetic changes, and bug fixes may use streamlined review only when evidence demonstrates no effect on behavior, access, data, action, or the approved control basis. The rationale must still be recorded.
 

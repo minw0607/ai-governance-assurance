@@ -23,8 +23,8 @@ lifecycle_stages:
   - operation
   - retirement
 status: draft
-version: "0.3.0"
-last_reviewed: 2026-08-18
+version: "0.4.0"
+last_reviewed: 2026-09-18
 source_artifacts:
   - SRC-AGT-01
   - SRC-AUD-01
@@ -388,11 +388,11 @@ Assessment should distinguish:
 
 ### OPS-03 — Controlled change and revalidation
 
-**Objective:** Changes to models, providers, prompts, retrieval, tools, data, scope, or autonomy are classified and tested before deployment.
+**Objective:** Changes to models, providers, prompts, retrieval, tools, data, scope, autonomy, or the underlying platform and infrastructure are classified and tested before deployment.
 
 **Evidence:** change record, diff, materiality decision, regression/targeted validation, approval, release and rollback evidence.
 
-**Assurance procedure:** sample production changes and correlate deployment timestamps with prior testing and approval.
+**Assurance procedure:** sample production changes and correlate deployment timestamps with prior testing and approval; include changes made below the application layer.
 
 ### OPS-04 — Safe retirement
 
@@ -401,6 +401,14 @@ Assessment should distinguish:
 **Evidence:** retirement plan, dependency signoff, access revocation, endpoint/tool disablement, data disposition, inventory closure.
 
 **Assurance procedure:** inspect retired systems for active credentials, traffic, schedules, indexes, contracts, or downstream calls.
+
+### OPS-05 — Shared-service change and consumer impact
+
+**Objective:** Where one AI service is used by multiple teams or business units, changes are classified at the highest consuming tier, notified to consumers with a test window, accepted per use case, released in risk order, and monitored per consumer.
+
+**Evidence:** consumer register, inherited-tier determination, change notice and test-window records, per-consumer acceptance or rejection, staged-rollout and hold records, segmented post-change monitoring, version-divergence record, and — where the prior version will be withdrawn — the migration plan and disposition of consumers that cannot pass in time.
+
+**Assurance procedure:** reconcile the consumer register against actual usage and identify unregistered consumers; sample a shared-service change and verify the tier was inherited from the highest consuming use case, that every registered consumer was notified and either accepted or was explicitly held, and that release did not rely on an aggregate score masking a failure in a higher-tier consumer.
 
 ## Control assessment record
 

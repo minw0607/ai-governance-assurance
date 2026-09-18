@@ -17,8 +17,8 @@ industries:
 lifecycle_stages:
   - operation
 status: draft
-version: "0.1.0"
-last_reviewed: 2026-08-17
+version: "0.2.0"
+last_reviewed: 2026-09-18
 source_artifacts:
   - SRC-TEST-01
   - SRC-VEND-01
@@ -62,12 +62,21 @@ At the cadence defined in the monitoring plan:
 
 ## Change and vendor
 
-**Control objectives:** OPS-03, TPRM-03, SEC-04
+**Control objectives:** OPS-03, OPS-05, TPRM-03, SEC-04
 
 - [ ] Model, prompt, retrieval, tool, application, evaluator, and provider changes are reconciled.
+- [ ] Platform and infrastructure changes — runtime, SDK/API version, compute, region, images, orchestration, gateway, quota, identity, observability — are reconciled against the approved baseline.
 - [ ] Release notes, incidents, deprecations, subprocessors, and service performance are reviewed.
+- [ ] Deprecation and end-of-life dates for components in use are tracked, with an internal cutover date set back from each deadline.
 - [ ] Golden-suite regression results are current.
 - [ ] Concentration and exit assumptions remain viable.
+
+For a shared service:
+
+- [ ] The consumer register matches actual usage, and the inherited tier is current.
+- [ ] Post-change quality, safety, and error measures are trended **per consuming use case**, not only in aggregate.
+- [ ] Any version divergence between consumers is recorded, time-bounded, and closing.
+- [ ] Consumers held on a prior version, or running with conditions after a failed acceptance, have owners and closure dates.
 
 ## Governance
 

@@ -18,8 +18,8 @@ lifecycle_stages:
   - validation
   - operation
 status: draft
-version: "0.1.0"
-last_reviewed: 2026-09-05
+version: "0.2.0"
+last_reviewed: 2026-09-18
 ---
 
 # Regression Testing Scenario Library
@@ -119,6 +119,48 @@ For each scenario, record the scenario ID, control objective, system and configu
 **Pass evidence:** Timed rollback execution record, post-rollback regression run matching baseline, and documented handling of partially completed agent actions.
 
 
+### RGS-09 — Shared-service upgrade across consuming teams
+
+**Control objective:** `OPS-05`, `OPS-03`, `QUAL-06`
+
+**Objective:** Confirm an upgrade to a service shared by multiple teams is safe for every consumer, not for the platform in aggregate.
+
+**Exercise:** Run the shared core suite and each registered consumer's acceptance set against the production-intended configuration in the same test window. Report results per consuming use case, ordered by consumer risk tier.
+
+**Pass evidence:** Per-consumer result against that consumer's pre-agreed criteria; a consumer register reconciled against actual usage; a recorded acceptance or explicit hold from each consuming business owner; no release decision resting on an averaged score across consumers.
+
+### RGS-10 — Partial failure and version divergence
+
+**Control objective:** `OPS-05`, `OPS-03`
+
+**Objective:** Confirm the decision rule holds when some consumers pass and some do not.
+
+**Exercise:** Take a change where at least one consumer fails acceptance. Verify the pre-agreed rule was applied: block for that consumer, block entirely where split versions are impossible, or proceed with recorded restriction, suspension, or conditional acceptance at the inherited tier's authority. Where consumers end on different versions, verify each baseline is separately recorded, monitored, and tested.
+
+**Pass evidence:** Decision record naming the failing consumer, the rule applied, and the approving authority; inventory showing every live configuration; evidence that a higher-tier failure was not offset by lower-tier passes.
+
+### RGS-11 — Platform and infrastructure change
+
+**Control objective:** `OPS-03`, `SEC-06`, `AGT-03`
+
+**Objective:** Detect behavior change from a change made below the application layer.
+
+**Exercise:** On runtime, SDK, API-version, compute, region, container, orchestration, gateway, timeout, quota, identity, or observability changes, re-run the regression set with attention to truncation, timeout, retry, long-context behavior, tool-call reliability, permission resolution, and trace completeness.
+
+**Pass evidence:** Infrastructure change record linked to a regression run; comparison covering latency and failure modes, not accuracy alone; confirmation that logs and traces remain complete enough to evidence the controls that depend on them.
+
+### RGS-12 — Forced deprecation and migration rehearsal
+
+**Control objective:** `OPS-05`, `TPRM-03`, `OPS-02`
+
+**Objective:** Confirm the organization can complete a cutover it cannot decline, before the date it does not control.
+
+**Exercise:** From a deprecation or end-of-life notice, rehearse the migration on the production-intended configuration. Establish the internal cutover date by working back from the provider deadline through consumer testing, remediation, and re-test. Exercise the fallback that replaces rollback.
+
+**Pass evidence:** Change record opened on the notice date rather than near the deadline; dated migration plan with consumer test windows; rehearsal result; named fallback; recorded disposition — migrate, restrict, suspend, or accept with an expiry — for every consumer not passing in time.
+
 ## Coverage note
 
 The distinguishing risk in GenAI regression is that the most consequential changes are made by someone else. RGS-01 and RGS-02 are the scenarios most often missing from otherwise mature change processes.
+
+Two further blind spots recur where an AI service is shared. Changes below the application layer (`RGS-11`) are released through a platform process that never routes them past AI governance, and consumer-level acceptance (`RGS-09`, `RGS-10`) is replaced by a single platform-level pass that no consuming business owner ever agreed to.

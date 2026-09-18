@@ -23,8 +23,8 @@ lifecycle_stages:
   - operation
   - retirement
 status: draft
-version: "0.1.0"
-last_reviewed: 2026-08-17
+version: "0.2.0"
+last_reviewed: 2026-09-18
 source_artifacts:
   - SRC-POL-01
   - SRC-AUD-01
@@ -196,6 +196,7 @@ This procedure defines the decisions and evidence required to move an AI system 
 - Reconcile deployed models, prompts, retrieval, tools, and permissions with inventory and baselines.
 - Perform periodic control, vendor, access, and monitoring reviews based on tier.
 - Classify changes before release and run regression or targeted revalidation.
+- For a shared service, keep the consumer register current, notify affected consuming teams before a material change, and give them a test window proportionate to the inherited tier.
 - Suspend, restrict, or roll back when thresholds or approval conditions fail.
 
 ### Periodic review record
@@ -203,7 +204,8 @@ This procedure defines the decisions and evidence required to move an AI system 
 - current use, users, tier, owner, versions, and dependencies;
 - KPI/KRI trends against thresholds;
 - incidents, overrides, complaints, and findings;
-- changes and provider notices;
+- changes and provider notices, including deprecation and end-of-life dates;
+- for a shared service: registered consumers, inherited tier, and any version divergence between them;
 - exceptions and overdue actions;
 - monitoring and control-effectiveness conclusion; and
 - decision to continue, condition, reassess, suspend, or retire.
@@ -236,12 +238,17 @@ This procedure defines the decisions and evidence required to move an AI system 
 | Change or event | Earliest gate normally revisited |
 |---|---|
 | New purpose, affected population, or high-impact decision | G1 |
+| New consuming team onboarded to a shared service | G1 for that use case; G2–G4 for the service if it raises the [inherited tier](../risk-tiering/ai-risk-tiering-framework.md#shared-service-tier-inheritance) |
 | New data category, geography, provider, architecture, or tool | G2 |
 | Implementation deviation or new dependency | G3 |
 | Model/prompt/retrieval update affecting behavior | G4 |
+| Platform or infrastructure change capable of altering behavior, availability, permission resolution, or trace completeness | G4 |
 | Production configuration or rollout change | G5 |
+| Provider deprecation or end-of-life notice for a component in use | G4, opened on receipt of the notice rather than at the deadline |
 | Threshold breach, incident, drift, or repeated override | G4 or G6 based on root cause |
 | End of business need or unsupported provider | G7 |
+
+For a **shared service**, the gate is determined by the highest-tier registered consumer affected, and the exit evidence must include per-consumer acceptance, not only the platform owner's approval (`OPS-05`).
 
 ## Gate-performance measures
 
@@ -250,5 +257,7 @@ This procedure defines the decisions and evidence required to move an AI system 
 - Conditional approvals and overdue conditions by tier.
 - Production releases that differ from validated baselines.
 - Material changes deployed without prior classification.
+- Shared-service changes released without notice to, or acceptance from, every registered consumer.
+- Consumers discovered during a change that were absent from the consumer register.
 - Reassessments triggered and completed within required time.
 - Retired systems with residual credentials, integrations, or inventory discrepancies.

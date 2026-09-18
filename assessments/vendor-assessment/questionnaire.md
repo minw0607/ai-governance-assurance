@@ -23,8 +23,8 @@ lifecycle_stages:
   - validation
   - operation
 status: draft
-version: "0.2.0"
-last_reviewed: 2026-08-18
+version: "0.3.0"
+last_reviewed: 2026-09-18
 source_artifacts:
   - SRC-AGT-01
   - SRC-VEND-01
@@ -102,13 +102,18 @@ For each response, record the vendor answer, evidence reference, assessor conclu
 43. How are preview features separated from generally available capabilities?
 44. What reassessment and re-testing does the provider perform after changes?
 45. What support periods and migration paths exist for retired models or APIs?
+46. What minimum advance notice is contractually committed for a version change, deprecation, or end-of-life, and does it differ for security-driven changes?
+47. Does the prior version remain available and unchanged during a customer test window, and for how long after the successor is released?
+48. Which changes can the customer defer, pin, or stage across its own user groups, and which are applied without customer control?
+49. What changes to infrastructure, routing, region, capacity, quotas, or default parameters are made without a model or API version change, and how are customers notified?
+50. What rollback support exists after a customer has migrated, and for how long?
 
 ## 9. Contract and assurance
 
-46. Do terms provide audit, regulatory cooperation, incident notification, data-use restriction, deletion, subprocessor notice, service level, and termination rights?
-47. Who owns customer prompts, outputs, fine-tuning artifacts, evaluations, and derived configurations?
-48. How does the provider support transparency, recordkeeping, impact assessment, accessibility, and contestability obligations?
-49. Identify all requested controls the provider cannot meet and proposed alternatives.
+51. Do terms provide audit, regulatory cooperation, incident notification, data-use restriction, deletion, subprocessor notice, service level, and termination rights?
+52. Who owns customer prompts, outputs, fine-tuning artifacts, evaluations, and derived configurations?
+53. How does the provider support transparency, recordkeeping, impact assessment, accessibility, and contestability obligations?
+54. Identify all requested controls the provider cannot meet and proposed alternatives.
 
 ## Related artifacts
 

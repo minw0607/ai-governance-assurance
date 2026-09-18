@@ -26,6 +26,6 @@ These modular examples are designed to be adopted into an organization's policy 
 - [AI Model and System Risk Management](model-risk-management.md)
 - [Third-Party AI Risk](third-party-risk.md)
 - [Prompt and Instruction Management](prompt-management.md)
-- [AI Change Management](change-management.md)
+- [AI Change Management](change-management.md) — including platform/infrastructure changes and upgrades to services shared by multiple teams
 
 Each policy identifies minimum expectations. Procedures, standards, and technical configurations should be maintained separately so they can change without reopening the governing policy.
