@@ -19,8 +19,8 @@ lifecycle_stages:
   - deployment
   - operation
 status: draft
-version: "0.2.0"
-last_reviewed: 2026-08-18
+version: "0.3.0"
+last_reviewed: 2026-09-29
 source_artifacts:
   - SRC-AGT-01
   - SRC-TEST-01
@@ -42,6 +42,7 @@ Each section lists the [control objectives](../governance/control-framework/cont
 - [ ] Agent goal, allowed scope, success condition, prohibited actions, and termination condition are explicit.
 - [ ] Every tool/action has an owner, business purpose, and read/write/delete/transact/execute classification.
 - [ ] User authority is propagated and revalidated at action time.
+- [ ] The basis of the downstream authorization decision is established separately from how identity is established; correct delegated identity is not evidence that current source restrictions are evaluated.
 - [ ] The agent cannot expand its own privileges, change governing policy, approve its own material action, or authorize its own exception.
 
 ## Privilege and action

@@ -23,8 +23,8 @@ lifecycle_stages:
   - operation
   - retirement
 status: draft
-version: "0.2.0"
-last_reviewed: 2026-09-18
+version: "0.3.0"
+last_reviewed: 2026-09-29
 source_artifacts:
   - SRC-POL-01
   - SRC-AUD-01
@@ -106,6 +106,8 @@ This procedure defines the decisions and evidence required to move an AI system 
 - Complete privacy, data, security threat, legal/compliance, records, vendor, and rights-impact reviews as applicable.
 - Define provider version strategy, rollback, degraded mode, recovery, and exit.
 - Map control objectives to implementation, owner, evidence, and planned test.
+- Identify every governed data asset the system will reach and route each to its own owner for approval, separately from the AI approval (`AGT-01`).
+- Record, for each security attribute that restricts access at the source, the field that carries it downstream and the component that enforces it.
 - Resolve design-blocking findings before build or acquisition commitment.
 
 ### Exit evidence
@@ -180,6 +182,7 @@ This procedure defines the decisions and evidence required to move an AI system 
 - signed readiness record;
 - production configuration and release identifier;
 - residual-risk acceptance and conditions;
+- for each governed data asset the system or its agents reach, an approval from that asset's own owner naming the permitted data and actions;
 - monitoring and incident plans;
 - rollout and rollback plans;
 - user/reviewer training and communication; and

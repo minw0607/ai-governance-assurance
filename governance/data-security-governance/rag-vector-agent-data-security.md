@@ -10,6 +10,7 @@ domains:
   - agentic-ai
   - data-leakage
   - information-security
+  - information-barriers
 applies_to:
   - rag
   - llm
@@ -24,8 +25,8 @@ lifecycle_stages:
   - operation
   - retirement
 status: draft
-version: "0.1.0"
-last_reviewed: 2026-08-18
+version: "0.2.0"
+last_reviewed: 2026-09-29
 source_artifacts:
   - SRC-POL-01
   - SRC-AUD-01
@@ -55,6 +56,21 @@ Document:
 - deletion, re-indexing, disaster recovery, provider exit, and retirement flows.
 
 Identify every point where untrusted content can influence instructions or where an identity boundary can be lost.
+
+### Security metadata mapping
+
+Record, for each security attribute that constrains access at the source, the field that carries it downstream and the component that enforces it:
+
+| Source attribute | Downstream carrier | Enforcement point |
+|---|---|---|
+| Source access control list or group grant | | |
+| Compartment restriction (matter, case, deal, or engagement) | | |
+| Information-barrier indicator | | |
+| Classification and handling label | | |
+| Deletion or suppression status | | |
+| Legal-hold or preservation status | | |
+
+An attribute with no downstream carrier is not enforced downstream, whatever the source system does. An attribute carried but never evaluated is not enforced either. Both are findings, and neither is visible from an architecture diagram alone.
 
 ## 3. Source onboarding and ingestion
 
@@ -91,6 +107,8 @@ Identify every point where untrusted content can influence instructions or where
 - Test direct retrieval, semantic retrieval, metadata filters, query rewriting, citations, previews, exports, and cached answers.
 - Do not let the model decide whether the user is entitled to data.
 
+**Authentication is not authorization.** Establishing the initiating user's identity — including through delegated identity or token exchange — settles *who is asking*. It does not establish that the authorization decision downstream evaluates the restrictions that actually apply to the content. The common failure is a system that identifies the user correctly at query time while authorizing against permissions copied during ingestion. Determine which basis the decision uses, and how stale it can be, separately from how identity is established.
+
 ### 4.2 Workload and administrative access
 
 - Use distinct managed identities for ingestion, retrieval, administration, evaluation, and agents.
@@ -105,6 +123,25 @@ Identify every point where untrusted content can influence instructions or where
 - Fail closed or isolate affected content when permission synchronization is stale or unsuccessful for sensitive corpora.
 - Propagate grants, revocations, document deletion, legal holds, external-share changes, and group changes.
 - Reconcile indexed permission metadata to source permissions on a risk-based cadence.
+
+### 4.4 Information barriers
+
+An information barrier is a mandatory restriction that **overrides an otherwise-valid grant**: a person may hold a legitimate role, group membership, and source permission and still be screened from the content. Barriers apply in legal, financial services, audit, advisory, and transaction contexts, and are known by various sector names.
+
+They differ from ordinary access control in ways that matter downstream:
+
+- **They override rather than grant.** The barrier is evaluated independently of the permission check and can only subtract from it. A design that treats the barrier as one signal among several, or that skips it once a permission check has passed, can be argued out of the restriction.
+- **They are retroactive.** Opening a compartment imposes a restriction on content that already exists in indexes, caches, embeddings, memory, and prior conversation history. Applying a barrier only to newly ingested content leaves the back catalogue exposed.
+- **They constrain derivation, not only retrieval.** A summary, aggregate, ranking, count, or citation list that spans compartments can disclose restricted information without returning a restricted document. Barrier enforcement that inspects only returned documents will not catch this.
+- **They are bidirectional and time-bounded.** Record which direction each barrier runs, when it takes effect, when it lapses, and who may lift it.
+
+Requirements:
+
+- Enforce barriers outside the model, after the source permission check, and before content reaches context assembly.
+- Carry the barrier indicator as retrievable metadata on every derived store, per the security metadata mapping above.
+- Apply barrier changes to existing derived content within a defined and approved interval; fail closed for affected compartments while the change is in flight.
+- Constrain cross-compartment aggregation, ranking, and counting, not only document return.
+- Log barrier decisions distinctly from ordinary permission denials, so that barrier effectiveness can be evidenced separately.
 
 ## 5. Vector and index security
 
@@ -203,13 +240,24 @@ When a source is corrected, restricted, deleted, or loses authorization:
 6. query for residual retrieval using representative and adversarial prompts; and
 7. retain evidence of authority, execution, exceptions, and verification.
 
+### Preservation obligations in conflict with deletion
+
+A legal hold or preservation order suspends deletion, while retention schedules, minimization, and data-subject rights compel it. The two obligations meet in the derived stores, and the procedure must say which wins and for what:
+
+- Determine whether the hold extends to derived artifacts — chunks, embeddings, indexes, caches, generated summaries, and agent memory — or only to the source record. State the determination; do not leave it to whoever runs the purge.
+- Where derivatives are in scope, suppress retrieval without destroying them, and record that suppression is not deletion.
+- Where derivatives are out of scope but a routine purge would destroy the only record of what the system disclosed, preserve the trace and log evidence regardless.
+- Reconcile hold status between the source and every downstream store on the same cadence as permissions; a hold applied at the source while a downstream purge proceeds destroys evidence and is not detectable after the fact.
+- Record the authority, scope, start, and release of every hold affecting AI-derived stores, and verify release as deliberately as imposition.
+
 ## 12. Minimum test suite
 
 | Test area | Representative scenarios | Expected evidence |
 |---|---|---|
 | Source scope | approved, blocked, personal, externally shared, deleted, and newly added sources | connector enforcement and denied-event logs |
 | Permissions | allowed/denied users, nested groups, recent revocation, file/folder conflict, service identity | source-to-index authorization consistency |
-| Isolation | user, session, tenant, business unit, environment, and region boundaries | no unauthorized retrieval or metadata disclosure |
+| Isolation | user, session, tenant, business unit, compartment, environment, and region boundaries | no unauthorized retrieval or metadata disclosure |
+| Information barriers | screened identity with a valid source grant, barrier imposed after ingestion, cross-compartment summary/aggregate/count, barrier lapse and lift | barrier enforced after the permission check, applied to pre-existing derived content within the approved interval, and logged distinctly from permission denials |
 | Injection | hidden text, document instructions, metadata, email thread, image/OCR, malicious link | unsafe instruction ignored/contained and event detected |
 | Exfiltration | synthetic canaries, broad summaries, encoding, tool/export path, multi-turn extraction | prevention or detection with no unauthorized disclosure |
 | Poisoning | altered trusted source, malicious new source, label manipulation, bulk change | quarantine, alert, rollback, and impact analysis |
@@ -224,7 +272,9 @@ Use synthetic canaries and multiple test identities. The source procedure's samp
 
 - architecture and data/control-flow diagrams;
 - source and connector register;
-- chunk/index/embedding manifest and permission model;
+- chunk/index/embedding manifest, permission model, and security metadata mapping;
+- information-barrier register with direction, effective and lapse dates, and lift authority;
+- legal-hold register covering derived stores, with scope determination and release verification;
 - identity, namespace, region, and environment configuration;
 - ingestion scanning and integrity results;
 - injection, permission, isolation, leakage, poisoning, deletion, and recovery test results;

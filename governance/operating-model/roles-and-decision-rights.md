@@ -21,8 +21,8 @@ lifecycle_stages:
   - deployment
   - operation
 status: draft
-version: "0.2.0"
-last_reviewed: 2026-09-18
+version: "0.3.0"
+last_reviewed: 2026-09-29
 source_artifacts:
   - SRC-POL-01
   - SRC-AUD-01
@@ -159,6 +159,7 @@ Every material forum decision should capture:
 | Approve Tier 2 use | A or delegated A | R | R | C | C | C/R | I |
 | Approve Tier 3/4 use | I | A | R | C | C as applicable | I | I |
 | Approve architecture and data use | I | C | R | C | A by domain | C | I |
+| Approve agent access to a governed data asset | I | C | R | C | A by data asset owner | C | I |
 | Design and execute testing | I | A | R | C | C | C or R if independent | I |
 | Accept validation findings | A by tier | A/R | R | C | C | R | I |
 | Accept residual risk | A by tier | R | C | C | C | I | I |
@@ -179,6 +180,7 @@ Every material forum decision should capture:
 - Privileged tool access, production deployment, and approval should not rest with one individual for higher-risk systems.
 - The person granting an exception should have authority at least equal to the original requirement owner.
 - The owner of a shared AI service must not accept a change on behalf of a consuming business owner, and must not classify a change below the tier of its highest registered consumer.
+- The AI approval does not substitute for the data asset owner's approval; an agent reaching a governed asset requires both, and the asset owner's approval must name the permitted data and actions rather than the agent alone.
 - Internal audit must not own the inventory, tiering, validation, monitoring, or exception process it later audits.
 
 ## Escalation triggers

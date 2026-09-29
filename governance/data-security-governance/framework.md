@@ -33,8 +33,8 @@ lifecycle_stages:
   - operation
   - retirement
 status: draft
-version: "0.1.0"
-last_reviewed: 2026-08-18
+version: "0.2.0"
+last_reviewed: 2026-09-29
 source_artifacts:
   - SRC-POL-01
   - SRC-AUD-01
@@ -158,7 +158,7 @@ This supplements the [AI inventory minimum data standard](../ai-inventory/minimu
 - Map enterprise classifications to AI processing patterns using the [classification and use matrix](data-classification-control-matrix.md).
 - Use managed human and workload identities, least privilege, separation of duties, and periodic access review.
 - Preserve source permissions at retrieval time and promptly propagate grants, revocations, and legal restrictions.
-- Segregate customers, business units, environments, regions, and evaluation datasets where commingling would create unacceptable risk.
+- Segregate customers, business units, compartments under information barriers, environments, regions, and evaluation datasets where commingling would create unacceptable risk.
 
 ### 6.3 Data quality, integrity, and representativeness
 

@@ -23,8 +23,8 @@ lifecycle_stages:
   - operation
   - retirement
 status: draft
-version: "0.4.0"
-last_reviewed: 2026-09-18
+version: "0.5.0"
+last_reviewed: 2026-09-29
 source_artifacts:
   - SRC-AGT-01
   - SRC-AUD-01
@@ -49,6 +49,18 @@ Assessment should distinguish:
 - **implementation:** the control exists in the deployed process and system;
 - **operating effectiveness:** evidence shows consistent performance over a defined period; and
 - **outcome effectiveness:** the control set keeps actual behavior within approved limits.
+
+### Eliciting evidence
+
+Most of these objectives are verified by asking someone how a control works. The answer is evidence only if it is specific enough to be wrong:
+
+- **A named mechanism is an assertion, not an outcome.** "It uses delegated identity", "permissions are inherited", "the platform handles it" each name a component without establishing what decision that component makes, on what basis, or how current the basis is. Ask what the mechanism *decides*, then what it decides *against*.
+- **Probe one issue at a time.** A compound question is answered at its easiest clause, and the rest is presumed covered.
+- **Require paired evidence.** One allowed case and one denied case, from the same run, with the same configuration. A control demonstrated only on the permitted path has not been demonstrated.
+- **Treat revocation as its own case.** Access that was never granted and access that was withdrawn are different tests, and systems commonly pass the first and fail the second.
+- **Ask for the mapping, not the intent.** Request the specific field, record, log line, or configuration that carries the control, with a dated result — not a description of the approach.
+
+Record which effectiveness level the evidence actually supports. A design description accepted as operating evidence is the most common overstatement in AI control reporting.
 
 ## 1. Governance and lifecycle
 
@@ -112,11 +124,11 @@ Assessment should distinguish:
 
 ### DATA-02 — Classification and least-privilege access
 
-**Objective:** Access to AI data and retrieval sources follows classification and source permissions.
+**Objective:** Access to AI data and retrieval sources follows classification and source permissions, and mandatory restrictions that override an otherwise-valid grant — information barriers and compartment screens — are enforced on retrieved and derived content alike.
 
-**Evidence:** classification mapping, RBAC/ABAC, connector configuration, group membership, access reviews, denial logs.
+**Evidence:** classification mapping, RBAC/ABAC, connector configuration, group membership, access reviews, denial logs, information-barrier register, security metadata mapping from source attribute to downstream carrier and enforcement point.
 
-**Assurance procedure:** test representative allowed and denied retrieval paths, including cross-user and cross-tenant attempts.
+**Assurance procedure:** test representative allowed and denied retrieval paths, including cross-user, cross-tenant, and cross-compartment attempts; verify a barrier is enforced for an identity holding a valid source grant, that a barrier imposed after ingestion reaches pre-existing derived content, and that cross-compartment summaries and aggregates are constrained, not only document return.
 
 ### DATA-03 — Minimization and provider data use
 
@@ -128,11 +140,11 @@ Assessment should distinguish:
 
 ### DATA-04 — Retention, deletion, and data-subject rights
 
-**Objective:** Data is retained only as required and can be corrected or deleted across prompts, logs, memory, embeddings, indexes, and downstream stores.
+**Objective:** Data is retained only as required and can be corrected or deleted across prompts, logs, memory, embeddings, indexes, and downstream stores, with conflicts between preservation and deletion obligations resolved in advance rather than by whichever job runs first.
 
-**Evidence:** schedule, deletion workflow, re-index evidence, memory deletion, legal-hold logic, completed requests.
+**Evidence:** schedule, deletion workflow, re-index evidence, memory deletion, legal-hold logic and register, determination of whether holds extend to derived artifacts, completed requests.
 
-**Assurance procedure:** execute an end-to-end deletion test and verify removal or documented lawful retention in every store.
+**Assurance procedure:** execute an end-to-end deletion test and verify removal or documented lawful retention in every store; separately verify that a record under preservation is suppressed rather than destroyed in derived stores, and that hold status reconciles between source and downstream stores.
 
 ### DATA-05 — Residency and cross-border control
 
@@ -314,11 +326,11 @@ Assessment should distinguish:
 
 ### AGT-01 — Tool registry and least privilege
 
-**Objective:** Each agent can access only approved tools, operations, data, and environments required for its task.
+**Objective:** Each agent can access only approved tools, operations, data, and environments required for its task, and access to a governed data asset is approved by that asset's own owner in addition to the AI approval — naming the permitted data and the permitted actions, not the agent alone.
 
-**Evidence:** tool registry, permission matrix, service identity, owner approval, access review, denied-call logs.
+**Evidence:** tool registry, permission matrix, service identity, owner approval, data-asset owner approval specifying permitted data and actions, recertification records, access review, denied-call logs.
 
-**Assurance procedure:** compare agent objectives with actual scopes and attempt unauthorized read, write, execute, and cross-tenant actions.
+**Assurance procedure:** compare agent objectives with actual scopes and attempt unauthorized read, write, execute, and cross-tenant actions; confirm each data asset an agent reaches carries an approval from its own owner, and that entitlements are recertified when the agent's purpose, owner, or data scope changes.
 
 ### AGT-02 — Consequential-action gating
 
@@ -358,7 +370,7 @@ Assessment should distinguish:
 
 **Evidence:** agent/server/tool register, workload identities, parent/child graph, scopes and audiences, token/exchange configuration, delegation policy, protocol/SDK/schema versions, denied and revoked access logs.
 
-**Assurance procedure:** attempt unknown/revoked identities, wrong-audience tokens, unsafe downstream token passthrough, unapproved servers/tools, spoofed/replayed messages, excessive delegation depth, and child-agent privilege expansion.
+**Assurance procedure:** attempt unknown/revoked identities, wrong-audience tokens, unsafe downstream token passthrough, unapproved servers/tools, spoofed/replayed messages, excessive delegation depth, and child-agent privilege expansion. Establish separately what the downstream authorization decision evaluates: correctly establishing the initiating identity does not show that the decision uses current source restrictions rather than a basis captured at ingestion.
 
 ### AGT-07 — Action and state integrity
 

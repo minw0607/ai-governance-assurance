@@ -13,8 +13,8 @@ applies_to:
 industries:
   - cross-industry
 status: draft
-version: "0.2.0"
-last_reviewed: 2026-08-18
+version: "0.3.0"
+last_reviewed: 2026-09-29
 ---
 
 # AI Governance and Assurance Glossary
@@ -30,6 +30,8 @@ last_reviewed: 2026-08-18
 **AI system:** A machine-based system that infers from inputs how to generate outputs such as predictions, content, recommendations, or decisions that can influence environments.
 
 **Assurance:** Evidence-based confidence that governance, risk management, and controls are suitable and operating as intended.
+
+**Compartment:** The unit a barrier separates — a matter, case, deal, engagement, client, or investigation — against which access and derivation are restricted.
 
 **Delegated authority:** The limited permission for an agent or workload to act on behalf of a person, service, or business purpose. Delegation should identify scope, duration, resources, destinations, and revocation.
 
@@ -52,6 +54,8 @@ last_reviewed: 2026-08-18
 **Human in the loop:** A person must review and authorize a decision or action before it takes effect.
 
 **Human on the loop:** A person supervises operation and can intervene, but the system may act before review.
+
+**Information barrier:** A mandatory restriction that prevents specified people from accessing specified information, overriding an otherwise-valid permission or role grant. Known in different sectors as an ethical wall, a Chinese wall, a conflicts screen, or a compartment. Unlike ordinary access control it is imposed rather than granted, commonly applies retroactively to content that already exists in derived stores, and constrains aggregation and summarization across compartments as well as direct retrieval.
 
 **Large language model (LLM):** A model trained to process and generate language or related token sequences at scale.
 

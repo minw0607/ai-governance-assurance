@@ -26,8 +26,8 @@ lifecycle_stages:
   - operation
   - retirement
 status: draft
-version: "0.1.0"
-last_reviewed: 2026-08-18
+version: "0.2.0"
+last_reviewed: 2026-09-29
 source_artifacts:
   - SRC-POL-01
   - SRC-AUD-01
@@ -150,6 +150,9 @@ Before acquiring or connecting data:
 - Execute approved deletion across active stores, indexes, caches, logs, memory, evaluation sets, provider copies, and downstream exports as applicable.
 - Rebuild or incrementally update indexes when tombstoning alone could still permit retrieval.
 - Respect legal holds and authoritative records schedules; document why a requested deletion cannot be completed immediately.
+- Determine and record whether a hold extends to derived artifacts — embeddings, indexes, caches, generated summaries, and agent memory — or only to the source record. Preservation and deletion obligations meet in the derived stores, and the determination must be made in advance rather than settled by whichever process runs first.
+- Where derived artifacts are within scope, suppress retrieval without destroying them, and record that suppression is not deletion. Where they are outside scope, preserve the trace and log evidence of what the system disclosed regardless.
+- Reconcile hold status between source and downstream stores on the same cadence as permissions; a hold applied at the source while a downstream purge proceeds is not detectable after the fact.
 - For backups, prevent deleted data from returning to active use and expire it under the approved backup lifecycle.
 
 **Evidence:** request and authority, affected-asset list, job logs, re-index result, post-deletion query test, provider confirmation, exception/hold record.

@@ -18,8 +18,8 @@ industries:
 lifecycle_stages:
   - operation
 status: draft
-version: "0.1.0"
-last_reviewed: 2026-08-17
+version: "0.2.0"
+last_reviewed: 2026-09-29
 source_artifacts:
   - SRC-AUD-01
 ---
@@ -89,6 +89,12 @@ Use this checklist to assess both **design** and **operating effectiveness**. Fo
 **Control objectives:** HUM-01, HUM-02, OPS-02, OPS-03
 
 Prepare a concise evidence index containing inventory, governance charter, policies, recent approvals, architecture/data flows, tiering, assessments, test reports, monitoring, incidents, change records, exceptions, training, vendor evidence, and remediation tracking.
+
+Evidence requests should name the artifact, not the topic. "Describe how access is controlled" returns a design narrative; "provide the field mapping that carries source restrictions downstream, with one allowed-access and one denied-or-revoked-access result from the same run" returns evidence. For each control examined, record whether what was supplied demonstrates design, implementation, operating, or outcome effectiveness — see [eliciting evidence](../governance/control-framework/control-objectives.md#eliciting-evidence). A named mechanism supplied in place of a result is a design description, and should be rated as one.
+
+- [ ] Every control conclusion cites an artifact and a date, not an interview alone.
+- [ ] Access and restriction controls are evidenced by paired allowed and denied results, with revocation tested separately from never-granted.
+- [ ] The effectiveness level each piece of evidence supports is recorded, and design descriptions are not reported as operating effectiveness.
 
 ## Rating
 
