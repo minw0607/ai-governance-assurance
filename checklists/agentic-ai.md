@@ -19,8 +19,8 @@ lifecycle_stages:
   - deployment
   - operation
 status: draft
-version: "0.3.0"
-last_reviewed: 2026-09-29
+version: "0.4.0"
+last_reviewed: 2026-10-06
 source_artifacts:
   - SRC-AGT-01
   - SRC-TEST-01
@@ -44,6 +44,9 @@ Each section lists the [control objectives](../governance/control-framework/cont
 - [ ] User authority is propagated and revalidated at action time.
 - [ ] The basis of the downstream authorization decision is established separately from how identity is established; correct delegated identity is not evidence that current source restrictions are evaluated.
 - [ ] The agent cannot expand its own privileges, change governing policy, approve its own material action, or authorize its own exception.
+- [ ] Behavior when delegated user identity is unavailable is documented per integration and fails closed unless an approved exception bounds the substituting identity to the initiating user's reach.
+- [ ] A denied authorization is not retried under a different or more privileged identity.
+- [ ] Where a workload identity performs the call, the initiating human remains reconstructable in the downstream system's own records.
 
 ## Privilege and action
 
@@ -53,6 +56,9 @@ Each section lists the [control objectives](../governance/control-framework/cont
 - [ ] Least privilege, parameter validation, rate/action budgets, and destination restrictions are enforced deterministically.
 - [ ] Irreversible, external, privileged, or high-impact actions require the defined approval.
 - [ ] Reviewers see the exact action and material parameters before approval.
+- [ ] Restrictions are enforced in tool permissions rather than instructed in the prompt; a "read-only" agent is confirmed to hold no write-capable tool.
+- [ ] No alternative tool, alias, endpoint, parameter, or retry path reaches a gated action without passing the gate.
+- [ ] Rejected and modified actions are recorded, not only approved ones.
 
 ## Context, tools, and memory
 
@@ -81,5 +87,11 @@ Each section lists the [control objectives](../governance/control-framework/cont
 - [ ] Planning, tool calls, approvals, state changes, errors, and final outcomes are reconstructable.
 - [ ] Alerts cover unauthorized action, repeated failure, budget breach, anomalous tools, and trace gaps.
 - [ ] Kill switch, credential revocation, containment, rollback/compensation, and checkpoint recovery are tested.
+- [ ] Stopping in-flight execution is demonstrated as distinct from reverting a deployment, and an individual agent, tool, server, identity, or route can be contained without a platform-wide shutdown.
+- [ ] Disabling a component also revokes its identity and suspends its scheduled triggers.
+- [ ] One correlation identifier connects initiating user, agent, model, protocol call, tool action, approval, and result.
+- [ ] Agent security events that raise an alert with a named responder are distinguished from those that only appear in a log; denials, fallbacks, and limit breaches are logged as completely as successes.
+- [ ] Telemetry contains no credentials, tokens, full prompts, sensitive tool arguments, or client content.
+- [ ] Limits bind per agent or workflow with attributable usage, and runaway or recursive execution is stopped automatically rather than by a human acting on an alert.
 - [ ] Material runs can be reconstructed from decision and action evidence without relying on hidden chain-of-thought.
 - [ ] Audit evidence is integrity-protected, access-controlled, minimized, exportable, and retained under an approved schedule.

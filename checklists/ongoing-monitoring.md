@@ -17,8 +17,8 @@ industries:
 lifecycle_stages:
   - operation
 status: draft
-version: "0.2.0"
-last_reviewed: 2026-09-18
+version: "0.3.0"
+last_reviewed: 2026-10-06
 source_artifacts:
   - SRC-TEST-01
   - SRC-VEND-01
@@ -59,6 +59,8 @@ At the cadence defined in the monitoring plan:
 - [ ] Unauthorized, duplicate, excessive, failed, and human-overridden actions are trended.
 - [ ] Tool permissions, credentials, memory, delegation, budgets, and kill switch are reviewed.
 - [ ] Trace completeness and recovery outcomes meet requirements.
+- [ ] Each agent security event is classified as alerting with a named responder and response path, or as log-only; denials, fallbacks, and limit breaches are reviewed alongside successful activity.
+- [ ] Per-agent usage, cost, and limit attribution is reviewed, and automatic containment for runaway execution is confirmed operative.
 
 ## Change and vendor
 

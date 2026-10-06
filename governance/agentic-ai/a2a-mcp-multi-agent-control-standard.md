@@ -28,8 +28,8 @@ lifecycle_stages:
   - deployment
   - operation
 status: draft
-version: "0.1.0"
-last_reviewed: 2026-08-18
+version: "0.2.0"
+last_reviewed: 2026-10-06
 source_artifacts:
   - SRC-AGT-01
 ---
@@ -68,6 +68,17 @@ Unregistered or unsupported servers, tools, extensions, agents, or protocol vers
 - Deny self-escalation, self-approval, policy modification, credential retrieval, and exception creation by the agent.
 - Support immediate revocation of a user delegation, workload identity, server, client, tool, endpoint, session/task, and child-agent authority.
 
+### Fallback and attribution
+
+Delegated user identity is not always available at the moment it is needed — the token expires, the exchange fails, the downstream service rejects the audience, or the call originates from a background task with no interactive user. What the system does next is a control decision, and it is frequently made implicitly by a library default:
+
+- **Define the failure behavior explicitly.** When the initiating user's delegated identity cannot be used, the transaction fails closed unless continuing under a different identity is separately approved for that path. Silent substitution of a workload or service identity is not a fallback; it is an unapproved change of authority mid-transaction.
+- **Bound the fallback identity.** Where continuing is approved, the substituting identity must not be able to reach data or actions beyond what the initiating user could reach. A service identity with broader standing permissions turns an authentication failure into a privilege escalation.
+- **Never retry a denial under another identity.** A failed authorization is a result, not a transient error. Retrying the same call with a different or more privileged identity defeats the decision that was just made, and is indistinguishable from the attack it enables.
+- **Preserve attribution downstream.** Where a workload identity performs the call, the initiating human must remain reconstructable in the downstream system's own records, not only in the calling application's logs. An action attributable only to a service identity cannot be investigated, attested, or defended.
+- **Treat a disabled validation as an exception.** Audience, issuer, and scope validation that is switched off requires a recorded rationale, a compensating control, an owner, and an expiry — the same treatment as any other control exception. Confirm by configuration whether the check is enabled, rather than by whether the mechanism exists.
+- **Document fallback behavior per integration.** Where different integrations behave differently on delegation failure, record each one. Undocumented divergence means the enterprise answer to "does it fail closed?" is unknown rather than yes.
+
 ## Server, tool, and schema governance
 
 - Approve the publisher, source, integrity, version, ownership, vulnerability posture, permissions, data use, and support status of each server and tool.
@@ -76,6 +87,10 @@ Unregistered or unsupported servers, tools, extensions, agents, or protocol vers
 - Compare catalog and schema changes with the approved baseline and require reassessment when operations, parameters, destinations, or privileges expand.
 - Validate tool arguments and returned data against locally enforced schemas and business rules. Descriptive metadata cannot authorize an action.
 - Apply allowlists, environment segregation, network egress restrictions, sandboxing, and content validation to third-party or high-risk tools.
+- Treat registration as distinct from enablement. A newly registered server or tool must not become reachable by an agent until approval and technical checks are complete.
+- Grant access at tool and operation granularity. Server-level access that exposes every tool the server offers is not least privilege, and it expands silently whenever the server adds a tool.
+- Treat changes to tool descriptions, names, annotations, aliases, parameter defaults and overrides, authentication, and downstream permissions as capability changes subject to review. Capability can increase without the schema changing, because the description is what steers tool selection.
+- Reconstruct administrative change history over registrations, enablement, permissions, and definitions: who changed what, when, and under which approval. Where the platform provides no native change history, determine whether source control, deployment pipeline, database, or administrative logs reconstruct it in full — and record the shortfall as a control gap where they do not, rather than treating the absence as covered.
 
 ## Context, provenance, and isolation
 
@@ -117,15 +132,31 @@ Use correlation identifiers to connect:
 - downstream state change, reconciliation, rollback/compensation, and final outcome; and
 - alerts, human intervention, exceptions, and incident records.
 
+A single correlation identifier should connect that whole chain end to end — initiating user, agent, model, protocol call, tool action, approval, downstream state, and final result. Evidence spread across sources that cannot be joined does not reconstruct a transaction.
+
+**Recording an event is not monitoring it.** For each agent-specific security event, establish whether it merely lands in a log or raises an alert with a named responder and a defined response path. Record denials, authorization failures, fallbacks, cancellations, and limit breaches as deliberately as successful activity: a log containing only what worked cannot show that a control held. Keep credentials, tokens, full prompts, sensitive tool arguments, and client content out of telemetry — observability must not become its own disclosure path.
+
 Record externally meaningful decision and action evidence; do not require hidden chain-of-thought. Make material audit records tamper-evident or access-controlled and append-only where proportionate, while supporting lawful correction, deletion, legal hold, and retention. Exclude credentials and minimize sensitive content.
 
 ## Limits, containment, and recovery
 
 - Enforce maximum duration, steps, retries, recursion, child agents, concurrent tasks, tokens, compute, cost, data volume, transaction value, and destinations.
+- Set limits per agent and per workflow, with usage attributable to each. A provider or account-level quota bounds the bill; it does not bound an individual agent, and it is reached only after the behavior it was meant to stop has already run.
+- Pair detection with automatic containment for runaway conditions. An alert on a recursive or looping execution that depends on a human to act is not a limit.
 - Detect unexpected tools, servers, partners, scopes, schemas, context volume, delegation patterns, denial spikes, loops, and trace gaps.
 - Provide independent control paths to disable a server, tool, agent, credential, queue, extension, or communication route.
 - Exercise cancellation of long-running tasks and reconcile actions that completed before cancellation.
 - Preserve evidence during containment and prevent recovery from restoring revoked identities, unsafe catalogs, poisoned memory, or unsupported versions.
+
+### Rollback is not termination
+
+Reverting a deployment and stopping work already in progress are different operations with different mechanisms, and treating one as the other leaves an incident running:
+
+- **A rollback does not stop an execution.** Deploying the previous version replaces what *starts next*. Tasks already dispatched continue under the version that launched them, including long-running, queued, scheduled, and child-agent work.
+- **Disabling a component does not revoke its identity.** An agent switched off whose workload identity, tokens, and secrets remain valid can still be invoked by anything else holding them, and its scheduled triggers may continue to fire.
+- **Containment must be scoped.** Establish that an individual agent, server, tool, identity, route, or model path can be stopped — together with its in-flight executions — without taking down the platform. Where the only available action is a platform-wide shutdown, record that as the containment capability and as a limitation.
+- **Name the authority and test the mechanism.** Record who may initiate containment without further approval, and exercise it on a running multi-step task rather than confirming that the control exists. A kill path that has been designed but never run is unevidenced.
+- **Recover deliberately.** Restoring service after containment requires validation and reapproval, not merely re-enablement.
 
 ## Third-party and supply-chain controls
 

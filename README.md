@@ -116,7 +116,7 @@ Overlays identify additional requirements that span artifact classes. They do no
 | [AI Inventory Minimum Data Standard](governance/ai-inventory/minimum-data-standard.md) | Required system/use-case fields, ownership, reconciliation, and quality rules | 0.4.0 | Draft |
 | [AI Data Security & Governance](governance/data-security-governance/README.md) | Integrated data lifecycle, classification, RAG/vector/agent security, and training/evaluation data standards | 0.1.0 | Draft |
 | [Agentic AI Governance and Assurance](governance/agentic-ai/README.md) | Agentic system governance, autonomy, delegated authority, A2A/MCP, and auditability | 0.1.0 | Draft |
-| [Enterprise AI Control Objectives](governance/control-framework/control-objectives.md) | Testable governance, data, security, quality, vendor, agentic, and operations objectives | 0.5.0 | Draft |
+| [Enterprise AI Control Objectives](governance/control-framework/control-objectives.md) | Testable governance, data, security, quality, vendor, agentic, and operations objectives | 0.6.0 | Draft |
 | [Control Coverage Matrix](governance/control-framework/control-coverage-matrix.md) | Reverse index: every control objective to the checklists, scenarios, templates, and mappings that evidence it | 0.1.0 | Draft |
 | [GenAI Policy Suite](governance/policies/README.md) | Modular acceptable-use, data, model-risk, vendor, prompt, and change policies | 0.1.0 | Draft |
 | [AI Risk Tiering Framework](governance/risk-tiering/ai-risk-tiering-framework.md) | Risk classification and minimum assurance requirements | 0.3.0 | Draft |
@@ -139,7 +139,7 @@ Overlays identify additional requirements that span artifact classes. They do no
 | [Use-Case-Driven Test Design](testing/test-design/use-case-driven-test-design.md) | Test formats, query taxonomy, and coverage design | 0.1.0 | Draft |
 | [Security Red Teaming](testing/security-red-teaming/testing-guide.md) | Adversarial testing for LLM and RAG applications | 0.1.0 | Draft |
 | [Agentic AI Testing](testing/agentic-ai/testing-guide.md) | Tool-use, autonomy, memory, and multi-agent assurance | 0.2.0 | Draft |
-| [Agentic AI Scenario Library](testing/agentic-ai/scenario-library.md) | Reusable intended, adversarial, failure, recovery, and audit-evidence scenarios | 0.1.0 | Draft |
+| [Agentic AI Scenario Library](testing/agentic-ai/scenario-library.md) | Reusable intended, adversarial, failure, recovery, and audit-evidence scenarios | 0.2.0 | Draft |
 | [Regression Testing](testing/regression-testing/testing-guide.md) | Change detection for provider, platform, and application updates | 0.2.0 | Draft |
 
 Every test dimension pairs a **method guide** with a **scenario library** carrying stable scenario IDs, acceptance criteria, and control-objective references. Functional correctness, hallucination and factuality, safety, bias and fairness, privacy, and workflow integration are catalogued in the [testing catalog](testing/README.md).
@@ -150,9 +150,9 @@ Every test dimension pairs a **method guide** with a **scenario library** carryi
 |---|---|---:|---|
 | [Examination Readiness](checklists/examination-readiness.md) | Control and evidence readiness for audit or examination | 0.2.0 | Draft |
 | [Production Readiness](checklists/production-readiness.md) | Release gate for production AI systems | 0.1.0 | Draft |
-| [Ongoing Monitoring](checklists/ongoing-monitoring.md) | Recurring quality, security, risk, and vendor checks | 0.2.0 | Draft |
-| [Agentic AI Audit Readiness](checklists/agentic-ai-audit-readiness.md) | Scope, control, evidence, testing, resilience, and reporting readiness | 0.1.0 | Draft |
-| [Agentic AI Audit Workpaper](templates/agentic-ai-audit-workpaper-template.md) | Reusable control-design, testing, evidence, finding, and retest record | 0.1.0 | Draft |
+| [Ongoing Monitoring](checklists/ongoing-monitoring.md) | Recurring quality, security, risk, and vendor checks | 0.3.0 | Draft |
+| [Agentic AI Audit Readiness](checklists/agentic-ai-audit-readiness.md) | Scope, control, evidence, testing, resilience, and reporting readiness | 0.2.0 | Draft |
+| [Agentic AI Audit Workpaper](templates/agentic-ai-audit-workpaper-template.md) | Reusable control-design, testing, evidence, finding, and retest record | 0.2.0 | Draft |
 | [Illustrative Microsoft 365 Copilot Audit Assessment](templates/examples/m365-copilot-audit-assessment-report.md) | Synthetic application of the framework and report templates; not client work or sponsored/endorsed | 0.2.0 | Draft |
 | [Templates Catalog](templates/README.md) | Risk, testing, findings, vendor, monitoring, and illustrative report resources | 0.1.0 | Draft |
 

@@ -17,8 +17,8 @@ lifecycle_stages:
   - validation
   - operation
 status: draft
-version: "0.1.0"
-last_reviewed: 2026-08-18
+version: "0.2.0"
+last_reviewed: 2026-10-06
 source_artifacts:
   - SRC-AGT-01
 ---
@@ -91,6 +91,26 @@ Identify the production-intended:
 
 **Selected items:** [Identifiers and selection method.]
 
+### Workflow selection
+
+Where the engagement validates a small number of representative workflows rather than a statistical sample, record why these ones carry the conclusion:
+
+| Criterion | Entry |
+|---|---|
+| Workflow name and business purpose | |
+| Deployment status (live, pilot, development, design-only) | |
+| Technical owner / business owner | |
+| Distinguishing technical pattern | [Identity model, external exposure, protocol and tool use, action capability] |
+| Highest consequence reachable | [Read-only, write, external communication, transaction, administrative] |
+| Diagram and sample transaction available | |
+
+Selection rules:
+
+- Workflows must differ in **technical pattern**, not only in name or business area. Three workflows sharing one identity model and one tool path test one control set three times.
+- A workflow must be implemented well enough to walk through an actual configuration or transaction. A design-only workflow yields a design conclusion and must be reported as one.
+- At least one selected workflow should reach a consequential action. A scope composed only of read-only paths cannot support a conclusion about action controls.
+- Prefer one workflow traced completely over three traced partially. Depth is what exposes the boundary where authorization is lost.
+
 ## 6. Procedure
 
 For each step, identify who performed it, when, against which configuration, and where the evidence is stored.
@@ -101,7 +121,19 @@ For each step, identify who performed it, when, against which configuration, and
 4. [Verify authoritative downstream state and monitoring response.]
 5. [Reconcile trace, approval, action, rollback/compensation, and outcome evidence.]
 
-## 7. Scenario execution record
+## 7. Transaction trace record
+
+Walk one representative transaction end to end and record each step. The sequence is typically: initiating user → agent or application → model → gateway → protocol server or connector → tool or API → downstream system → result → human review.
+
+| Step | Identity used | Credential / token type | Authorization decision and basis | Data sent / returned | Tool or action invoked | External destination | Persistence | Human checkpoint | Correlation reference |
+|---|---|---|---|---|---|---|---|---|---|
+| 1 | | | | | | | | | |
+| 2 | | | | | | | | | |
+| 3 | | | | | | | | | |
+
+For each step, state whether the identity is the initiating human's or a workload's, and at which boundary authorization is evaluated rather than merely carried. Record the general architecture separately; it is not a substitute for the traced transaction. Note specifically where the user identity is replaced by a service identity, where authorization is checked only on entry to the platform, where data crosses into an external service, where a tool is selected by the model without independent authorization, and where intermediate data is persisted.
+
+## 8. Scenario execution record
 
 | Field | Entry |
 |---|---|
@@ -116,7 +148,7 @@ For each step, identify who performed it, when, against which configuration, and
 | Variance / severity | [Difference and impact] |
 | Cleanup / rollback | [Completed action and evidence] |
 
-## 8. Evidence index
+## 9. Evidence index
 
 | Ref | Evidence | Source / owner | Period / version | Integrity and access | Relevance / limitation |
 |---|---|---|---|---|---|
@@ -124,7 +156,7 @@ For each step, identify who performed it, when, against which configuration, and
 | E-02 | [Configuration/export] | [Source] | [Date/version] | [Control] | [Use/limitation] |
 | E-03 | [Trace/action record] | [Source] | [Date/version] | [Control] | [Use/limitation] |
 
-## 9. Results and conclusions
+## 10. Results and conclusions
 
 **Implementation correctness:** [Does deployed configuration implement the approved design?]
 
@@ -138,7 +170,7 @@ For each step, identify who performed it, when, against which configuration, and
 
 **Overall conclusion:** [Effective / partially effective / ineffective, with concise rationale.]
 
-## 10. Finding, remediation, and retest
+## 11. Finding, remediation, and retest
 
 **Condition:** [What was observed.]
 

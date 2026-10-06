@@ -18,8 +18,8 @@ lifecycle_stages:
   - validation
   - operation
 status: draft
-version: "0.2.0"
-last_reviewed: 2026-09-18
+version: "0.3.0"
+last_reviewed: 2026-10-06
 ---
 
 # Regression Testing Scenario Library
@@ -116,7 +116,7 @@ For each scenario, record the scenario ID, control objective, system and configu
 
 **Exercise:** Execute an actual rollback of model version, prompt, retrieval configuration, and tool set. Verify behavior matches the prior validated baseline and that in-flight work is handled safely.
 
-**Pass evidence:** Timed rollback execution record, post-rollback regression run matching baseline, and documented handling of partially completed agent actions.
+**Pass evidence:** Timed rollback execution record, post-rollback regression run matching baseline, and documented handling of partially completed agent actions. Reverting the deployment is evidenced separately from stopping work already in flight: queued, scheduled, long-running, and child-agent executions launched under the prior version are shown to continue, be cancelled, or be reconciled deliberately rather than assumed to stop.
 
 
 ### RGS-09 — Shared-service upgrade across consuming teams

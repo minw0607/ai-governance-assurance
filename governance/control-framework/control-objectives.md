@@ -23,8 +23,8 @@ lifecycle_stages:
   - operation
   - retirement
 status: draft
-version: "0.5.0"
-last_reviewed: 2026-09-29
+version: "0.6.0"
+last_reviewed: 2026-10-06
 source_artifacts:
   - SRC-AGT-01
   - SRC-AUD-01
@@ -182,11 +182,11 @@ Record which effectiveness level the evidence actually supports. A design descri
 
 ### SEC-02 — Identity, secrets, and privileged access
 
-**Objective:** Users, applications, agents, and tools use managed identities, least privilege, secure credential storage, rotation, and revocation.
+**Objective:** Users, applications, agents, and tools use managed identities, least privilege, secure credential storage, rotation, and revocation; every non-human identity has a named owner, an approved purpose, a review date, and a retirement path.
 
-**Evidence:** SSO/MFA, service identities, roles, vault configuration, rotation, privileged-access reviews, secret scans.
+**Evidence:** SSO/MFA, service identities, roles, vault configuration, rotation, privileged-access reviews, secret scans, non-human identity inventory with owner, purpose, credential type, effective permissions, review cadence, and disablement procedure.
 
-**Assurance procedure:** sample identities and credentials; test scope, expiry, rotation, and terminated-user/service revocation.
+**Assurance procedure:** sample identities and credentials; test scope, expiry, rotation, and terminated-user/service revocation. Search specifically for identities shared across unrelated agents, identities with no named owner, long-lived static credentials, and credentials still valid after the agent they served was retired.
 
 ### SEC-03 — Input, output, and tool boundary enforcement
 
@@ -206,19 +206,19 @@ Record which effectiveness level the evidence actually supports. A design descri
 
 ### SEC-05 — Logging and tamper resistance
 
-**Objective:** Material access, configuration, retrieval, tool, action, approval, and security events are reconstructable and protected.
+**Objective:** Material access, configuration, retrieval, tool, action, approval, and security events are reconstructable and protected, with denials, fallbacks, and limit breaches recorded as completely as successful activity, and telemetry itself free of credentials and sensitive content.
 
-**Evidence:** log schema, correlation IDs, immutable or restricted storage, SIEM integration, access and retention controls.
+**Evidence:** log schema, correlation IDs spanning the full transaction chain, immutable or restricted storage, SIEM integration, detection rules with named responders, access and retention controls.
 
-**Assurance procedure:** reconstruct sampled transactions and changes; identify missing steps or unauthorized log access.
+**Assurance procedure:** reconstruct sampled transactions and changes from one correlation identifier; identify missing steps or unauthorized log access. Establish which events raise an alert with a named responder and a response path rather than only appearing in a log, verify that denied and failed attempts are present and not only successes, and inspect telemetry for exposed credentials, tokens, prompts, tool arguments, or client content.
 
 ### SEC-06 — Resilience, capacity, and cost control
 
 **Objective:** The system withstands provider failure, resource exhaustion, denial-of-service, and cost spikes without unsafe degradation.
 
-**Evidence:** rate/size/token limits, budgets, alerts, degraded mode, backup endpoint, recovery and failover tests.
+**Evidence:** rate/size/token limits set per agent or workflow with attributable usage, budgets, alerts paired with automatic containment, degraded mode, backup endpoint, recovery and failover tests.
 
-**Assurance procedure:** exercise throttling, provider failure, rollback, and recovery; compare results with service objectives.
+**Assurance procedure:** exercise throttling, provider failure, rollback, and recovery; compare results with service objectives. Confirm limits bind at the agent or workflow level rather than only at the provider account, that usage is attributable per agent, and that a runaway or recursively delegating execution is stopped automatically rather than by a human responding to an alert.
 
 ## 4. Model and system quality
 
@@ -328,7 +328,7 @@ Record which effectiveness level the evidence actually supports. A design descri
 
 **Objective:** Each agent can access only approved tools, operations, data, and environments required for its task, and access to a governed data asset is approved by that asset's own owner in addition to the AI approval — naming the permitted data and the permitted actions, not the agent alone.
 
-**Evidence:** tool registry, permission matrix, service identity, owner approval, data-asset owner approval specifying permitted data and actions, recertification records, access review, denied-call logs.
+**Evidence:** tool registry, permission matrix, service identity, owner approval, data-asset owner approval specifying permitted data and actions, recertification records, access review, denied-call logs, administrative change history over registration, enablement, definitions, and permissions.
 
 **Assurance procedure:** compare agent objectives with actual scopes and attempt unauthorized read, write, execute, and cross-tenant actions; confirm each data asset an agent reaches carries an approval from its own owner, and that entitlements are recertified when the agent's purpose, owner, or data scope changes.
 
@@ -346,7 +346,7 @@ Record which effectiveness level the evidence actually supports. A design descri
 
 **Evidence:** correlated traces, observability, kill switch, queue suspension, credential revocation, rollback test.
 
-**Assurance procedure:** reconstruct sampled runs and exercise emergency stop during a multi-step task.
+**Assurance procedure:** reconstruct sampled runs from a single correlation identifier and exercise emergency stop during a multi-step task. Confirm that stopping in-flight execution is a distinct capability from reverting a deployment, that a single agent, tool, server, identity, or route can be contained without a platform-wide shutdown, and that disabling a component also revokes its identity and suspends its scheduled triggers.
 
 ### AGT-04 — Memory, state, and recovery
 
@@ -366,11 +366,11 @@ Record which effectiveness level the evidence actually supports. A design descri
 
 ### AGT-06 — Agent identity, delegation, and protocol trust
 
-**Objective:** Every agent, protocol client/server, and child task has an approved identity and bounded authority; delegated authority, context, and communication cannot be spoofed, replayed, expanded, or passed to an unintended service.
+**Objective:** Every agent, protocol client/server, and child task has an approved identity and bounded authority; delegated authority, context, and communication cannot be spoofed, replayed, expanded, or passed to an unintended service; and where delegated user identity is unavailable the transaction fails closed rather than continuing under a broader identity.
 
-**Evidence:** agent/server/tool register, workload identities, parent/child graph, scopes and audiences, token/exchange configuration, delegation policy, protocol/SDK/schema versions, denied and revoked access logs.
+**Evidence:** agent/server/tool register, workload identities, parent/child graph, scopes and audiences, token/exchange configuration, documented delegation-failure behavior per integration, recorded exception where audience or issuer validation is disabled, downstream records attributing action to the initiating human, delegation policy, protocol/SDK/schema versions, denied and revoked access logs.
 
-**Assurance procedure:** attempt unknown/revoked identities, wrong-audience tokens, unsafe downstream token passthrough, unapproved servers/tools, spoofed/replayed messages, excessive delegation depth, and child-agent privilege expansion. Establish separately what the downstream authorization decision evaluates: correctly establishing the initiating identity does not show that the decision uses current source restrictions rather than a basis captured at ingestion.
+**Assurance procedure:** attempt unknown/revoked identities, wrong-audience tokens, unsafe downstream token passthrough, unapproved servers/tools, spoofed/replayed messages, excessive delegation depth, and child-agent privilege expansion. Establish separately what the downstream authorization decision evaluates: correctly establishing the initiating identity does not show that the decision uses current source restrictions rather than a basis captured at ingestion. Then induce delegation failure and observe whether the transaction fails closed or proceeds under a workload identity; compare that identity's reach with the initiating user's; attempt a denied call again under a different identity; and confirm the initiating human is reconstructable in the downstream system's own records.
 
 ### AGT-07 — Action and state integrity
 

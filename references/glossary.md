@@ -13,8 +13,8 @@ applies_to:
 industries:
   - cross-industry
 status: draft
-version: "0.3.0"
-last_reviewed: 2026-09-29
+version: "0.4.0"
+last_reviewed: 2026-10-06
 ---
 
 # AI Governance and Assurance Glossary
@@ -34,6 +34,8 @@ last_reviewed: 2026-09-29
 **Compartment:** The unit a barrier separates — a matter, case, deal, engagement, client, or investigation — against which access and derivation are restricted.
 
 **Delegated authority:** The limited permission for an agent or workload to act on behalf of a person, service, or business purpose. Delegation should identify scope, duration, resources, destinations, and revocation.
+
+**Confused deputy:** A failure in which a component with broader authority performs an action on behalf of a requester who lacks that authority, because the component substitutes its own permissions for the requester's. In agent systems it typically arises where a workload or service identity acts for a user without constraining the action to what that user could do.
 
 **Decision and action trace:** Correlated operational evidence showing the authorized purpose, identity, versions, context references, policy/approval decisions, tool calls, state changes, errors, and outcomes. It does not require hidden chain-of-thought.
 

@@ -18,8 +18,8 @@ lifecycle_stages:
   - deployment
   - operation
 status: draft
-version: "0.1.0"
-last_reviewed: 2026-08-18
+version: "0.2.0"
+last_reviewed: 2026-10-06
 source_artifacts:
   - SRC-AGT-01
 ---
@@ -64,9 +64,13 @@ Each section lists the [control objectives](../governance/control-framework/cont
 **Control objectives:** AGT-01, AGT-02, AGT-06, SEC-02
 
 - [ ] Human and workload identities, delegated authority, scopes, audiences, expiry, rotation, and revocation are documented.
+- [ ] Behavior on delegation failure is documented per integration, and any disabled audience or issuer validation is recorded as an exception with compensating control, owner, and expiry.
+- [ ] Non-human identities each have a named owner, approved purpose, effective permissions, review date, and retirement path; none are shared across unrelated agents or outlive the agent they served.
 - [ ] Each tool/server/action has an owner, purpose, version, integrity source, operations, data access, destinations, and risk classification.
 - [ ] High-impact actions use deterministic authorization and exact-action approval where required.
 - [ ] Self-escalation, self-approval, token misuse, cross-tenant action, replay, parameter substitution, and limit evasion have been tested.
+- [ ] Alternative paths to a gated action — another tool, alias, endpoint, parameter, or retry — have been tested and do not bypass the gate.
+- [ ] Containment has been exercised on a running task, with component-level stop distinguished from deployment revert, and administrative change history over registrations, definitions, and permissions is reconstructable or recorded as a gap.
 
 ## Data, retrieval, memory, and privacy
 
