@@ -23,8 +23,8 @@ lifecycle_stages:
   - operation
   - retirement
 status: draft
-version: "0.3.0"
-last_reviewed: 2026-09-29
+version: "0.4.0"
+last_reviewed: 2026-10-08
 source_artifacts:
   - SRC-POL-01
   - SRC-AUD-01
@@ -62,6 +62,7 @@ This procedure defines the decisions and evidence required to move an AI system 
 - Record discovery source, business area, capability, provider, environment, and lifecycle status.
 - Name a provisional business owner and technical contact.
 - Restrict or suspend unapproved use when exposure is material.
+- Route experimentation that cannot yet define purpose, users, or acceptance criteria to a contained environment under the [AI Development Environment Standard](../environments/ai-development-environment-standard.md) with a recorded owner, hypothesis, and expiry, rather than through intake or around it (`GOV-07`).
 - Route to G1 within a defined service level.
 
 ### Exit evidence
@@ -127,7 +128,8 @@ This procedure defines the decisions and evidence required to move an AI system 
 ### Required activities
 
 - Use approved models, services, data sources, tools, connectors, and dependencies.
-- Separate development, evaluation, and production identities and environments.
+- Separate development, evaluation, and production identities and environments to the containment contract in the [AI Development Environment Standard](../environments/ai-development-environment-standard.md), including egress, isolation, resource limits, and verified teardown (`GOV-07`).
+- Establish the provenance of any prompt, index, evaluation set, dataset, or tuned model promoted from an experimental environment before use.
 - Apply code review, dependency and secret scanning, provenance, configuration, and supply-chain controls.
 - Version prompts, policies, retrieval indexes, tool schemas, guardrails, and evaluation datasets.
 - Implement logging, correlation, rollback, kill switch, rate/transaction limits, and safe failure.
@@ -241,6 +243,8 @@ This procedure defines the decisions and evidence required to move an AI system 
 | Change or event | Earliest gate normally revisited |
 |---|---|
 | New purpose, affected population, or high-impact decision | G1 |
+| Experiment acquiring real users, real decisions, or real counterparties | G1 — it has become production use with a small population, whatever it is called |
+| Artifact promoted out of an experimental environment | G2 for a design artifact, G3 for a built one; never directly to production |
 | New consuming team onboarded to a shared service | G1 for that use case; G2–G4 for the service if it raises the [inherited tier](../risk-tiering/ai-risk-tiering-framework.md#shared-service-tier-inheritance) |
 | New data category, geography, provider, architecture, or tool | G2 |
 | Implementation deviation or new dependency | G3 |
@@ -261,6 +265,7 @@ For a **shared service**, the gate is determined by the highest-tier registered 
 - Production releases that differ from validated baselines.
 - Material changes deployed without prior classification.
 - Shared-service changes released without notice to, or acceptance from, every registered consumer.
+- Experiments past expiry, and experiments carrying real users without having re-entered the gates.
 - Consumers discovered during a change that were absent from the consumer register.
 - Reassessments triggered and completed within required time.
 - Retired systems with residual credentials, integrations, or inventory discrepancies.

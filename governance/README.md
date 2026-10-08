@@ -12,6 +12,8 @@ Governance artifacts answer: **What rules, accountabilities, decisions, and mini
 | [AI Inventory Minimum Data Standard](ai-inventory/minimum-data-standard.md) | Minimum system-of-record fields, ownership, discovery reconciliation, and data-quality rules |
 | [AI Data Security & Governance](data-security-governance/README.md) | Integrated framework and standards for AI data lifecycle, classification, RAG/vector/agent security, and training/evaluation data |
 | [Agentic AI Governance](agentic-ai/README.md) | Governance and assurance profile plus A2A, MCP, and multi-agent control requirements |
+| [AI Security Overlay](ai-security/README.md) | Security view across the library: threat modeling, detection, incident response, and AI supply chain |
+| [AI Development Environment Standard](environments/ai-development-environment-standard.md) | Containment contract, teardown, and promotion rules for lab, development, and ephemeral environments |
 | [Enterprise AI Control Objectives](control-framework/control-objectives.md) | Testable control outcomes, evidence expectations, and assurance procedures |
 | [AI Risk Tiering Framework](risk-tiering/ai-risk-tiering-framework.md) | Risk classification and minimum assurance by tier |
 

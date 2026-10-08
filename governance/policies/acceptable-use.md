@@ -18,8 +18,8 @@ lifecycle_stages:
   - deployment
   - operation
 status: draft
-version: "0.1.0"
-last_reviewed: 2026-08-17
+version: "0.2.0"
+last_reviewed: 2026-10-08
 source_artifacts:
   - SRC-POL-01
 ---
@@ -44,6 +44,8 @@ Users must:
 - respect intellectual-property, confidentiality, privacy, and contractual restrictions.
 
 Builders and owners must additionally register the use case, maintain documentation, implement required controls, test before release, monitor in production, and obtain approval before material changes.
+
+Experimentation, evaluation, and development of AI capability must take place in an environment meeting the containment contract in the [AI Development Environment Standard](../environments/ai-development-environment-standard.md). Using real sensitive data, production credentials, or real users in an uncontained environment is prohibited regardless of how the activity is labelled; an experiment that acquires real users making real decisions has become production use and must re-enter intake (`GOV-07`).
 
 ## Prohibited uses
 

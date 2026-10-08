@@ -23,8 +23,8 @@ lifecycle_stages:
   - operation
   - retirement
 status: draft
-version: "0.6.0"
-last_reviewed: 2026-10-06
+version: "0.7.0"
+last_reviewed: 2026-10-08
 source_artifacts:
   - SRC-AGT-01
   - SRC-AUD-01
@@ -42,6 +42,8 @@ These objectives define the outcomes an AI control environment should achieve. T
 The [AI Data Security & Governance Framework](../data-security-governance/framework.md) provides the implementation model for DATA objectives and related security, quality, provider, and agent controls.
 
 The [Agentic AI Governance and Assurance Profile](../agentic-ai/governance-and-assurance-profile.md) and [A2A, MCP, and Multi-Agent Control Standard](../agentic-ai/a2a-mcp-multi-agent-control-standard.md) provide the system and protocol context for AGT objectives.
+
+The [AI Security Overlay](../ai-security/README.md) is the security view across these objectives, with the threat-modeling method, detection catalog, incident-response procedure, and supply-chain standard that implement SEC objectives.
 
 Assessment should distinguish:
 
@@ -112,6 +114,14 @@ Record which effectiveness level the evidence actually supports. A design descri
 
 **Assurance procedure:** inspect active and expired exceptions; test compensating controls and escalation of overdue items.
 
+### GOV-07 — Contained experimentation
+
+**Objective:** AI experimentation and development occur in environments whose containment is established in advance — separated identity, no production credentials, default-deny egress, no inbound path to production, tested isolation, enforced resource limits, and verified teardown — and artifacts leave only through a governed promotion with their provenance established.
+
+**Evidence:** environment register with owner, purpose and expiry; containment recorded as configuration rather than intent; isolation test results including environment-to-environment, environment-to-secrets, and environment-to-host; egress policy verified against observed flows; teardown results for completion, failure, and timeout; approval where real data is used; experiment records with hypothesis, kill criteria, and recorded decision; promotion records naming the gate re-entered.
+
+**Assurance procedure:** attempt to reach another environment, the platform's secrets, and the hosting environment from inside one; attempt egress to a destination outside the allowlist and compare the result with the declared policy; crash and time out a workload and inspect whether files, credentials, processes, and storage survive; trace a prompt, index, evaluation set, or tuned model now in production back to the environment it was built in and to the approval under which it was promoted; and identify experiments that have outlived their expiry or acquired real users without re-entering the gates.
+
 ## 2. Data, privacy, and intellectual property
 
 ### DATA-01 — Authorized data sources and lineage
@@ -174,6 +184,8 @@ Record which effectiveness level the evidence actually supports. A design descri
 
 ### SEC-01 — Threat modeling and secure design
 
+> **Method:** [AI Threat Modeling Method](../ai-security/threat-modeling-method.md).
+
 **Objective:** Architecture addresses identity, trust boundaries, prompt injection, insecure output handling, data leakage, poisoning, excessive agency, availability, and recovery.
 
 **Evidence:** architecture/data-flow diagrams, threat model, design review, findings, remediation.
@@ -198,6 +210,8 @@ Record which effectiveness level the evidence actually supports. A design descri
 
 ### SEC-04 — Software and model supply chain
 
+> **Standard:** [Model and AI Supply Chain Security Standard](../ai-security/model-supply-chain.md).
+
 **Objective:** Models, libraries, datasets, containers, plugins, and services are approved, versioned, scanned, and monitored for compromise or unsupported status.
 
 **Evidence:** SBOM/model inventory, signatures/checksums, dependency scans, source approval, vulnerability and provider notices.
@@ -205,6 +219,8 @@ Record which effectiveness level the evidence actually supports. A design descri
 **Assurance procedure:** sample deployed components against approved versions and remediation service levels.
 
 ### SEC-05 — Logging and tamper resistance
+
+> **Catalog:** [AI Security Detection Catalog](../ai-security/detection-catalog.md).
 
 **Objective:** Material access, configuration, retrieval, tool, action, approval, and security events are reconstructable and protected, with denials, fallbacks, and limit breaches recorded as completely as successful activity, and telemetry itself free of credentials and sensitive content.
 
@@ -391,6 +407,8 @@ Record which effectiveness level the evidence actually supports. A design descri
 **Assurance procedure:** trace selected threshold breaches from detection to decision and verify monitoring covers approved risks.
 
 ### OPS-02 — AI incident response
+
+> **Procedure:** [AI Security Incident Response](../ai-security/incident-response.md).
 
 **Objective:** AI-specific incidents are detected, contained, investigated, reported, recovered, and used to improve controls.
 
