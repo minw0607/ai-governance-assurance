@@ -23,28 +23,57 @@
 
 ## 🧭 Start here
 
-Route by the question you actually have. The taxonomy below explains how the library is organized; this table is for finding the artifact.
+Route by the question you actually have, grouped by where you are. The taxonomy below explains how the library is organized; this table is for finding the artifact.
+
+Security questions appear throughout rather than in a block of their own, because [AI security](governance/ai-security/README.md) is an overlay across the library rather than a stage of it.
+
+**Getting oriented** — before a specific system is in view.
 
 | Your question | Go to |
 |---|---|
 | **Are we ready for AI?** — what people usually mean by *AI readiness* | [Readiness model](assessments/README.md): the three senses of the term and the two levels at which it is assessed |
 | Is our organization ready to **govern** AI? | [Governance Readiness Assessment](assessments/readiness-assessment/checklist.md) + [scoring guide](assessments/readiness-assessment/scoring-guide.md) |
-| Is **this specific use case** permitted, and at what depth of review? | [Use-Case Assessment](assessments/use-case-assessment/checklist.md) — the intake instrument for [gate G1](governance/lifecycle/stage-gates.md) |
-| Can we **prove** our controls operated, to an examiner or customer? | [Examination Readiness](checklists/examination-readiness.md) |
 | We need to **secure** an AI system — where do we start? | [AI Security Overlay](governance/ai-security/README.md) — the security view across the library |
+| How do we **run** this across a growing portfolio without the effort growing with it? | [AI Control Operating Model](governance/operating-model/control-operating-model.md) — inherited controls, operating rhythm, programme metrics |
+
+**Intake and approval** — deciding whether, and at what depth.
+
+| Your question | Go to |
+|---|---|
+| Is **this specific use case** permitted, and at what depth of review? | [Use-Case Assessment](assessments/use-case-assessment/checklist.md) — the intake instrument for [gate G1](governance/lifecycle/stage-gates.md) |
+| Is this vendor acceptable? | [Vendor Assessment Framework](assessments/vendor-assessment/framework.md) |
+| It is an **agent** — what changes? | [Agentic AI Governance and Assurance](governance/agentic-ai/README.md) |
+
+**Design and build** — what to implement, and what could defeat it.
+
+| Your question | Go to |
+|---|---|
+| What controls should exist at all? | [Control Objectives](governance/control-framework/control-objectives.md) and the [coverage matrix](governance/control-framework/control-coverage-matrix.md) |
 | What could go wrong in **this** system, and what stops it? | [AI Threat Modeling Method](governance/ai-security/threat-modeling-method.md) |
-| What should we **alert** on, and who responds? | [AI Security Detection Catalog](governance/ai-security/detection-catalog.md) |
-| Something has gone wrong with an AI system or agent | [AI Security Incident Response](governance/ai-security/incident-response.md) |
 | Can we trust the models, weights, adapters, and tools we deploy? | [Model and AI Supply Chain Security](governance/ai-security/model-supply-chain.md) |
 | How do we run **experiments** safely in a lab or dev environment? | [AI Development Environment Standard](governance/environments/ai-development-environment-standard.md) |
-| What controls should exist at all? | [Control Objectives](governance/control-framework/control-objectives.md) and the [coverage matrix](governance/control-framework/control-coverage-matrix.md) |
-| How do we **run** this across a growing portfolio without the effort growing with it? | [AI Control Operating Model](governance/operating-model/control-operating-model.md) — inheritance, rhythm, metrics |
+
+**Test and release** — establishing it works before it ships.
+
+| Your question | Go to |
+|---|---|
 | How do we test it? | [Testing catalog](testing/README.md) — method guide plus scenario library per dimension |
-| Which regulations and standards apply? | [Crosswalk](mappings/crosswalk.md) |
-| Is this vendor acceptable? | [Vendor Assessment Framework](assessments/vendor-assessment/framework.md) |
 | Can we ship it? | [Production Readiness](checklists/production-readiness.md) |
+
+**Operate, change, and respond** — keeping it inside its approved envelope.
+
+| Your question | Go to |
+|---|---|
+| What should we **alert** on, and who responds? | [AI Security Detection Catalog](governance/ai-security/detection-catalog.md) |
+| Something has gone wrong with an AI system or agent | [AI Security Incident Response](governance/ai-security/incident-response.md) |
 | We are **upgrading** a live AI service — new LLM version, provider, or the platform under it — and several teams depend on it | [Pre-upgrade sequence](governance/policies/change-management.md#pre-upgrade-sequence-for-a-shared-service) in the change policy, verified with the [shared-service section](checklists/pre-deployment.md#upgrading-a-shared-service) of the pre-deployment checklist |
-| It is an **agent** — what changes? | [Agentic AI Governance and Assurance](governance/agentic-ai/README.md) |
+
+**Prove and comply** — showing it to someone who will check.
+
+| Your question | Go to |
+|---|---|
+| Can we **prove** our controls operated, to an examiner or customer? | [Examination Readiness](checklists/examination-readiness.md) |
+| Which regulations and standards apply? | [Crosswalk](mappings/crosswalk.md) |
 
 > **A note on the word "readiness."** It appears in this library with three distinct meanings, and they are not interchangeable. **Governance readiness** is scored organizational maturity ([assessment](assessments/readiness-assessment/checklist.md)). **Assurance readiness** is whether control operation can be evidenced to a third party ([examination](checklists/examination-readiness.md), [agentic audit](checklists/agentic-ai-audit-readiness.md)). **Release readiness** is a binary ship/no-ship gate for one system ([pre-deployment](checklists/pre-deployment.md), [production](checklists/production-readiness.md)). **Adoption readiness** — data platform, talent, commercial case — is deliberately [out of scope](assessments/README.md). See the [readiness model](assessments/README.md) for how the first three relate.
 

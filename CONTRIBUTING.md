@@ -12,6 +12,16 @@ Contributions should make the library more accurate, usable, and auditable. Open
 - Preserve source attribution while rewriting content into a consistent library voice.
 - Avoid vendor-specific UI instructions unless the artifact is explicitly product-specific and date-stamped.
 
+## The root "Start here" table
+
+New artifacts that answer a question a reader would actually arrive with should be added to the root README's **Start here** table, which is grouped by lifecycle stage: getting oriented, intake and approval, design and build, test and release, operate and change and respond, and prove and comply.
+
+- Add the row to the stage at which the question arises, not the stage the artifact describes.
+- Phrase the row as the reader's question in their words, not the artifact's title.
+- Security questions belong in the stage where they arise rather than in a group of their own, because AI security is an overlay across the library rather than a stage of it.
+- Where a stage grows past roughly five rows, route through an overlay or catalog page instead of adding a seventh row — the table is for finding the entry point, not for listing the library.
+- Add a new stage only when a question genuinely fits none of the six; the catalog tables below the taxonomy exist for completeness.
+
 ## Metadata
 
 Every substantive artifact must use the fields defined in [schema/metadata.md](schema/metadata.md). Use stable `artifact_id` values; do not recycle identifiers from retired artifacts.
