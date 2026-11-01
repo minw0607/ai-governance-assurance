@@ -13,8 +13,8 @@ applies_to:
 industries:
   - cross-industry
 status: draft
-version: "0.4.0"
-last_reviewed: 2026-10-06
+version: "0.5.0"
+last_reviewed: 2026-11-01
 ---
 
 # AI Governance and Assurance Glossary
@@ -56,6 +56,8 @@ last_reviewed: 2026-10-06
 **Human in the loop:** A person must review and authorize a decision or action before it takes effect.
 
 **Human on the loop:** A person supervises operation and can intervene, but the system may act before review.
+
+**Inherited control:** A control implemented once in a shared platform and relied upon by every use case built on it, rather than rebuilt per project. Distinct from an *inherited tier*, which is the risk tier a shared service takes from its highest-tier consumer. A control recorded as inherited must be evidenced at the platform; a use case that assumes inheritance without a record has no control.
 
 **Information barrier:** A mandatory restriction that prevents specified people from accessing specified information, overriding an otherwise-valid permission or role grant. Known in different sectors as an ethical wall, a Chinese wall, a conflicts screen, or a compartment. Unlike ordinary access control it is imposed rather than granted, commonly applies retroactively to content that already exists in derived stores, and constrains aggregation and summarization across compartments as well as direct retrieval.
 

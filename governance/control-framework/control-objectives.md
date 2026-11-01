@@ -23,8 +23,8 @@ lifecycle_stages:
   - operation
   - retirement
 status: draft
-version: "0.7.0"
-last_reviewed: 2026-10-08
+version: "0.8.0"
+last_reviewed: 2026-11-01
 source_artifacts:
   - SRC-AGT-01
   - SRC-AUD-01
@@ -92,11 +92,13 @@ Record which effectiveness level the evidence actually supports. A design descri
 
 ### GOV-04 — Roles, forums, and decision authority
 
-**Objective:** Ownership, review independence, committee authority, escalation, and action tracking are explicit and operating.
+> **Operating model:** [AI Control Operating Model](../operating-model/control-operating-model.md) — control inheritance, operating rhythm, and programme metrics.
 
-**Evidence:** charters, RACI, delegation, minutes, decisions, action logs, quorum, conflicts and recusals.
+**Objective:** Ownership, review independence, committee authority, escalation, and action tracking are explicit and operating; every control has exactly one accountable role — never a committee — and controls inherited from a shared platform are recorded as such and evidenced at the platform.
 
-**Assurance procedure:** trace sampled decisions to the authorized forum and verify conditions were closed or escalated.
+**Evidence:** charters, RACI, delegation, minutes, decisions, action logs, quorum, conflicts and recusals; per-use-case control record marking each control inherited or local with the providing component; platform evidence referenced by each inheriting use case; human sponsor recorded for every non-human identity.
+
+**Assurance procedure:** trace sampled decisions to the authorized forum and verify conditions were closed or escalated. Separately, select controls recorded as inherited and confirm each is evidenced at the platform and that the use case is within its scope; search for controls with no accountable owner, with more than one, or with a committee recorded as owner; and confirm register owners still hold the roles recorded.
 
 ### GOV-05 — Central inventory and shadow-AI discovery
 

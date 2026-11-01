@@ -5,8 +5,8 @@
 **A practical, versioned collection of frameworks, procedures, checklists, templates, and reference material for securing, governing, and evaluating generative AI and agentic AI systems.**
 
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](LICENSE)
-[![Release: 0.3.0](https://img.shields.io/badge/Release-0.3.0%20curated%20draft-blue.svg)](CHANGELOG.md)
-[![Artifacts: 83](https://img.shields.io/badge/Artifacts-83%20documents-1baf7a.svg)](#library)
+[![Release: 0.4.0](https://img.shields.io/badge/Release-0.4.0%20curated%20draft-blue.svg)](CHANGELOG.md)
+[![Artifacts: 84](https://img.shields.io/badge/Artifacts-84%20documents-1baf7a.svg)](#library)
 [![AI Security](https://img.shields.io/badge/AI%20security-threat%20modeling%20·%20detection%20·%20IR%20·%20supply%20chain-c3423f.svg)](governance/ai-security/README.md)
 [![Frameworks](https://img.shields.io/badge/mapped-EU%20AI%20Act%20·%20NIST%20AI%20RMF%20·%20ISO%2042001%20·%20OWASP%20LLM%20%2B%20Agentic%20·%20SR%2026--2-378add.svg)](mappings/crosswalk.md)
 [![Project: Independent & Personal](https://img.shields.io/badge/Project-Independent%20%26%20Personal-lightgrey)](#disclaimer)
@@ -19,7 +19,7 @@
 
 ---
 
-> **Release status:** Expanded curated draft (`0.3.0`). The material is implementation guidance, not legal advice, and must be tailored to an organization's risks, obligations, and operating environment.
+> **Release status:** Expanded curated draft (`0.4.0`). The material is implementation guidance, not legal advice, and must be tailored to an organization's risks, obligations, and operating environment.
 
 ## 🧭 Start here
 
@@ -38,6 +38,7 @@ Route by the question you actually have. The taxonomy below explains how the lib
 | Can we trust the models, weights, adapters, and tools we deploy? | [Model and AI Supply Chain Security](governance/ai-security/model-supply-chain.md) |
 | How do we run **experiments** safely in a lab or dev environment? | [AI Development Environment Standard](governance/environments/ai-development-environment-standard.md) |
 | What controls should exist at all? | [Control Objectives](governance/control-framework/control-objectives.md) and the [coverage matrix](governance/control-framework/control-coverage-matrix.md) |
+| How do we **run** this across a growing portfolio without the effort growing with it? | [AI Control Operating Model](governance/operating-model/control-operating-model.md) — inheritance, rhythm, metrics |
 | How do we test it? | [Testing catalog](testing/README.md) — method guide plus scenario library per dimension |
 | Which regulations and standards apply? | [Crosswalk](mappings/crosswalk.md) |
 | Is this vendor acceptable? | [Vendor Assessment Framework](assessments/vendor-assessment/framework.md) |
@@ -118,7 +119,8 @@ Overlays identify additional requirements that span artifact classes. They do no
 | Resource | Description | Version | Status |
 |---|---|---:|---|
 | [AI Governance Framework](governance/ai-governance-framework.md) | Enterprise operating model, lifecycle, accountability, and control principles | 0.4.0 | Draft |
-| [Roles and Decision Rights](governance/operating-model/roles-and-decision-rights.md) | Three-lines accountability, governance forums, RACI, and escalation | 0.3.0 | Draft |
+| [Roles and Decision Rights](governance/operating-model/roles-and-decision-rights.md) | Three-lines accountability, governance forums, RACI, control ownership principles, and escalation | 0.4.0 | Draft |
+| [AI Control Operating Model](governance/operating-model/control-operating-model.md) | Running the control set at scale: inherited vs local controls, operating rhythm, programme metrics, and standing it up | 0.1.0 | Draft |
 | [AI Lifecycle Stage Gates](governance/lifecycle/stage-gates.md) | Entry, exit, evidence, and approval criteria from discovery through retirement | 0.4.0 | Draft |
 | [AI Inventory Minimum Data Standard](governance/ai-inventory/minimum-data-standard.md) | Required system/use-case fields, ownership, reconciliation, and quality rules | 0.4.0 | Draft |
 | [AI Data Security & Governance](governance/data-security-governance/README.md) | Integrated data lifecycle, classification, RAG/vector/agent security, and training/evaluation data standards | 0.1.0 | Draft |
@@ -129,7 +131,7 @@ Overlays identify additional requirements that span artifact classes. They do no
 | [AI Security Incident Response](governance/ai-security/incident-response.md) | What differs for AI incidents: evidence preservation, containment scope, propagation, attribution | 0.1.0 | Draft |
 | [Model and AI Supply Chain Security](governance/ai-security/model-supply-chain.md) | Provenance and integrity for models, weights, adapters, datasets, tools, and harnesses | 0.1.0 | Draft |
 | [AI Development Environment Standard](governance/environments/ai-development-environment-standard.md) | Containment contract, teardown, experiment conduct, and promotion out of lab environments | 0.1.0 | Draft |
-| [Enterprise AI Control Objectives](governance/control-framework/control-objectives.md) | Testable governance, data, security, quality, vendor, agentic, and operations objectives | 0.7.0 | Draft |
+| [Enterprise AI Control Objectives](governance/control-framework/control-objectives.md) | Testable governance, data, security, quality, vendor, agentic, and operations objectives | 0.8.0 | Draft |
 | [Control Coverage Matrix](governance/control-framework/control-coverage-matrix.md) | Reverse index: every control objective to the checklists, scenarios, templates, and mappings that evidence it | 0.1.0 | Draft |
 | [GenAI Policy Suite](governance/policies/README.md) | Modular acceptable-use, data, model-risk, vendor, prompt, and change policies | 0.1.0 | Draft |
 | [AI Risk Tiering Framework](governance/risk-tiering/ai-risk-tiering-framework.md) | Risk classification and minimum assurance requirements | 0.3.0 | Draft |

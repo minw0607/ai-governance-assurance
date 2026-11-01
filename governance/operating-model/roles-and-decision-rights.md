@@ -8,6 +8,7 @@ domains:
   - accountability
   - governance-forums
   - three-lines
+  - control-ownership
 applies_to:
   - generative-ai
   - agentic-ai
@@ -21,8 +22,8 @@ lifecycle_stages:
   - deployment
   - operation
 status: draft
-version: "0.3.0"
-last_reviewed: 2026-09-29
+version: "0.4.0"
+last_reviewed: 2026-11-01
 source_artifacts:
   - SRC-POL-01
   - SRC-AUD-01
@@ -145,6 +146,30 @@ Every material forum decision should capture:
 - required monitoring and escalation triggers; and
 - date and approving authority.
 
+## Control ownership principles
+
+Decision rights say who decides. These say who answers for whether a control works — a distinct question, and the one programmes most often leave unresolved.
+
+1. **One accountable owner per control.** Others may be responsible, consulted, or informed, but exactly one named role answers for whether the control operates. **A committee can approve a control; it cannot own one** — accountability that is shared is accountability that is absent at the moment it is needed.
+2. **The owner is a role, not a person or a team.** A named individual leaves; a team diffuses. Record the role, and record the current holder in the inventory.
+3. **Separate inherited from local controls.** Where a control is implemented in a shared platform, the platform owner is accountable for it operating and the use-case owner is accountable for relying on it correctly — being in its scope and not bypassing it. Each use case records which of its controls are inherited, so coverage is never assumed. See the [control operating model](control-operating-model.md).
+4. **Every data source has a data owner.** Nothing enters an index, corpus, or training set without that owner's approval, a classification, and a record of who may read it (`DATA-01`, `AGT-01`).
+5. **Every non-human identity has a human sponsor.** An agent or service identity is a user without a person attached. It requires a named sponsor, scoped access, and joiner-mover-leaver treatment — reviewed, recertified, and disabled when no longer needed (`SEC-02`).
+6. **Vendor-provided AI still needs an internal owner.** The provider secures the model; the organization owns what it is connected to, who may use it, and what it can reach. A capability enabled organization-wide with no internal owner is an ungoverned deployment, not a procurement.
+7. **Ownership survives change.** A material change to a model, prompt, data source, tool, or connector requires the owner's sign-off on the re-test (`OPS-03`). When a role holder changes, ownership moves in the register the same day — not at the next review.
+8. **Exceptions have an owner and an expiry.** A control that cannot be met is a time-limited exception with a named owner, compensating control, and approval at the appropriate authority — never a silent gap (`GOV-06`).
+
+### Signs ownership is not working
+
+These are observable conditions, each of which should be searched for rather than waited for:
+
+- a decision-rights row with more than one accountable owner, or a committee recorded as the owner;
+- non-human identities running with no human sponsor;
+- *"we assumed the platform handles that"* — no one has checked which controls are actually inherited and evidenced;
+- vendor-provided assistants enabled broadly with no internal owner for what they reach;
+- findings open past their date because no one can say whose they are; and
+- a register whose named owners no longer hold the roles recorded.
+
 ## Decision-rights matrix
 
 `A` = accountable decision owner; `R` = responsible for preparing or operating; `C` = consulted/challenger; `I` = informed. Organizations should tailor names while preserving accountability and independence.
@@ -160,6 +185,12 @@ Every material forum decision should capture:
 | Approve Tier 3/4 use | I | A | R | C | C as applicable | I | I |
 | Approve architecture and data use | I | C | R | C | A by domain | C | I |
 | Approve agent access to a governed data asset | I | C | R | C | A by data asset owner | C | I |
+| Maintain the control library and standards | I | I | C | A | C | C | I |
+| Build and operate platform-level inherited controls | I | I | A | C | C | I | I |
+| Sponsor a non-human identity and its entitlements | I | A | R | C | C | I | I |
+| Produce pre-release test evidence | I | A | R | C | C | C | I |
+| Re-test after a material change | I | A | R | I | C | C | I |
+| Own a vendor-provided AI capability internally | I | A | R | C | C | I | I |
 | Design and execute testing | I | A | R | C | C | C or R if independent | I |
 | Accept validation findings | A by tier | A/R | R | C | C | R | I |
 | Accept residual risk | A by tier | R | C | C | C | I | I |
@@ -206,6 +237,10 @@ Escalate outside normal cadence when:
 - Exceptions nearing expiry or renewed more than once.
 - Meeting cadence, quorum, and decision-condition closure.
 - Systems suspended or restricted because approval conditions failed.
+- Controls with no accountable owner, more than one, or a committee recorded as owner.
+- Non-human identities with no human sponsor, and register entries whose named owner no longer holds the role.
+
+Programme-level measures — inventory and ownership coverage, inherited-control ratio, finding and exception ageing, and time to revoke access — are in the [control operating model](control-operating-model.md).
 
 ## Related artifacts
 
@@ -213,3 +248,4 @@ Escalate outside normal cadence when:
 - [AI Lifecycle Stage Gates](../lifecycle/stage-gates.md)
 - [Control Objectives (GOV series)](../control-framework/control-objectives.md)
 - [GenAI Policy Suite](../policies/README.md)
+- [AI Control Operating Model](control-operating-model.md)

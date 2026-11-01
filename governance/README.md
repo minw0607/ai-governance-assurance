@@ -7,7 +7,8 @@ Governance artifacts answer: **What rules, accountabilities, decisions, and mini
 | Resource | Use |
 |---|---|
 | [AI Governance Framework](ai-governance-framework.md) | Enterprise governance architecture, lifecycle, control domains, overlays, and assurance model |
-| [Roles and Decision Rights](operating-model/roles-and-decision-rights.md) | Accountabilities, governance forums, RACI, segregation of duties, and escalation |
+| [Roles and Decision Rights](operating-model/roles-and-decision-rights.md) | Accountabilities, governance forums, RACI, control ownership principles, segregation of duties, and escalation |
+| [AI Control Operating Model](operating-model/control-operating-model.md) | Operating the control set at scale: inherited and local controls, operating rhythm, programme metrics, and adoption sequence |
 | [AI Lifecycle Stage Gates](lifecycle/stage-gates.md) | Decisions, required activities, evidence, and exit criteria at each lifecycle gate |
 | [AI Inventory Minimum Data Standard](ai-inventory/minimum-data-standard.md) | Minimum system-of-record fields, ownership, discovery reconciliation, and data-quality rules |
 | [AI Data Security & Governance](data-security-governance/README.md) | Integrated framework and standards for AI data lifecycle, classification, RAG/vector/agent security, and training/evaluation data |

@@ -25,8 +25,8 @@ lifecycle_stages:
   - operation
   - retirement
 status: draft
-version: "0.2.0"
-last_reviewed: 2026-09-29
+version: "0.3.0"
+last_reviewed: 2026-11-01
 source_artifacts:
   - SRC-POL-01
   - SRC-AUD-01
@@ -56,6 +56,21 @@ Document:
 - deletion, re-indexing, disaster recovery, provider exit, and retirement flows.
 
 Identify every point where untrusted content can influence instructions or where an identity boundary can be lost.
+
+### Stage ownership
+
+Each stage of the pipeline forces one decision and fails in one characteristic way. Record the accountable role for each; an unowned stage is where the recurring failure settles.
+
+| Stage | The decision it forces | Typical accountable owner | Recurring failure |
+|---|---|---|---|
+| Source | Which content may enter, and is its origin recorded? | Data owner, with information governance | Sources added by engineers with no owner approval |
+| Ingest | Is the copy faithful, and do permissions travel with it? | Platform engineering | Permission labels dropped when documents are split or transformed |
+| Index | Is the search copy constrained like the original, and does deletion reach it? | Platform engineering, with the data owner | Deleted or restricted content still retrievable |
+| Retrieve | Is authorization evaluated before the search rather than after? | Identity and access, with application engineering | Filtering applied after retrieval, or entitlement stated only in the prompt |
+| Context | Is retrieved content treated as information and never as instruction? | Application engineering | Everything concatenated into one undifferentiated prompt |
+| Act | Which actions require a human, and what is retained, for whom? | Use-case owner, with security architecture | One broad service identity behind every tool |
+
+Where a stage is implemented in a shared platform, the control is inherited by every use case built on it and is evidenced once at the platform — see the [control operating model](../operating-model/control-operating-model.md).
 
 ### Security metadata mapping
 
