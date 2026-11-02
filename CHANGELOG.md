@@ -7,6 +7,7 @@ All notable library-level changes are recorded here. Individual artifacts retain
 ### Changed
 
 - Root README "Start here" table restructured into six lifecycle stages — getting oriented, intake and approval, design and build, test and release, operate and change and respond, prove and comply — so a reader navigates by where they are rather than scanning eighteen ungrouped rows. All rows retained; none added or removed. Security questions are distributed across the stages at which they arise rather than grouped, because AI security is an overlay across the library rather than a stage of it.
+- Each "Start here" stage carries an icon (🔭 🚦 🏗️ 🚀 ⚙️ 🧾), chosen to stay distinct from the section-header icons used elsewhere in the README.
 - `CONTRIBUTING.md` records how to extend the table: add to the stage where the question arises rather than where the artifact sits, phrase the row as the reader's question rather than the artifact's title, and route through an overlay once a stage grows past roughly five rows instead of listing the library.
 
 ## [0.4.0] - 2026-11-01

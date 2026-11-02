@@ -14,7 +14,7 @@ Contributions should make the library more accurate, usable, and auditable. Open
 
 ## The root "Start here" table
 
-New artifacts that answer a question a reader would actually arrive with should be added to the root README's **Start here** table, which is grouped by lifecycle stage: getting oriented, intake and approval, design and build, test and release, operate and change and respond, and prove and comply.
+New artifacts that answer a question a reader would actually arrive with should be added to the root README's **Start here** table, which is grouped by lifecycle stage: 🔭 getting oriented, 🚦 intake and approval, 🏗️ design and build, 🚀 test and release, ⚙️ operate and change and respond, and 🧾 prove and comply. Each stage carries one icon; keep it distinct from the section-header icons used elsewhere in the README.
 
 - Add the row to the stage at which the question arises, not the stage the artifact describes.
 - Phrase the row as the reader's question in their words, not the artifact's title.

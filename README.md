@@ -27,7 +27,7 @@ Route by the question you actually have, grouped by where you are. The taxonomy 
 
 Security questions appear throughout rather than in a block of their own, because [AI security](governance/ai-security/README.md) is an overlay across the library rather than a stage of it.
 
-**Getting oriented** — before a specific system is in view.
+**🔭 Getting oriented** — before a specific system is in view.
 
 | Your question | Go to |
 |---|---|
@@ -36,7 +36,7 @@ Security questions appear throughout rather than in a block of their own, becaus
 | We need to **secure** an AI system — where do we start? | [AI Security Overlay](governance/ai-security/README.md) — the security view across the library |
 | How do we **run** this across a growing portfolio without the effort growing with it? | [AI Control Operating Model](governance/operating-model/control-operating-model.md) — inherited controls, operating rhythm, programme metrics |
 
-**Intake and approval** — deciding whether, and at what depth.
+**🚦 Intake and approval** — deciding whether, and at what depth.
 
 | Your question | Go to |
 |---|---|
@@ -44,7 +44,7 @@ Security questions appear throughout rather than in a block of their own, becaus
 | Is this vendor acceptable? | [Vendor Assessment Framework](assessments/vendor-assessment/framework.md) |
 | It is an **agent** — what changes? | [Agentic AI Governance and Assurance](governance/agentic-ai/README.md) |
 
-**Design and build** — what to implement, and what could defeat it.
+**🏗️ Design and build** — what to implement, and what could defeat it.
 
 | Your question | Go to |
 |---|---|
@@ -53,14 +53,14 @@ Security questions appear throughout rather than in a block of their own, becaus
 | Can we trust the models, weights, adapters, and tools we deploy? | [Model and AI Supply Chain Security](governance/ai-security/model-supply-chain.md) |
 | How do we run **experiments** safely in a lab or dev environment? | [AI Development Environment Standard](governance/environments/ai-development-environment-standard.md) |
 
-**Test and release** — establishing it works before it ships.
+**🚀 Test and release** — establishing it works before it ships.
 
 | Your question | Go to |
 |---|---|
 | How do we test it? | [Testing catalog](testing/README.md) — method guide plus scenario library per dimension |
 | Can we ship it? | [Production Readiness](checklists/production-readiness.md) |
 
-**Operate, change, and respond** — keeping it inside its approved envelope.
+**⚙️ Operate, change, and respond** — keeping it inside its approved envelope.
 
 | Your question | Go to |
 |---|---|
@@ -68,7 +68,7 @@ Security questions appear throughout rather than in a block of their own, becaus
 | Something has gone wrong with an AI system or agent | [AI Security Incident Response](governance/ai-security/incident-response.md) |
 | We are **upgrading** a live AI service — new LLM version, provider, or the platform under it — and several teams depend on it | [Pre-upgrade sequence](governance/policies/change-management.md#pre-upgrade-sequence-for-a-shared-service) in the change policy, verified with the [shared-service section](checklists/pre-deployment.md#upgrading-a-shared-service) of the pre-deployment checklist |
 
-**Prove and comply** — showing it to someone who will check.
+**🧾 Prove and comply** — showing it to someone who will check.
 
 | Your question | Go to |
 |---|---|
