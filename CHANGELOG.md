@@ -4,6 +4,16 @@ All notable library-level changes are recorded here. Individual artifacts retain
 
 ## [Unreleased]
 
+### Added
+
+- Synthetic content against a human control, as scenario `SRS-11` and a threat-set entry in the threat-modeling method: a control whose last line is a person judging whether what they were shown is genuine can be defeated with no weakness in the model, the prompt, or the tools. `HUM-01` and `AGT-02` now require the gate to rest on an authenticated channel and independently verifiable facts, and any control relying on human detection of generated content to be recorded as a residual exposure rather than a mitigation. The threat-modeling method gains a companion to "the model is not a control": human judgement of authenticity is not one either.
+- Human-oversight monitoring section in the ongoing monitoring checklist, and a five-category measure taxonomy in the monitoring plan template — performance, risk and compliance, model behavior, operational, human oversight — so a gap shows as an empty category rather than an absent line. `OPS-01` now names human-oversight indicators in the monitored set, which it previously omitted, and requires escalation, override, abstention, complaint and appeal measures to carry sources, thresholds and responses rather than be read at a meeting. A reviewer population that never overrides and never escalates is recorded as a finding.
+- Glossary entry for *generated explanation*.
+
+### Changed
+
+- `HUM-02` now requires a model-generated explanation to be presented as generated content rather than as an account of how the system reached its result, with the basis of each explanation established — retrieved sources, recorded policy decisions and execution facts, or the model's own narration — and a generated rationale not relied upon as evidence of reasoning in notices, reviewer displays, appeal responses, or control records. The library already measured whether generated rationale anchors a reviewer; it had stated only that hidden chain-of-thought is not *required*, never that a generated explanation is not *proof*.
+
 ### Changed
 
 - Root README "Start here" table restructured into six lifecycle stages — getting oriented, intake and approval, design and build, test and release, operate and change and respond, prove and comply — so a reader navigates by where they are rather than scanning eighteen ungrouped rows. All rows retained; none added or removed. Security questions are distributed across the stages at which they arise rather than grouped, because AI security is an overlay across the library rather than a stage of it.

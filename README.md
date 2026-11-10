@@ -155,12 +155,12 @@ Overlays identify additional requirements that span artifact classes. They do no
 | [AI Data Security & Governance](governance/data-security-governance/README.md) | Integrated data lifecycle, classification, RAG/vector/agent security, and training/evaluation data standards | 0.1.0 | Draft |
 | [Agentic AI Governance and Assurance](governance/agentic-ai/README.md) | Agentic system governance, autonomy, delegated authority, A2A/MCP, and auditability | 0.1.0 | Draft |
 | [AI Security Overlay](governance/ai-security/README.md) | Security view across the library, routing to objectives, standards, and testing by security question | 0.1.0 | Draft |
-| [AI Threat Modeling Method](governance/ai-security/threat-modeling-method.md) | Trust-boundary procedure producing tested controls and recorded residual exposure | 0.1.0 | Draft |
+| [AI Threat Modeling Method](governance/ai-security/threat-modeling-method.md) | Trust-boundary procedure producing tested controls and recorded residual exposure | 0.2.0 | Draft |
 | [AI Security Detection Catalog](governance/ai-security/detection-catalog.md) | Thirty AI-specific detections with signal, response, and named-responder requirement | 0.1.0 | Draft |
 | [AI Security Incident Response](governance/ai-security/incident-response.md) | What differs for AI incidents: evidence preservation, containment scope, propagation, attribution | 0.1.0 | Draft |
 | [Model and AI Supply Chain Security](governance/ai-security/model-supply-chain.md) | Provenance and integrity for models, weights, adapters, datasets, tools, and harnesses | 0.1.0 | Draft |
 | [AI Development Environment Standard](governance/environments/ai-development-environment-standard.md) | Containment contract, teardown, experiment conduct, and promotion out of lab environments | 0.1.0 | Draft |
-| [Enterprise AI Control Objectives](governance/control-framework/control-objectives.md) | Testable governance, data, security, quality, vendor, agentic, and operations objectives | 0.8.0 | Draft |
+| [Enterprise AI Control Objectives](governance/control-framework/control-objectives.md) | Testable governance, data, security, quality, vendor, agentic, and operations objectives | 0.9.0 | Draft |
 | [Control Coverage Matrix](governance/control-framework/control-coverage-matrix.md) | Reverse index: every control objective to the checklists, scenarios, templates, and mappings that evidence it | 0.1.0 | Draft |
 | [GenAI Policy Suite](governance/policies/README.md) | Modular acceptable-use, data, model-risk, vendor, prompt, and change policies | 0.1.0 | Draft |
 | [AI Risk Tiering Framework](governance/risk-tiering/ai-risk-tiering-framework.md) | Risk classification and minimum assurance requirements | 0.3.0 | Draft |
@@ -194,7 +194,7 @@ Every test dimension pairs a **method guide** with a **scenario library** carryi
 |---|---|---:|---|
 | [Examination Readiness](checklists/examination-readiness.md) | Control and evidence readiness for audit or examination | 0.2.0 | Draft |
 | [Production Readiness](checklists/production-readiness.md) | Release gate for production AI systems | 0.1.0 | Draft |
-| [Ongoing Monitoring](checklists/ongoing-monitoring.md) | Recurring quality, security, risk, and vendor checks | 0.3.0 | Draft |
+| [Ongoing Monitoring](checklists/ongoing-monitoring.md) | Recurring quality, security, risk, and vendor checks | 0.4.0 | Draft |
 | [Agentic AI Audit Readiness](checklists/agentic-ai-audit-readiness.md) | Scope, control, evidence, testing, resilience, and reporting readiness | 0.2.0 | Draft |
 | [Agentic AI Audit Workpaper](templates/agentic-ai-audit-workpaper-template.md) | Reusable control-design, testing, evidence, finding, and retest record | 0.2.0 | Draft |
 | [Illustrative Microsoft 365 Copilot Audit Assessment](templates/examples/m365-copilot-audit-assessment-report.md) | Synthetic application of the framework and report templates; not client work or sponsored/endorsed | 0.2.0 | Draft |

@@ -17,8 +17,8 @@ industries:
 lifecycle_stages:
   - operation
 status: draft
-version: "0.3.0"
-last_reviewed: 2026-10-06
+version: "0.4.0"
+last_reviewed: 2026-11-10
 source_artifacts:
   - SRC-TEST-01
   - SRC-VEND-01
@@ -79,6 +79,18 @@ For a shared service:
 - [ ] Post-change quality, safety, and error measures are trended **per consuming use case**, not only in aggregate.
 - [ ] Any version divergence between consumers is recorded, time-bounded, and closing.
 - [ ] Consumers held on a prior version, or running with conditions after a failed acceptance, have owners and closure dates.
+
+## Human oversight
+
+**Control objectives:** HUM-01, HUM-02, OPS-01
+
+Oversight indicators are measures with sources, thresholds, and responses — not items to read at a meeting. A reviewer population that never overrides and never escalates is a finding, not a clean result.
+
+- [ ] Escalation, override, and abstention rates are trended against thresholds, segmented by reviewer and decision type.
+- [ ] Complaint, appeal, and correction volumes are trended, with outcomes and response times.
+- [ ] Reviewer feedback and reported difficulty are collected and acted on, not only counted.
+- [ ] Override and approval rates are examined for automation bias — approval that is faster than the task allows, or rationale that anchors the decision.
+- [ ] Any control relying on a reviewer distinguishing authentic from generated content is recorded as a residual exposure.
 
 ## Governance
 

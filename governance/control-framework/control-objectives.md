@@ -23,8 +23,8 @@ lifecycle_stages:
   - operation
   - retirement
 status: draft
-version: "0.8.0"
-last_reviewed: 2026-11-01
+version: "0.9.0"
+last_reviewed: 2026-11-10
 source_artifacts:
   - SRC-AGT-01
   - SRC-AUD-01
@@ -292,19 +292,19 @@ Record which effectiveness level the evidence actually supports. A design descri
 
 ### HUM-01 — Effective human review
 
-**Objective:** Human reviewers can understand, challenge, stop, correct, and escalate AI-supported outcomes before material harm.
+**Objective:** Human reviewers can understand, challenge, stop, correct, and escalate AI-supported outcomes before material harm, and the review step does not rely on inputs an adversary can synthesize or on a model-generated rationale the reviewer cannot verify.
 
-**Evidence:** role definition, training, review criteria, evidence display, workload analysis, overrides, intervention exercises.
+**Evidence:** role definition, training, review criteria, evidence display, workload analysis, overrides, intervention exercises, verification design for approval inputs that could be synthetic, measurement of whether generated rationale anchors the reviewer.
 
-**Assurance procedure:** observe or simulate review; test whether users detect seeded errors and can prevent action in time.
+**Assurance procedure:** observe or simulate review; test whether users detect seeded errors and can prevent action in time. Separately, present the reviewer with synthetic or AI-generated approval inputs — a fabricated instruction, document, voice or video request, or a fluent but wrong rationale — and determine whether the control depends on the reviewer distinguishing authentic from generated content, which is not a capability a control may assume.
 
 ### HUM-02 — Notice, explanation, correction, and appeal
 
-**Objective:** Users and affected parties receive context-appropriate disclosure and can obtain correction or human reconsideration.
+**Objective:** Users and affected parties receive context-appropriate disclosure and can obtain correction or human reconsideration, and any model-generated explanation is presented as generated content rather than as an account of how the system reached its result.
 
-**Evidence:** notices, explanation design, feedback/complaint process, appeal records, response service levels.
+**Evidence:** notices, explanation design and the basis each explanation actually rests on, feedback/complaint process, appeal records, response service levels.
 
-**Assurance procedure:** trace sampled cases from notice through explanation, correction, or appeal and verify outcomes are recorded.
+**Assurance procedure:** trace sampled cases from notice through explanation, correction, or appeal and verify outcomes are recorded. Establish what each explanation is derived from — retrieved sources, recorded policy decisions, and execution facts, or the model's own narration — and confirm that a generated rationale is not relied upon as evidence of the system's reasoning in notices, reviewer displays, appeal responses, or control records.
 
 ### HUM-03 — Approved-use enforcement
 
@@ -356,7 +356,7 @@ Record which effectiveness level the evidence actually supports. A design descri
 
 **Evidence:** step-up or dual approval, transaction limits, dry run, circuit breaker, rollback, approval logs.
 
-**Assurance procedure:** simulate consequential actions, approval bypass, replay, duplicate requests, and limit evasion.
+**Assurance procedure:** simulate consequential actions, approval bypass, replay, duplicate requests, and limit evasion. Include an approval request whose supporting content is synthetic or AI-generated, and verify the gate rests on an authenticated channel and verifiable facts rather than on the approver judging whether what they were shown is genuine.
 
 ### AGT-03 — Execution trace and intervention
 
@@ -402,9 +402,9 @@ Record which effectiveness level the evidence actually supports. A design descri
 
 ### OPS-01 — Continuous monitoring and threshold action
 
-**Objective:** Quality, safety, fairness, security, privacy, agent, usage, resilience, and cost indicators lead to timely investigation and control action.
+**Objective:** Quality, safety, fairness, security, privacy, agent, human-oversight, usage, resilience, and cost indicators lead to timely investigation and control action.
 
-**Evidence:** KPI/KRI definitions, thresholds, alerts, dashboards, review minutes, sampled outputs, action tickets.
+**Evidence:** KPI/KRI definitions, thresholds, alerts, dashboards, review minutes, sampled outputs, action tickets; human-oversight measures — escalation, override, and abstention rates, complaint and appeal volume, and reviewer feedback — defined as measures with sources, thresholds and responses rather than as items to read.
 
 **Assurance procedure:** trace selected threshold breaches from detection to decision and verify monitoring covers approved risks.
 

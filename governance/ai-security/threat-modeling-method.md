@@ -21,8 +21,8 @@ lifecycle_stages:
   - validation
   - operation
 status: draft
-version: "0.1.0"
-last_reviewed: 2026-10-08
+version: "0.2.0"
+last_reviewed: 2026-11-10
 ---
 
 # AI Threat Modeling Method
@@ -102,12 +102,14 @@ Use this set as a prompt at each boundary, not as a checklist to complete. Ident
 | Supply-chain compromise | What do you deploy that you did not build, and how is its integrity established? |
 | Runaway execution and cost abuse | What stops a loop, a fan-out, or a recursive delegation, automatically? |
 | Cross-session and cross-environment leakage | What separates sessions, tenants, compartments, and environments? |
+| Synthetic content against a human control | Does any control depend on a person judging whether what they were shown is authentic? |
 | Evidence degradation | If this failed, could you prove what happened? |
 
 Two framing rules keep the exercise honest:
 
 - **Insiders and accidents count.** A model that considers only external attackers omits the authorized user reaching further than intended, and the misconfiguration that grants it.
 - **The model is not a control.** Where the answer to "what prevents this" is that the model was instructed not to, the control is absent.
+- **Human judgement of authenticity is not a control.** Where the answer is that a reviewer would notice, establish what they would notice it from. Content an attacker can generate, including a fluent rationale the system produced itself, is not something a control may assume a person will catch.
 
 ## Step 5 — Decide, record, and route
 
