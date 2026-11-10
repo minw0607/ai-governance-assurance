@@ -42,6 +42,7 @@ Security questions appear throughout rather than in a block of their own, becaus
 |---|---|
 | Is **this specific use case** permitted, and at what depth of review? | [Use-Case Assessment](assessments/use-case-assessment/checklist.md) — the intake instrument for [gate G1](governance/lifecycle/stage-gates.md) |
 | Is this vendor acceptable? | [Vendor Assessment Framework](assessments/vendor-assessment/framework.md) |
+| The AI capability is **run by the vendor** — what can we actually govern? | [Vendor-operated AI platforms](assessments/vendor-assessment/framework.md#vendor-operated-ai-platforms) — visibility, restriction enforcement, independent containment |
 | It is an **agent** — what changes? | [Agentic AI Governance and Assurance](governance/agentic-ai/README.md) |
 
 **🏗️ Design and build** — what to implement, and what could defeat it.
@@ -157,12 +158,12 @@ Overlays identify additional requirements that span artifact classes. They do no
 | [Agentic AI Governance and Assurance](governance/agentic-ai/README.md) | Agentic system governance, autonomy, delegated authority, A2A/MCP, and auditability | 0.1.0 | Draft |
 | [AI Security Overlay](governance/ai-security/README.md) | Security view across the library, routing to objectives, standards, and testing by security question | 0.2.0 | Draft |
 | [AI Threat Modeling Method](governance/ai-security/threat-modeling-method.md) | Trust-boundary procedure producing tested controls and recorded residual exposure | 0.2.0 | Draft |
-| [AI Security Detection Catalog](governance/ai-security/detection-catalog.md) | Thirty AI-specific detections with signal, response, and named-responder requirement | 0.2.0 | Draft |
-| [AI Security Incident Response](governance/ai-security/incident-response.md) | What differs for AI incidents: evidence preservation, containment scope, propagation, attribution | 0.1.0 | Draft |
+| [AI Security Detection Catalog](governance/ai-security/detection-catalog.md) | Thirty AI-specific detections with signal, response, and named-responder requirement | 0.3.0 | Draft |
+| [AI Security Incident Response](governance/ai-security/incident-response.md) | What differs for AI incidents: evidence preservation, containment scope, propagation, attribution | 0.2.0 | Draft |
 | [Model and AI Supply Chain Security](governance/ai-security/model-supply-chain.md) | Provenance and integrity for models, weights, adapters, datasets, tools, and harnesses | 0.1.0 | Draft |
 | [Identity and Access for AI Capabilities](governance/ai-security/identity-and-access.md) | The interface to enterprise identity: attribute authority, entitlement provenance, session termination, boundary privileges, consent | 0.1.0 | Draft |
 | [AI Development Environment Standard](governance/environments/ai-development-environment-standard.md) | Containment contract, teardown, experiment conduct, and promotion out of lab environments | 0.1.0 | Draft |
-| [Enterprise AI Control Objectives](governance/control-framework/control-objectives.md) | Testable governance, data, security, quality, vendor, agentic, and operations objectives | 0.10.0 | Draft |
+| [Enterprise AI Control Objectives](governance/control-framework/control-objectives.md) | Testable governance, data, security, quality, vendor, agentic, and operations objectives | 0.11.0 | Draft |
 | [Control Coverage Matrix](governance/control-framework/control-coverage-matrix.md) | Reverse index: every control objective to the checklists, scenarios, templates, and mappings that evidence it | 0.1.0 | Draft |
 | [GenAI Policy Suite](governance/policies/README.md) | Modular acceptable-use, data, model-risk, vendor, prompt, and change policies | 0.1.0 | Draft |
 | [AI Risk Tiering Framework](governance/risk-tiering/ai-risk-tiering-framework.md) | Risk classification and minimum assurance requirements | 0.3.0 | Draft |
@@ -171,8 +172,8 @@ Overlays identify additional requirements that span artifact classes. They do no
 
 | Resource | Description | Version | Status |
 |---|---|---:|---|
-| [Vendor Assessment Framework](assessments/vendor-assessment/framework.md) | Risk-based assessment for AI and foundation-model vendors | 0.1.0 | Draft |
-| [Vendor Questionnaire](assessments/vendor-assessment/questionnaire.md) | Evidence-oriented due-diligence questions | 0.3.0 | Draft |
+| [Vendor Assessment Framework](assessments/vendor-assessment/framework.md) | Risk-based assessment for AI and foundation-model vendors | 0.2.0 | Draft |
+| [Vendor Questionnaire](assessments/vendor-assessment/questionnaire.md) | Evidence-oriented due-diligence questions | 0.4.0 | Draft |
 | [Use-Case Assessment](assessments/use-case-assessment/checklist.md) | Use-case-level intake and inherent-risk assessment; the instrument for stage gate G1 | 0.2.0 | Draft |
 | [Assessments Catalog and Readiness Model](assessments/README.md) | The three senses of "AI readiness", the two levels at which it is assessed, and which artifact serves each | 0.1.0 | Draft |
 | [Governance Readiness Assessment](assessments/readiness-assessment/checklist.md) | Enterprise-level scored governance, model-risk, privacy, and agentic-AI maturity | 0.1.0 | Draft |

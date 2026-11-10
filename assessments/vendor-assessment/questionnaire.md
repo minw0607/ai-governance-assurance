@@ -23,8 +23,8 @@ lifecycle_stages:
   - validation
   - operation
 status: draft
-version: "0.3.0"
-last_reviewed: 2026-09-18
+version: "0.4.0"
+last_reviewed: 2026-11-24
 source_artifacts:
   - SRC-AGT-01
   - SRC-VEND-01
@@ -108,12 +108,29 @@ For each response, record the vendor answer, evidence reference, assessor conclu
 49. What changes to infrastructure, routing, region, capacity, quotas, or default parameters are made without a model or API version change, and how are customers notified?
 50. What rollback support exists after a customer has migrated, and for how long?
 
-## 9. Contract and assurance
+## 9. Vendor-operated platform control
 
-51. Do terms provide audit, regulatory cooperation, incident notification, data-use restriction, deletion, subprocessor notice, service level, and termination rights?
-52. Who owns customer prompts, outputs, fine-tuning artifacts, evaluations, and derived configurations?
-53. How does the provider support transparency, recordkeeping, impact assessment, accessibility, and contestability obligations?
-54. Identify all requested controls the provider cannot meet and proposed alternatives.
+51. Which administrative views let the customer enumerate every enabled capability, agentic feature, integration, connector, reachable data source, and action the platform can take?
+52. Does the administrative surface distinguish capabilities that only generate output from those that invoke tools, reach external systems, or take actions?
+53. What usage and last-activity information is available per user and per capability?
+54. For each capability the customer restricts, which configuration disables it technically, and can the customer verify it is disabled by attempting use?
+55. What prevents a restricted capability being re-enabled by a product update, an administrator, or a user setting without review?
+56. Do new tool-using or agentic features arrive disabled by default, and what notice precedes their availability?
+57. Which of the following can the customer perform without provider action: suspending a user, terminating active sessions and tokens, disabling one integration, disabling one agentic capability, disabling one access path, cutting access to a data source, suspending the tenant?
+58. What is the named emergency contact and committed response time where containment requires provider action, and how is it tested?
+59. Which provider support identities, service principals, or connectors can reach customer data or administer the capability, and can the customer revoke them independently and during an incident?
+60. Which activity is logged, which can the customer obtain, for how long is it retained, and can it be exported into customer monitoring?
+61. Which provider-side events raise an alert to the customer rather than appearing only in a log, and who is the named responder?
+62. Does investigation of a suspected incident require provider involvement, and under what service level?
+63. What independent testing covers the AI and agentic capability specifically — prompt and indirect injection, tool and connector abuse, data exposure, cross-tenant isolation — and what is the remediation status of findings?
+64. Where content is deleted through the user interface, what is deleted in the platform, and what remains in projects, logs, caches, backups, or subprocessor systems?
+
+## 10. Contract and assurance
+
+65. Do terms provide audit, regulatory cooperation, incident notification, data-use restriction, deletion, subprocessor notice, service level, and termination rights?
+66. Who owns customer prompts, outputs, fine-tuning artifacts, evaluations, and derived configurations?
+67. How does the provider support transparency, recordkeeping, impact assessment, accessibility, and contestability obligations?
+68. Identify all requested controls the provider cannot meet and proposed alternatives.
 
 ## Related artifacts
 

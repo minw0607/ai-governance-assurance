@@ -23,8 +23,8 @@ lifecycle_stages:
   - operation
   - retirement
 status: draft
-version: "0.10.0"
-last_reviewed: 2026-11-16
+version: "0.11.0"
+last_reviewed: 2026-11-24
 source_artifacts:
   - SRC-AGT-01
   - SRC-AUD-01
@@ -320,15 +320,15 @@ Record which effectiveness level the evidence actually supports. A design descri
 
 ### TPRM-01 — AI-specific due diligence
 
-**Objective:** Provider governance, model documentation, data use, security, quality, change, incident, subprocessor, resilience, and exit risks are assessed before use.
+**Objective:** Provider governance, model documentation, data use, security, quality, change, incident, subprocessor, resilience, and exit risks are assessed before use; and for a provider-operated capability, administrative visibility, restriction enforcement, independent containment, provider-held access, and obtainable activity records are established before approval.
 
-**Evidence:** questionnaire, independent reports, architecture review, provider documentation, findings, risk decision.
+**Evidence:** questionnaire, independent reports with their scope over the AI and agentic capability stated, architecture review, provider documentation, administrative-visibility and containment determinations, findings, risk decision.
 
-**Assurance procedure:** verify due diligence depth matches tier and that unresolved gaps appear in the residual-risk decision.
+**Assurance procedure:** verify due diligence depth matches tier and that unresolved gaps appear in the residual-risk decision. For a provider-operated capability, confirm an administrator can enumerate enabled capabilities, integrations, reachable data sources and available actions; attempt use of a capability recorded as restricted; and establish which containment actions the organization can take without provider involvement. An assurance report over the provider's conventional application is not assurance over its agentic surface.
 
 ### TPRM-02 — Contractual control and notification
 
-**Objective:** Contracts support approved data use, security, audit/evidence needs, model changes, incidents, service levels, deletion, portability, and termination.
+**Objective:** Contracts support approved data use, security, audit/evidence needs, model changes, incidents, service levels, deletion, portability, and termination, including a named emergency contact and committed response time where containment depends on the provider, and customer access to activity records sufficient to investigate.
 
 **Evidence:** contract clauses, DPA, service levels, change/incident notices, exit rights.
 
@@ -340,7 +340,7 @@ Record which effectiveness level the evidence actually supports. A design descri
 
 **Evidence:** periodic review, service and incident metrics, notices, concentration analysis, alternate provider/degraded mode, exit test.
 
-**Assurance procedure:** sample provider changes and incidents; verify assessment, regression, decision, and contingency actions.
+**Assurance procedure:** sample provider changes and incidents; verify assessment, regression, decision, and contingency actions. Confirm that capabilities recorded as restricted remain disabled after provider updates, that newly released tool-using or agentic features did not become available before review, and that provider-held support access is still required and still revocable.
 
 ## 7. Agentic AI
 

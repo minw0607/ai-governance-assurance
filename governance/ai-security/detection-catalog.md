@@ -19,8 +19,8 @@ lifecycle_stages:
   - deployment
   - operation
 status: draft
-version: "0.2.0"
-last_reviewed: 2026-11-16
+version: "0.3.0"
+last_reviewed: 2026-11-24
 ---
 
 # AI Security Detection Catalog
@@ -99,6 +99,7 @@ Each detection names the control objective it evidences. Severity is indicative;
 | `DET-20` | New or changed server, tool, schema, description, alias, or parameter default | Registry diff against the approved baseline | Re-review before use; a description change can increase capability without a schema change (`AGT-01`, `SEC-04`) |
 | `DET-21` | Call to an unapproved server, tool, endpoint, or destination | Allowlist enforcement denials | Investigate how the call was constructed; verify the allowlist is enforced, not advisory (`AGT-01`) |
 | `DET-22` | Administrative change to registration, enablement, or permissions | Administrative audit records | Attribute to a person and an approval; absence of attribution is a control gap (`AGT-01`) |
+| `DET-34` | Capability recorded as restricted becoming available, or a new provider feature appearing without review | Periodic reconciliation of enabled capabilities, integrations and connectors against the approved configuration baseline | Disable and re-review; a restriction that can revert without notice is a temporary control, not a control (`TPRM-03`, `AGT-01`) |
 | `DET-23` | Model, package, image, or adapter deployed without matching provenance | Deployment events joined to signature or attestation verification | Block promotion; treat unverifiable artifacts as untrusted (`SEC-04`) |
 
 ### 6. Resource, resilience, and environment

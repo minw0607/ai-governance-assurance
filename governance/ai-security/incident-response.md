@@ -19,8 +19,8 @@ lifecycle_stages:
   - deployment
   - operation
 status: draft
-version: "0.1.0"
-last_reviewed: 2026-10-08
+version: "0.2.0"
+last_reviewed: 2026-11-24
 ---
 
 # AI Security Incident Response
@@ -69,6 +69,17 @@ Establish what is running before deciding what to stop. Then contain in this ord
 5. **Hold the change surface** — freeze registration, enablement, and definition changes for the affected components so the picture stops moving during investigation.
 
 Record which of these the implementation actually supports. Where the only available action is a platform-wide shutdown, that is the containment capability, and it is also a finding.
+
+#### Where the capability is provider-operated
+
+Containment on a platform the organization does not operate is bounded by what the provider exposes. Determine this during assessment, not during the event — see [vendor-operated AI platforms](../../assessments/vendor-assessment/framework.md).
+
+- Work from the containment determination already recorded: which actions are independent, and which need provider involvement.
+- **Removing a licence is not containment.** Sessions, tokens, integrations, and credentials may remain usable after the entitlement is withdrawn.
+- Where the only available action is suspending the whole tenant, that is the containment capability, and the collateral impact is part of the decision rather than a surprise during it.
+- Where containment requires a support request, use the named emergency contact and committed response time, and record that response depends on a party that may itself be involved in the event.
+- Preserve provider-side records early. Retention is set by the provider, may be shorter than the investigation, and may not survive the tenant action taken to contain.
+- Verify that activity has stopped rather than that the request was submitted, and record the interval between the two.
 
 ### 4. Establish scope
 
