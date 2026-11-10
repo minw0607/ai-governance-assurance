@@ -19,8 +19,8 @@ lifecycle_stages:
   - deployment
   - operation
 status: draft
-version: "0.1.0"
-last_reviewed: 2026-10-08
+version: "0.2.0"
+last_reviewed: 2026-11-16
 ---
 
 # AI Security Detection Catalog
@@ -88,6 +88,9 @@ Each detection names the control objective it evidences. Severity is indicative;
 | `DET-17` | One identity used by unrelated agents or workflows | Caller attribution per identity | Separate the identities; shared identities defeat attribution and least privilege (`SEC-02`) |
 | `DET-18` | Long-lived static credential in use where short-lived was required | Credential type and age at authentication | Rotate and convert; record as an exception until closed (`SEC-02`) |
 | `DET-19` | Token used against an unintended audience, or validation disabled | Audience and issuer validation outcomes | Verify the check is enabled; a disabled check is an exception with owner and expiry (`AGT-06`) |
+| `DET-31` | New or changed application consent grant reaching enterprise content | Consent-grant events with application, granting identity, and scopes | Verify the grant was approved naming data and actions; consent is standing access no AI approval may have touched (`SEC-02`, `AGT-01`) |
+| `DET-32` | Workload identity reaching a resource for the first time | Per-identity resource-access history against its approved scope | Confirm the resource is within approved purpose; first access is where scope creep becomes visible (`SEC-02`, `AGT-01`) |
+| `DET-33` | Session or token still usable after its account was disabled | Authentication and session events correlated with directory account state | Terminate the session; a disabled account does not by itself end sessions or invalidate issued tokens (`SEC-02`) |
 
 ### 5. Protocol, tool, and supply chain
 

@@ -6,7 +6,7 @@
 
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](LICENSE)
 [![Release: 0.4.0](https://img.shields.io/badge/Release-0.4.0%20curated%20draft-blue.svg)](CHANGELOG.md)
-[![Artifacts: 84](https://img.shields.io/badge/Artifacts-84%20documents-1baf7a.svg)](#library)
+[![Artifacts: 85](https://img.shields.io/badge/Artifacts-85%20documents-1baf7a.svg)](#library)
 [![AI Security](https://img.shields.io/badge/AI%20security-threat%20modeling%20·%20detection%20·%20IR%20·%20supply%20chain-c3423f.svg)](governance/ai-security/README.md)
 [![Frameworks](https://img.shields.io/badge/mapped-EU%20AI%20Act%20·%20NIST%20AI%20RMF%20·%20ISO%2042001%20·%20OWASP%20LLM%20%2B%20Agentic%20·%20SR%2026--2-378add.svg)](mappings/crosswalk.md)
 [![Project: Independent & Personal](https://img.shields.io/badge/Project-Independent%20%26%20Personal-lightgrey)](#disclaimer)
@@ -52,6 +52,7 @@ Security questions appear throughout rather than in a block of their own, becaus
 | What could go wrong in **this** system, and what stops it? | [AI Threat Modeling Method](governance/ai-security/threat-modeling-method.md) |
 | Can we trust the models, weights, adapters, and tools we deploy? | [Model and AI Supply Chain Security](governance/ai-security/model-supply-chain.md) |
 | How do we run **experiments** safely in a lab or dev environment? | [AI Development Environment Standard](governance/environments/ai-development-environment-standard.md) |
+| Who can **reach** our AI capabilities, and does removing access actually remove it? | [Identity and Access for AI Capabilities](governance/ai-security/identity-and-access.md) |
 
 **🚀 Test and release** — establishing it works before it ships.
 
@@ -154,13 +155,14 @@ Overlays identify additional requirements that span artifact classes. They do no
 | [AI Inventory Minimum Data Standard](governance/ai-inventory/minimum-data-standard.md) | Required system/use-case fields, ownership, reconciliation, and quality rules | 0.4.0 | Draft |
 | [AI Data Security & Governance](governance/data-security-governance/README.md) | Integrated data lifecycle, classification, RAG/vector/agent security, and training/evaluation data standards | 0.1.0 | Draft |
 | [Agentic AI Governance and Assurance](governance/agentic-ai/README.md) | Agentic system governance, autonomy, delegated authority, A2A/MCP, and auditability | 0.1.0 | Draft |
-| [AI Security Overlay](governance/ai-security/README.md) | Security view across the library, routing to objectives, standards, and testing by security question | 0.1.0 | Draft |
+| [AI Security Overlay](governance/ai-security/README.md) | Security view across the library, routing to objectives, standards, and testing by security question | 0.2.0 | Draft |
 | [AI Threat Modeling Method](governance/ai-security/threat-modeling-method.md) | Trust-boundary procedure producing tested controls and recorded residual exposure | 0.2.0 | Draft |
-| [AI Security Detection Catalog](governance/ai-security/detection-catalog.md) | Thirty AI-specific detections with signal, response, and named-responder requirement | 0.1.0 | Draft |
+| [AI Security Detection Catalog](governance/ai-security/detection-catalog.md) | Thirty AI-specific detections with signal, response, and named-responder requirement | 0.2.0 | Draft |
 | [AI Security Incident Response](governance/ai-security/incident-response.md) | What differs for AI incidents: evidence preservation, containment scope, propagation, attribution | 0.1.0 | Draft |
 | [Model and AI Supply Chain Security](governance/ai-security/model-supply-chain.md) | Provenance and integrity for models, weights, adapters, datasets, tools, and harnesses | 0.1.0 | Draft |
+| [Identity and Access for AI Capabilities](governance/ai-security/identity-and-access.md) | The interface to enterprise identity: attribute authority, entitlement provenance, session termination, boundary privileges, consent | 0.1.0 | Draft |
 | [AI Development Environment Standard](governance/environments/ai-development-environment-standard.md) | Containment contract, teardown, experiment conduct, and promotion out of lab environments | 0.1.0 | Draft |
-| [Enterprise AI Control Objectives](governance/control-framework/control-objectives.md) | Testable governance, data, security, quality, vendor, agentic, and operations objectives | 0.9.0 | Draft |
+| [Enterprise AI Control Objectives](governance/control-framework/control-objectives.md) | Testable governance, data, security, quality, vendor, agentic, and operations objectives | 0.10.0 | Draft |
 | [Control Coverage Matrix](governance/control-framework/control-coverage-matrix.md) | Reverse index: every control objective to the checklists, scenarios, templates, and mappings that evidence it | 0.1.0 | Draft |
 | [GenAI Policy Suite](governance/policies/README.md) | Modular acceptable-use, data, model-risk, vendor, prompt, and change policies | 0.1.0 | Draft |
 | [AI Risk Tiering Framework](governance/risk-tiering/ai-risk-tiering-framework.md) | Risk classification and minimum assurance requirements | 0.3.0 | Draft |
@@ -195,7 +197,7 @@ Every test dimension pairs a **method guide** with a **scenario library** carryi
 | [Examination Readiness](checklists/examination-readiness.md) | Control and evidence readiness for audit or examination | 0.2.0 | Draft |
 | [Production Readiness](checklists/production-readiness.md) | Release gate for production AI systems | 0.1.0 | Draft |
 | [Ongoing Monitoring](checklists/ongoing-monitoring.md) | Recurring quality, security, risk, and vendor checks | 0.4.0 | Draft |
-| [Agentic AI Audit Readiness](checklists/agentic-ai-audit-readiness.md) | Scope, control, evidence, testing, resilience, and reporting readiness | 0.2.0 | Draft |
+| [Agentic AI Audit Readiness](checklists/agentic-ai-audit-readiness.md) | Scope, control, evidence, testing, resilience, and reporting readiness | 0.3.0 | Draft |
 | [Agentic AI Audit Workpaper](templates/agentic-ai-audit-workpaper-template.md) | Reusable control-design, testing, evidence, finding, and retest record | 0.2.0 | Draft |
 | [Illustrative Microsoft 365 Copilot Audit Assessment](templates/examples/m365-copilot-audit-assessment-report.md) | Synthetic application of the framework and report templates; not client work or sponsored/endorsed | 0.2.0 | Draft |
 | [Templates Catalog](templates/README.md) | Risk, testing, findings, vendor, monitoring, and illustrative report resources | 0.1.0 | Draft |

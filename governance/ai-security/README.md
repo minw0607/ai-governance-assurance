@@ -26,8 +26,8 @@ lifecycle_stages:
   - deployment
   - operation
 status: draft
-version: "0.1.0"
-last_reviewed: 2026-10-08
+version: "0.2.0"
+last_reviewed: 2026-11-16
 ---
 
 # AI Security Overlay
@@ -45,6 +45,7 @@ This page is the security view over the library. Nothing here is unique to this 
 | Something has gone wrong — how do we contain and investigate it? | [AI Security Incident Response](incident-response.md) |
 | Can we trust the model, weights, adapters, and packages we deploy? | [Model and AI Supply Chain Security](model-supply-chain.md) |
 | How do we secure the lab and development environments? | [AI Development Environment Standard](../environments/ai-development-environment-standard.md) |
+| Who can reach our AI capabilities, and does removing access actually remove it? | [Identity and Access for AI Capabilities](identity-and-access.md) |
 | Can a user or agent reach data they should not? | [RAG, Vector, and Agent Data Security Standard](../data-security-governance/rag-vector-agent-data-security.md) |
 | An agent uses tools, protocols, or other agents — what changes? | [A2A, MCP, and Multi-Agent Control Standard](../agentic-ai/a2a-mcp-multi-agent-control-standard.md) |
 | How do we test any of this adversarially? | [Security Red Teaming](../../testing/security-red-teaming/testing-guide.md) and [Privacy and Data Leakage](../../testing/privacy-data-leakage/testing-guide.md) |

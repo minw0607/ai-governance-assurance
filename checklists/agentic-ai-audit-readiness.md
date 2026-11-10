@@ -18,8 +18,8 @@ lifecycle_stages:
   - deployment
   - operation
 status: draft
-version: "0.2.0"
-last_reviewed: 2026-10-06
+version: "0.3.0"
+last_reviewed: 2026-11-16
 source_artifacts:
   - SRC-AGT-01
 ---
@@ -66,6 +66,11 @@ Each section lists the [control objectives](../governance/control-framework/cont
 - [ ] Human and workload identities, delegated authority, scopes, audiences, expiry, rotation, and revocation are documented.
 - [ ] Behavior on delegation failure is documented per integration, and any disabled audience or issuer validation is recorded as an exception with compensating control, owner, and expiry.
 - [ ] Non-human identities each have a named owner, approved purpose, effective permissions, review date, and retirement path; none are shared across unrelated agents or outlive the agent they served.
+- [ ] What account disablement terminates, and what survives it until expiry, is established and tested per capability — with policy target, directory propagation, application removal, and session termination reported separately.
+- [ ] Each capability's granting mechanism, approver, scope, review or expiry, and removal path is recorded; no access rests on a license assignment or a broad pre-existing group with no approval record.
+- [ ] Privileges able to change the AI security boundary — consent, application registration, API permissions, platform administration, workload-identity permissions, connector registration — are enumerated with holders and elevation model.
+- [ ] Consent grants reaching enterprise content are inventoried with scopes, granting identity, and review date.
+- [ ] Access reviews include workload and agent identities and review effective rather than assigned permissions.
 - [ ] Each tool/server/action has an owner, purpose, version, integrity source, operations, data access, destinations, and risk classification.
 - [ ] High-impact actions use deterministic authorization and exact-action approval where required.
 - [ ] Self-escalation, self-approval, token misuse, cross-tenant action, replay, parameter substitution, and limit evasion have been tested.

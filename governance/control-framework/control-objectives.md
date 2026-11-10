@@ -23,8 +23,8 @@ lifecycle_stages:
   - operation
   - retirement
 status: draft
-version: "0.9.0"
-last_reviewed: 2026-11-10
+version: "0.10.0"
+last_reviewed: 2026-11-16
 source_artifacts:
   - SRC-AGT-01
   - SRC-AUD-01
@@ -196,11 +196,13 @@ Record which effectiveness level the evidence actually supports. A design descri
 
 ### SEC-02 — Identity, secrets, and privileged access
 
-**Objective:** Users, applications, agents, and tools use managed identities, least privilege, secure credential storage, rotation, and revocation; every non-human identity has a named owner, an approved purpose, a review date, and a retirement path.
+> **Standard:** [Identity and Access for AI Capabilities](../ai-security/identity-and-access.md) — the interface between AI access and enterprise identity.
 
-**Evidence:** SSO/MFA, service identities, roles, vault configuration, rotation, privileged-access reviews, secret scans, non-human identity inventory with owner, purpose, credential type, effective permissions, review cadence, and disablement procedure.
+**Objective:** Users, applications, agents, and tools use managed identities, least privilege, secure credential storage, rotation, and revocation; every non-human identity has a named owner, an approved purpose, a review date, and a retirement path; AI capabilities inherit enterprise authentication, session and conditional-access controls or carry a recorded exception; and removing access removes it, including sessions and tokens already issued.
 
-**Assurance procedure:** sample identities and credentials; test scope, expiry, rotation, and terminated-user/service revocation. Search specifically for identities shared across unrelated agents, identities with no named owner, long-lived static credentials, and credentials still valid after the agent they served was retired.
+**Evidence:** SSO/MFA, service identities, roles, vault configuration, rotation, privileged-access reviews, secret scans, non-human identity inventory with owner, purpose, credential type, effective permissions, review cadence, and disablement procedure; per-capability entitlement record naming the granting mechanism, approver, scope, review or expiry, and removal path; attribute-authority record for the identity facts AI authorization depends on; tested revocation times reported separately for policy target, directory propagation, application removal, and session termination; enumerated privileges able to change the AI security boundary; consent-grant inventory.
+
+**Assurance procedure:** sample identities and credentials; test scope, expiry, rotation, and terminated-user/service revocation. Search specifically for identities shared across unrelated agents, identities with no named owner, long-lived static credentials, and credentials still valid after the agent they served was retired. Then disable an account and establish what access actually ends and what survives until expiry — a disabled account does not by itself terminate sessions or invalidate issued tokens; take a transfer between roles and determine whether prior AI entitlements, content permissions, connected applications, and consents were removed as well as new ones added; and trace how each capability is granted, testing whether a license assignment or membership of a broad pre-existing group confers access with no approval record.
 
 ### SEC-03 — Input, output, and tool boundary enforcement
 
