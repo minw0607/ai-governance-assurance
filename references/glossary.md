@@ -13,8 +13,8 @@ applies_to:
 industries:
   - cross-industry
 status: draft
-version: "0.6.0"
-last_reviewed: 2026-11-10
+version: "0.7.0"
+last_reviewed: 2026-11-17
 ---
 
 # AI Governance and Assurance Glossary
@@ -36,6 +36,10 @@ last_reviewed: 2026-11-10
 **Delegated authority:** The limited permission for an agent or workload to act on behalf of a person, service, or business purpose. Delegation should identify scope, duration, resources, destinations, and revocation.
 
 **Confused deputy:** A failure in which a component with broader authority performs an action on behalf of a requester who lacks that authority, because the component substitutes its own permissions for the requester's. In agent systems it typically arises where a workload or service identity acts for a user without constraining the action to what that user could do.
+
+**Control plane:** The layer that governs AI systems rather than performing their work — registry and ownership, identity and scoped access, policy enforcement, observability, routing and cost, lifecycle state, and containment. The term is borrowed from networking and container orchestration. Its governance value is that controls implemented there are *inherited controls* for every system built on it; its governance risk is that it reaches the whole estate at once, and that a system which bypasses it appears governed because the registry lists it.
+
+**Data plane:** The layer where the work happens — models answering, retrieval executing, tools being called, actions taken. This library's recurring requirement that authorization be enforced outside the model is a separation of these two layers: a decision the data plane makes about its own permissions is not a control.
 
 **Decision and action trace:** Correlated operational evidence showing the authorized purpose, identity, versions, context references, policy/approval decisions, tool calls, state changes, errors, and outcomes. It does not require hidden chain-of-thought.
 

@@ -7,6 +7,7 @@ artifact_type: operating-model
 domains:
   - accountability
   - control-inheritance
+  - control-plane
   - operating-rhythm
   - programme-metrics
 applies_to:
@@ -25,8 +26,8 @@ lifecycle_stages:
   - deployment
   - operation
 status: draft
-version: "0.1.0"
-last_reviewed: 2026-11-01
+version: "0.2.0"
+last_reviewed: 2026-11-17
 ---
 
 # AI Control Operating Model
@@ -63,6 +64,28 @@ Controls implemented **once in a shared platform** — authorization evaluated b
 - **State the limits of inheritance.** Record which controls the platform does *not* provide, so a use case cannot read silence as coverage.
 
 Inheritance is also what makes the control set difficult to skip: a project team can omit a control it has to build, but not one it receives by construction.
+
+### Where a control plane is used
+
+A **control plane** — a central layer that governs AI systems rather than performing their work — is the usual implementation of inherited controls. It is an architecture, not a control: each capability it offers is governed by an objective in this library, and the objective is what must be satisfied.
+
+| Control-plane capability | Governed by |
+|---|---|
+| Registry and ownership of every model and agent | `GOV-05`, and the [inventory minimum data standard](../ai-inventory/minimum-data-standard.md) |
+| Identity per agent, with scoped access to data and tools | `AGT-06`, `AGT-01`, `SEC-02`, and [identity and access](../ai-security/identity-and-access.md) |
+| Policy enforcement — guardrails, data-loss rules, approval gates | `SEC-03`, `AGT-02`, `DATA-02` |
+| Observability — traces, behavior, failures across the estate | `AGT-03`, `SEC-05`, and the [detection catalog](../ai-security/detection-catalog.md) |
+| Model routing and cost attribution | `SEC-06`, `QUAL-01`, `OPS-03` |
+| Lifecycle — approve, deploy, version, retire | [Stage gates](../lifecycle/stage-gates.md), `OPS-03`, `OPS-04` |
+| Runtime detection and quarantine of a misbehaving agent | `OPS-02`, `AGT-03`, and [incident response](../ai-security/incident-response.md) |
+
+Three requirements apply to the plane itself, and none of them follow from having one:
+
+- **Govern the governor.** A layer holding the registry, the identities, the policy decisions, and the traces reaches every system that depends on it. Tier it accordingly — see [mandatory escalation](../risk-tiering/ai-risk-tiering-framework.md) — and apply this library's change, access, and assurance requirements to it rather than treating it as infrastructure.
+- **Coverage is the control, not existence.** "Enforced the same way everywhere" is a claim about which systems route through the plane. A system calling a model endpoint directly, or using an unregistered tool, is outside the plane while the registry lists it — so an incomplete plane makes the registry a source of false assurance, which is worse than no registry. Reconcile what routes through the plane against the inventory on the quarterly cycle, and record every known bypass with an owner and a date.
+- **Decide what happens when it is unavailable.** A plane that fails open converts an availability incident into an ungoverned estate; one that fails closed converts it into an outage. Make the choice deliberately, per capability and per tier, record it, and test it (`SEC-06`).
+
+Where the plane is operated by a provider, it is a vendor-operated capability holding the organization's registry, identities, and traces — the highest-stakes instance of [those requirements](../../assessments/vendor-assessment/framework.md#vendor-operated-ai-platforms).
 
 ## 3. Use the processes that already exist
 
@@ -101,7 +124,7 @@ Forum cadence is defined in [roles and decision rights](roles-and-decision-right
 | Every new use case | Intake, tiering, control record with inherited and local marked, owners named for the use case, each data source, and each non-human identity | Use-case owner, with the AI governance function |
 | Every release or material change | Automated suite runs against the production-intended configuration; results filed as evidence; owner signs off; re-test on model, prompt, retrieval, tool, or platform change | Use-case owner, with the platform team |
 | Monthly | Programme metrics reviewed; open findings and exceptions chased to named owners; new threats added to regression coverage | AI governance function (second line) |
-| Quarterly | Inventory certified; higher-risk exceptions and trends reviewed; non-human identities recertified; inherited-control register reconciled against what the platform actually provides | Governance committee, with use-case owners |
+| Quarterly | Inventory certified; higher-risk exceptions and trends reviewed; non-human identities recertified; inherited-control register reconciled against what the platform actually provides, including which systems route through it and which bypass it | Governance committee, with use-case owners |
 | Annually | Control set refreshed against current threats, standards, and obligations; independent assurance performed; the control library itself reviewed for staleness | Second line and internal audit |
 | Event-driven | Incident, threshold breach, provider deprecation, or regulatory change routes to the earliest affected gate | Per [escalation triggers](roles-and-decision-rights.md) |
 
@@ -120,6 +143,7 @@ These measure whether the operating model works, as distinct from the [gate-perf
 | Open findings and exceptions by age, and the number past expiry | Whether the programme closes what it opens |
 | Time to revoke assistant and agent access after a role change or departure | Whether AI access is inside the enterprise identity lifecycle or outside it |
 | Controls recorded as inherited but not evidenced at the platform | Assumed coverage, measured directly |
+| Systems bypassing the shared platform or control plane, as a share of the inventory | Whether "enforced everywhere" is true. Every bypass is a system where the inherited controls do not apply, however complete the registry looks |
 
 Report the trend, not the point value. A programme improving from a weak position is in better condition than one static at a middling one.
 

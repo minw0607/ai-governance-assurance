@@ -19,8 +19,8 @@ lifecycle_stages:
   - design
   - validation
 status: draft
-version: "0.3.0"
-last_reviewed: 2026-09-18
+version: "0.4.0"
+last_reviewed: 2026-11-17
 source_artifacts:
   - SRC-AGT-01
   - SRC-VEND-01
@@ -70,6 +70,8 @@ Escalate to at least Tier 2 when the system:
 - is difficult to observe, interrupt, or roll back.
 
 Also escalate to at least Tier 2 when an agent uses persistent cross-session memory, can create or delegate to other agents, relies on externally managed MCP/A2A servers or tools, or can continue long-running work without contemporaneous review.
+
+Escalate to at least Tier 2, and normally to the tier of the highest-tier system it governs, when the system **governs or mediates other AI systems** — a control plane, gateway, agent registry, policy decision point, or shared orchestration layer. Its failure or compromise reaches every system that depends on it, and a control weakened there is weakened everywhere at once. Where it serves consumers of differing tiers, the [shared-service tier inheritance](#shared-service-tier-inheritance) rule applies.
 
 Escalate to Tier 1 when credible failure could create severe or irreversible harm, or when privileged autonomy is combined with untrusted input and sensitive data.
 

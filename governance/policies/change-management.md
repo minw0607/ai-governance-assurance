@@ -22,8 +22,8 @@ lifecycle_stages:
   - operation
   - retirement
 status: draft
-version: "0.2.0"
-last_reviewed: 2026-09-18
+version: "0.3.0"
+last_reviewed: 2026-11-17
 source_artifacts:
   - SRC-POL-01
   - SRC-TEST-01
@@ -46,6 +46,7 @@ Scope also includes the **platform and infrastructure the system runs on**, whic
 - container images, operating system, and dependency upgrades;
 - orchestration, queueing, caching, batching, and concurrency settings;
 - gateway, proxy, load balancer, timeout, retry, and truncation behavior;
+- routing policy selecting the model, provider, region, or tool that serves a request;
 - quota, rate-limit, and cost-control configuration;
 - identity provider, authentication, and authorization integration;
 - network, egress, and data-residency routing; and

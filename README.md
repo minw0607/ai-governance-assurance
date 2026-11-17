@@ -35,6 +35,7 @@ Security questions appear throughout rather than in a block of their own, becaus
 | Is our organization ready to **govern** AI? | [Governance Readiness Assessment](assessments/readiness-assessment/checklist.md) + [scoring guide](assessments/readiness-assessment/scoring-guide.md) |
 | We need to **secure** an AI system — where do we start? | [AI Security Overlay](governance/ai-security/README.md) — the security view across the library |
 | How do we **run** this across a growing portfolio without the effort growing with it? | [AI Control Operating Model](governance/operating-model/control-operating-model.md) — inherited controls, operating rhythm, programme metrics |
+| We are building or buying an **AI control plane** — what does it have to satisfy? | [Where a control plane is used](governance/operating-model/control-operating-model.md#where-a-control-plane-is-used) — capability-to-objective mapping, and the three requirements having one does not give you |
 
 **🚦 Intake and approval** — deciding whether, and at what depth.
 
@@ -151,7 +152,7 @@ Overlays identify additional requirements that span artifact classes. They do no
 |---|---|---:|---|
 | [AI Governance Framework](governance/ai-governance-framework.md) | Enterprise operating model, lifecycle, accountability, and control principles | 0.4.0 | Draft |
 | [Roles and Decision Rights](governance/operating-model/roles-and-decision-rights.md) | Three-lines accountability, governance forums, RACI, control ownership principles, and escalation | 0.4.0 | Draft |
-| [AI Control Operating Model](governance/operating-model/control-operating-model.md) | Running the control set at scale: inherited vs local controls, operating rhythm, programme metrics, and standing it up | 0.1.0 | Draft |
+| [AI Control Operating Model](governance/operating-model/control-operating-model.md) | Running the control set at scale: inherited vs local controls, operating rhythm, programme metrics, and standing it up | 0.2.0 | Draft |
 | [AI Lifecycle Stage Gates](governance/lifecycle/stage-gates.md) | Entry, exit, evidence, and approval criteria from discovery through retirement | 0.4.0 | Draft |
 | [AI Inventory Minimum Data Standard](governance/ai-inventory/minimum-data-standard.md) | Required system/use-case fields, ownership, reconciliation, and quality rules | 0.4.0 | Draft |
 | [AI Data Security & Governance](governance/data-security-governance/README.md) | Integrated data lifecycle, classification, RAG/vector/agent security, and training/evaluation data standards | 0.1.0 | Draft |
@@ -163,10 +164,10 @@ Overlays identify additional requirements that span artifact classes. They do no
 | [Model and AI Supply Chain Security](governance/ai-security/model-supply-chain.md) | Provenance and integrity for models, weights, adapters, datasets, tools, and harnesses | 0.1.0 | Draft |
 | [Identity and Access for AI Capabilities](governance/ai-security/identity-and-access.md) | The interface to enterprise identity: attribute authority, entitlement provenance, session termination, boundary privileges, consent | 0.1.0 | Draft |
 | [AI Development Environment Standard](governance/environments/ai-development-environment-standard.md) | Containment contract, teardown, experiment conduct, and promotion out of lab environments | 0.1.0 | Draft |
-| [Enterprise AI Control Objectives](governance/control-framework/control-objectives.md) | Testable governance, data, security, quality, vendor, agentic, and operations objectives | 0.11.0 | Draft |
+| [Enterprise AI Control Objectives](governance/control-framework/control-objectives.md) | Testable governance, data, security, quality, vendor, agentic, and operations objectives | 0.12.0 | Draft |
 | [Control Coverage Matrix](governance/control-framework/control-coverage-matrix.md) | Reverse index: every control objective to the checklists, scenarios, templates, and mappings that evidence it | 0.1.0 | Draft |
 | [GenAI Policy Suite](governance/policies/README.md) | Modular acceptable-use, data, model-risk, vendor, prompt, and change policies | 0.1.0 | Draft |
-| [AI Risk Tiering Framework](governance/risk-tiering/ai-risk-tiering-framework.md) | Risk classification and minimum assurance requirements | 0.3.0 | Draft |
+| [AI Risk Tiering Framework](governance/risk-tiering/ai-risk-tiering-framework.md) | Risk classification and minimum assurance requirements | 0.4.0 | Draft |
 
 ### 🔍 Assessments
 

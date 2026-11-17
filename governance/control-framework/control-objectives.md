@@ -23,8 +23,8 @@ lifecycle_stages:
   - operation
   - retirement
 status: draft
-version: "0.11.0"
-last_reviewed: 2026-11-24
+version: "0.12.0"
+last_reviewed: 2026-11-17
 source_artifacts:
   - SRC-AGT-01
   - SRC-AUD-01
@@ -72,7 +72,7 @@ Record which effectiveness level the evidence actually supports. A design descri
 
 **Evidence:** intake form, workflow timestamps, ownership acceptance, prohibited-use determination, review routing.
 
-**Assurance procedure:** sample recent deployments and experiments; verify intake preceded material use and facts match the recorded scope.
+**Assurance procedure:** sample recent deployments and experiments; verify intake preceded material use and facts match the recorded scope. Where a central registry or control plane is relied upon, reconcile what actually routes through it against the inventory: a system listed in the registry but reaching models or tools outside it is recorded as governed while being unenforced, which makes the registry a source of false assurance.
 
 ### GOV-02 — Risk classification
 
@@ -234,11 +234,11 @@ Record which effectiveness level the evidence actually supports. A design descri
 
 ### SEC-06 — Resilience, capacity, and cost control
 
-**Objective:** The system withstands provider failure, resource exhaustion, denial-of-service, and cost spikes without unsafe degradation.
+**Objective:** The system withstands provider failure, resource exhaustion, denial-of-service, and cost spikes without unsafe degradation, and where a shared governing layer enforces its controls, behavior when that layer is unavailable is decided in advance rather than discovered.
 
 **Evidence:** rate/size/token limits set per agent or workflow with attributable usage, budgets, alerts paired with automatic containment, degraded mode, backup endpoint, recovery and failover tests.
 
-**Assurance procedure:** exercise throttling, provider failure, rollback, and recovery; compare results with service objectives. Confirm limits bind at the agent or workflow level rather than only at the provider account, that usage is attributable per agent, and that a runaway or recursively delegating execution is stopped automatically rather than by a human responding to an alert.
+**Assurance procedure:** exercise throttling, provider failure, rollback, and recovery; compare results with service objectives. Confirm limits bind at the agent or workflow level rather than only at the provider account, that usage is attributable per agent, and that a runaway or recursively delegating execution is stopped automatically rather than by a human responding to an alert. Where a gateway, policy decision point, or control plane enforces controls for other systems, make it unavailable and observe whether dependent systems stop or continue unenforced — a governing layer that fails open converts an availability incident into an ungoverned estate.
 
 ## 4. Model and system quality
 
@@ -422,7 +422,7 @@ Record which effectiveness level the evidence actually supports. A design descri
 
 ### OPS-03 — Controlled change and revalidation
 
-**Objective:** Changes to models, providers, prompts, retrieval, tools, data, scope, autonomy, or the underlying platform and infrastructure are classified and tested before deployment.
+**Objective:** Changes to models, providers, prompts, retrieval, tools, data, scope, autonomy, routing policy, or the underlying platform and infrastructure are classified and tested before deployment.
 
 **Evidence:** change record, diff, materiality decision, regression/targeted validation, approval, release and rollback evidence.
 

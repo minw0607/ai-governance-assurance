@@ -28,8 +28,8 @@ lifecycle_stages:
   - deployment
   - operation
 status: draft
-version: "0.2.0"
-last_reviewed: 2026-10-06
+version: "0.3.0"
+last_reviewed: 2026-11-17
 source_artifacts:
   - SRC-AGT-01
 ---
@@ -85,6 +85,7 @@ Delegated user identity is not always available at the moment it is needed — t
 - Retrieve catalogs and metadata only from approved endpoints. Treat server descriptions, tool names, schemas, annotations, prompts, resources, and metadata as untrusted input.
 - Pin or constrain protocol, SDK, tool, schema, and extension versions in production; monitor deprecation and breaking changes.
 - Compare catalog and schema changes with the approved baseline and require reassessment when operations, parameters, destinations, or privileges expand.
+- Treat routing policy as a change surface. Where a gateway selects the model, provider, region, or tool that serves a request, the routing table determines behavior, cost, residency, and the provider terms that apply — so a routing change is a change to every system it routes, with the fan-out `OPS-05` governs.
 - Validate tool arguments and returned data against locally enforced schemas and business rules. Descriptive metadata cannot authorize an action.
 - Apply allowlists, environment segregation, network egress restrictions, sandboxing, and content validation to third-party or high-risk tools.
 - Treat registration as distinct from enablement. A newly registered server or tool must not become reachable by an agent until approval and technical checks are complete.
@@ -143,6 +144,7 @@ Record externally meaningful decision and action evidence; do not require hidden
 - Enforce maximum duration, steps, retries, recursion, child agents, concurrent tasks, tokens, compute, cost, data volume, transaction value, and destinations.
 - Set limits per agent and per workflow, with usage attributable to each. A provider or account-level quota bounds the bill; it does not bound an individual agent, and it is reached only after the behavior it was meant to stop has already run.
 - Pair detection with automatic containment for runaway conditions. An alert on a recursive or looping execution that depends on a human to act is not a limit.
+- Where a gateway, policy decision point, or control plane enforces these limits for other components, decide and test what dependent components do when it is unavailable. Failing open leaves them running unenforced; failing closed stops them. Both are defensible; neither should be discovered during an outage.
 - Detect unexpected tools, servers, partners, scopes, schemas, context volume, delegation patterns, denial spikes, loops, and trace gaps.
 - Provide independent control paths to disable a server, tool, agent, credential, queue, extension, or communication route.
 - Exercise cancellation of long-running tasks and reconcile actions that completed before cancellation.
